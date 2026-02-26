@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    0_Area7Items - Item Definitions
+    Author: Frilioth
+    Version: 1.2.0
+
+    This mod loads BEFORE FrilArea7Challenge (alphabetical order) so that
+    all Area 7 custom items exist by the time traders.xml is parsed.
+
+    Meshfile paths use #@modfolder: which resolves to THIS mod's Resources folder.
+    A copy of area7Notes.unity3d must exist in 0_Area7Items/Resources/ as well as
+    FrilArea7Challenge/Resources/.
+
+    NOTE: noteArea7Extraction has EconomicValue=1 so it appears in Hugh's trade window.
+    Hugh sells the extraction order for 1 duke - triggers quest_Area7Extraction popup.
+-->
+<configs>
+    <append xpath="/items">
+
+        <!-- ================================================
+             AREA 7 RULES NOTE
+             Readable item given on spawn.
+             Also sold by Hugh for 1 duke as the Extraction Order placeholder.
+             EconomicValue required for trader window visibility.
+             ================================================ -->
+        <item name="noteArea7Rules">
+            <property name="Extends" value="blankNoteMaster"/>
+            <property name="HoldType" value="31"/>
+            <property name="Meshfile" value="#@modfolder:Resources/area7Notes.unity3d?noteArea7Rules.Prefab"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="challengeQuestMaster"/>
+            <property name="DescriptionKey" value="noteArea7RulesDesc"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="SoundPickup" value="map_grab"/>
+            <property name="SoundPlace" value="map_place"/>
+            <property class="Action0">
+                <property name="Class" value="Quest"/>
+                <property name="QuestGiven" value="quest_Area7Rules"/>
+            </property>
+        </item>
+
+        <!-- ================================================
+             AREA 7 IOU NOTES
+             Given when player is unlucky in vehicle lottery.
+             noteArea7IOU (bare) kept for save file compatibility - superseded by noteArea7IOU4.
+             ================================================ -->
+        <item name="noteArea7IOU">
+            <property name="Extends" value="blankNoteMaster"/>
+            <property name="HoldType" value="31"/>
+            <property name="Meshfile" value="#@modfolder:Resources/area7Notes.unity3d?noteArea7IOU.Prefab"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="IOUNote4"/>
+            <property name="DescriptionKey" value="noteArea7IOUDesc"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="SoundPickup" value="map_grab"/>
+            <property name="SoundPlace" value="map_place"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="read_mod"/>
+                <property name="Sound_in_head" value="true"/>
+                <property name="PromptTitle" value="noteArea7IOU"/>
+                <property name="PromptDescription" value="noteArea7IOUDesc"/>
+            </property>
+        </item>
+
+        <item name="noteArea7IOU1">
+            <property name="Extends" value="blankNoteMaster"/>
+            <property name="HoldType" value="31"/>
+            <property name="Meshfile" value="#@modfolder:Resources/area7Notes.unity3d?noteArea7IOU1.Prefab"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="IOUNote1"/>
+            <property name="DescriptionKey" value="noteArea7IOU1Desc"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="SoundPickup" value="map_grab"/>
+            <property name="SoundPlace" value="map_place"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="read_mod"/>
+                <property name="Sound_in_head" value="true"/>
+                <property name="PromptTitle" value="noteArea7IOU1"/>
+                <property name="PromptDescription" value="noteArea7IOU1Desc"/>
+            </property>
+        </item>
+
+        <item name="noteArea7IOU2">
+            <property name="Extends" value="blankNoteMaster"/>
+            <property name="HoldType" value="31"/>
+            <property name="Meshfile" value="#@modfolder:Resources/area7Notes.unity3d?noteArea7IOU2.Prefab"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="IOUNote2"/>
+            <property name="DescriptionKey" value="noteArea7IOU2Desc"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="SoundPickup" value="map_grab"/>
+            <property name="SoundPlace" value="map_place"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="read_mod"/>
+                <property name="Sound_in_head" value="true"/>
+                <property name="PromptTitle" value="noteArea7IOU2"/>
+                <property name="PromptDescription" value="noteArea7IOU2Desc"/>
+            </property>
+        </item>
+
+        <item name="noteArea7IOU3">
+            <property name="Extends" value="blankNoteMaster"/>
+            <property name="HoldType" value="31"/>
+            <property name="Meshfile" value="#@modfolder:Resources/area7Notes.unity3d?noteArea7IOU3.Prefab"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="IOUNote3"/>
+            <property name="DescriptionKey" value="noteArea7IOU3Desc"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="SoundPickup" value="map_grab"/>
+            <property name="SoundPlace" value="map_place"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="read_mod"/>
+                <property name="Sound_in_head" value="true"/>
+                <property name="PromptTitle" value="noteArea7IOU3"/>
+                <property name="PromptDescription" value="noteArea7IOU3Desc"/>
+            </property>
+        </item>
+
+        <item name="noteArea7IOU4">
+            <property name="Extends" value="blankNoteMaster"/>
+            <property name="HoldType" value="31"/>
+            <property name="Meshfile" value="#@modfolder:Resources/area7Notes.unity3d?noteArea7IOU.Prefab"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="IOUNote4"/>
+            <property name="DescriptionKey" value="noteArea7IOU4Desc"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="SoundPickup" value="map_grab"/>
+            <property name="SoundPlace" value="map_place"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="read_mod"/>
+                <property name="Sound_in_head" value="true"/>
+                <property name="PromptTitle" value="noteArea7IOU4"/>
+                <property name="PromptDescription" value="noteArea7IOU4Desc"/>
+            </property>
+        </item>
+
+        <item name="noteArea7IOU5">
+            <property name="Extends" value="blankNoteMaster"/>
+            <property name="HoldType" value="31"/>
+            <property name="Meshfile" value="#@modfolder:Resources/area7Notes.unity3d?noteArea7IOU5.Prefab"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="IOUNote5"/>
+            <property name="DescriptionKey" value="noteArea7IOU5Desc"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="SoundPickup" value="map_grab"/>
+            <property name="SoundPlace" value="map_place"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="read_mod"/>
+                <property name="Sound_in_head" value="true"/>
+                <property name="PromptTitle" value="noteArea7IOU5"/>
+                <property name="PromptDescription" value="noteArea7IOU5Desc"/>
+            </property>
+        </item>
+
+
+        <!-- ================================================
+             AREA 7 EXTRACTION ORDER NOTE
+             Given via C# after escapeArea7 completes.
+             Fires quest_Area7Extraction which shows the victory popup.
+             Not obtainable any other way (CreativeMode=None).
+             ================================================ -->
+        <item name="noteArea7Extraction">
+            <property name="Extends" value="blankNoteMaster"/>
+			<property name="EconomicValue" value="1"/>
+            <property name="HoldType" value="31"/>
+            <property name="Meshfile" value="#@modfolder:Resources/area7Notes.unity3d?noteArea7Extraction.Prefab"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="noteArea7Extraction"/>
+            <property name="DescriptionKey" value="noteArea7ExtractionDesc"/>
+            <property name="NoScrapping" value="true"/>
+            <property name="SoundPickup" value="map_grab"/>
+            <property name="SoundPlace" value="map_place"/>
+            <property class="Action0">
+                <property name="Class" value="Quest"/>
+                <property name="QuestGiven" value="quest_Area7Extraction"/>
+            </property>
+        </item>
+
+    </append>
+</configs>
