@@ -1,0 +1,7 @@
+<configs>
+  <set xpath="/blocks/block/property[@name='CreativeMode']/@value">None</set>
+
+  <append xpath="/blocks/block[not(property[@name='CreativeMode'])]">
+    <property name="CreativeMode" value="None"/>
+  </append>
+</configs>

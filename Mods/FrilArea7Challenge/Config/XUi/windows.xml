@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Area 7 Challenge - UI Modifications
+	Author: Frilioth
+	Version: 2.0.0
+	
+	MODIFICATIONS:
+	- Enlarge ShowMessageWindow (windowTip) for better readability
+	- Increase font size for message text
+-->
+<configs>	
+	<!-- Overall window height - makes the entire message window 663 pixels tall -->
+	<set xpath="//window[@name='windowTip']/@height">663</set>
+	
+	<!-- Window position on screen: -300 = 300 pixels left of center, 250 = 250 pixels down from top -->
+	<set xpath="//window[@name='windowTip']/@pos">-300,200</set>
+	
+	<!-- Header panel position (the title bar at top of window) -->
+	<setattribute xpath="//window[@name='windowTip']/panel[@name='header']" name="pos">0,190</setattribute>
+	
+	<!-- Content area position - where the actual message text starts -->
+	<set xpath="//window[@name='windowTip']/rect[@name='content']/@pos">0,146</set>
+	
+	<!-- Content area height - how tall the scrollable text area is -->
+	<set xpath="//window[@name='windowTip']/rect[@name='content']/@height">663</set>
+	
+	<!-- Text label height - the actual text display area (30px smaller than content for padding) -->
+	<set xpath="//window[@name='windowTip']/rect[@name='content']/label[@depth='3']/@height">633</set>
+	
+	<!-- Font size increase for readability -->
+	<set xpath="//window[@name='windowTip']/rect[@name='content']/label[@depth='3']/@font_size">26</set>
+	
+	<!-- Continue button position - placed at bottom of window (negative value positions from bottom) -->
+	<set xpath="//window[@name='windowTip']/rect[@name='content']/rect[@name='btnContinue']/@pos">0,-663</set>
+	
+    <!-- Zombie HP bar -->
+    <set xpath="/windows/window[@name='windowTargetBar']/@visibility">always</set>
+
+
+	
+</configs>

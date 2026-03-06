@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    FrilArea7Challenge - Game Events
+    Author: Frilioth
+    Version: 2.1.1
+
+-->
+
+<configs>
+
+    <set xpath="/gameevents/action_sequence[@name='game_first_spawn']">
+        <property name="allow_user_trigger" value="false" />
+        <property name="action_type" value="Game" />
+        <action class="Delay">
+            <property name="phase" value="1" />
+            <property name="time" value="5" />
+        </action>
+        <action class="SetItemSlots">
+            <property name="items_location" value="Toolbelt" />
+            <property name="items" value="noteArea7Rules,meleeWpnBladeT1HuntingKnife,medicalFirstAidBandage,drinkJarBoiledWater,foodCanChili" />
+            <property name="item_counts" value="1,1,2,2,2" />
+            <property name="slot_numbers" value="0,1,2,3,4" />
+        </action>
+    </set>
+
+    <append xpath="/gameevents/action_sequence[@name='challenge_reward_500']">
+        <action class="AddSkillPoints">
+            <property name="skill_points" value="4" />
+        </action>
+    </append>
+
+    <append xpath="/gameevents">
+
+        <action_sequence name="area7_step_one">
+            <property name="action_type" value="Game" />
+            <action class="SetItemSlots">
+                <property name="items_location" value="Equipment" />
+                <property name="items" value="armorPrimitiveHelmet,armorPrimitiveOutfit,armorPrimitiveGloves,armorPrimitiveBoots" />
+                <property name="item_counts" value="1,1,1,1" />
+            </action>
+            <action class="AddItems">
+                <property name="added_items" value="meleeToolSalvageT1Wrench,modArmorHelmetLight" />
+                <property name="added_item_counts" value="1,1" />
+            </action>
+        </action_sequence>
+
+        <!-- Victory event - triggered when Escape challenge is redeemed -->
+        <action_sequence name="challenge_complete_escape">
+            <property name="action_type" value="Game" />
+            
+            <!-- Add buff that will trigger the completion quest -->
+            <action class="AddBuff">
+                <property name="buff_name" value="frilArea7Victory" />
+            </action>
+        </action_sequence>
+    </append>
+</configs>

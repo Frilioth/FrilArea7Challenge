@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Area 7 Challenge - Progression Modifications
+	Author: Frilioth
+	Version: 2.1.1
+	
+	MODIFICATIONS:
+	- Cap crafting skill magazines at level 50 (down from 75/100)
+	- Stop magazine drops once player reaches level 50
+-->
+
+<configs>
+	<!-- Cap Forge Ahead (craftingWorkstations) at 50 -->
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/@max_level">50</set>
+	
+	<!-- Stop Forge Ahead magazines from dropping after level 50 -->
+	<set xpath="//perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@tags='workstationCSM']/requirement/@value">50</set>
+	
+	<!-- Update all workstation recipe unlocks to cap at 50 instead of 100 -->
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[1]/@level">4,50</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[2]/@level">8,50</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[3]/@level">10,50</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[4]/@level">12,50</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[5]/@level">16,50</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[6]/@level">20,50</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[7]/@level">26,50</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[8]/@level">30,50</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[9]/@level">32,50</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[10]/@level">34,50</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[11]/@level">40,50</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[12]/@level">44,50</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[13]/@level">48,50</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[14]/@level">50,50</set>
+	<!-- toolApiarySmoker (index 15): 56 → 50 -->
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[15]/@level">50,50</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@name_key='workstationsT5-2,workstationsT5-5']/@unlock_level">30,50</set>
+	<!-- toolForgeCrucible (index 16): 75 → 50 -->
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[16]/@level">50,50</set>
+	
+	<!-- Cap Trap Crafting (craftingTraps) at 50 -->
+	<set xpath="//crafting_skill[@name='craftingTraps']/@max_level">50</set>
+	
+	<!-- Stop Trap Crafting magazines from dropping after level 50 -->
+	<set xpath="//perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@tags='trapsCSM']/requirement/@value">50</set>
+	
+	<!-- Update all trap recipe unlocks to cap at 50 instead of 100 -->
+	<set xpath="//crafting_skill[@name='craftingTraps']/effect_group/passive_effect[1]/@level">50,50</set>
+	<set xpath="//crafting_skill[@name='craftingTraps']/effect_group/passive_effect[2]/@level">50,50</set>
+	<!-- autoTurret (index 3): 75 → 50 -->
+	<set xpath="//crafting_skill[@name='craftingTraps']/effect_group/passive_effect[3]/@level">50,50</set>
+	<set xpath="//crafting_skill[@name='craftingTraps']/display_entry[@name_key='trapsT3']/@unlock_level">50</set>
+	
+	<!-- Cap Electrician/Robotics (craftingElectrician) at 50 -->
+	<set xpath="//crafting_skill[@name='craftingElectrician']/@max_level">50</set>
+	
+	<!-- Stop Tech Junkie magazines from dropping after level 50 -->
+	<set xpath="//perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@tags='electricianCSM']/requirement[@operation='LT']/@value">50</set>
+	<set xpath="//perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@tags='electricianCSM']/requirement[@operation='Equals']/@value">50</set>
+	
+	<!-- Update all electrician recipe unlocks to cap at 50 -->
+	<set xpath="//crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[1]/@level">25,50</set>
+	<set xpath="//crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[2]/@level">45,50</set>
+	<!-- Battery bank (index 3): 55,100 → 50,50 (keep at 50 for max cap) -->
+	<set xpath="//crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[3]/@level">50,50</set>
+	<set xpath="//crafting_skill[@name='craftingElectrician']/display_entry[@name_key='electricianT3']/@unlock_level">50</set>
+	<!-- Car battery (index 4): 55 → 10 -->
+	<set xpath="//crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[4]/@level">5,50</set>
+	<!-- Move car battery from T4 to T1 display -->
+	<set xpath="//crafting_skill[@name='craftingElectrician']/display_entry[@name_key='electricianT1']/unlock_entry/@item">generatorbank,electricwirerelay,switch,tripwirepost,ceilingLight01_player,industrialLight01_player,industrialLight02_player,ceilingLight07_player,carBattery</set>
+	<set xpath="//crafting_skill[@name='craftingElectrician']/display_entry[@name_key='electricianT1']/@unlock_level">5</set>
+	<!-- Remove T4 display entry for car battery -->
+	<remove xpath="//crafting_skill[@name='craftingElectrician']/display_entry[@name_key='electricianT4']"/>
+	
+	<!-- Unlock all seeds after reading 1 book -->
+	<set xpath="//crafting_skill[@name='craftingSeeds']/@max_level">1</set>
+	<set xpath="//crafting_skill[@name='craftingSeeds']/display_entry[1]/@unlock_level">1,1,1,1,1</set>
+	<set xpath="//crafting_skill[@name='craftingSeeds']/display_entry[2]/@unlock_level">1,1,1,1,1</set>
+	<set xpath="//crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[1]/@level">1,1</set>
+	<set xpath="//crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[2]/@level">1,1</set>
+	<set xpath="//crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[3]/@level">1,1</set>
+	<set xpath="//crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[4]/@level">1,1</set>
+	<set xpath="//crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[5]/@level">1,1</set>
+	<set xpath="//crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[6]/@level">1,1</set>
+	<set xpath="//crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[7]/@level">1,1</set>
+	<set xpath="//crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[8]/@level">1,1</set>
+	<set xpath="//crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[9]/@level">1,1</set>
+	<set xpath="//crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[10]/@level">1,1</set>
+	
+	<!-- Cap Vehicle Crafting (craftingVehicles) at 50 -->
+	<set xpath="//crafting_skill[@name='craftingVehicles']/@max_level">50</set>
+	
+	<!-- Stop Vehicle magazines from dropping after level 50 -->
+	<set xpath="//perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@tags='vehiclesCSM']/requirement/@value">50</set>
+	
+	<!-- Update vehicle unlocks using array indices -->
+	<!-- Bicycle (index 1): 5,100 → 5,50 -->
+	<set xpath="//crafting_skill[@name='craftingVehicles']/effect_group/passive_effect[1]/@level">5,50</set>
+	<!-- Minibike (index 2): 20,100 → 20,50 -->
+	<set xpath="//crafting_skill[@name='craftingVehicles']/effect_group/passive_effect[2]/@level">20,50</set>
+	<!-- Motorcycle (index 3): 45,100 → 30,50 -->
+	<set xpath="//crafting_skill[@name='craftingVehicles']/effect_group/passive_effect[3]/@level">30,50</set>
+	<set xpath="//crafting_skill[@name='craftingVehicles']/display_entry[@name_key='vehiclesT3']/@unlock_level">30</set>
+	<!-- 4x4 (index 4): 70,100 → 40,50 -->
+	<set xpath="//crafting_skill[@name='craftingVehicles']/effect_group/passive_effect[4]/@level">40,50</set>
+	<set xpath="//crafting_skill[@name='craftingVehicles']/display_entry[@name_key='vehiclesT4']/@unlock_level">40</set>
+	<!-- Gyro (index 5): 100,100 → 50,50 -->
+	<set xpath="//crafting_skill[@name='craftingVehicles']/effect_group/passive_effect[5]/@level">50,50</set>
+	<set xpath="//crafting_skill[@name='craftingVehicles']/display_entry[@name_key='vehiclesT5']/@unlock_level">50</set>
+	
+	<!-- Cap Robotics (craftingRobotics / Tech Planet) at 50 -->
+	<set xpath="//crafting_skill[@name='craftingRobotics']/@max_level">50</set>
+	
+	<!-- Stop Tech Planet magazines from dropping after level 50 -->
+	<set xpath="//perk[@name='perkElectrocutioner']/effect_group/passive_effect[@tags='roboticsCSM']/requirement[@operation='LT']/@value">50</set>
+	<set xpath="//perk[@name='perkElectrocutioner']/effect_group/passive_effect[@tags='roboticsCSM']/requirement[@operation='Equals']/@value">50</set>
+	
+	<!-- Update robotics recipe unlocks -->
+	<!-- Pipe Baton (index 1): 1,100 → 2,50 -->
+	<set xpath="//crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[1]/@level">2,50</set>
+	<!-- Robotic Sledge (index 2): 11,100 → 5,50 -->
+	<set xpath="//crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[2]/@level">5,50</set>
+	<!-- Stun Baton (index 3): 26,100 → 10,50 -->
+	<set xpath="//crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[3]/@level">10,50</set>
+	<!-- Robotic Turret (index 4): 51,100 → 25,50 -->
+	<set xpath="//crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[4]/@level">25,50</set>
+	<!-- Robotic Drone (index 5): 76,100 → 50,50 -->
+	<set xpath="//crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[5]/@level">50,50</set>
+	
+	<!-- Update robotics display_entry quality levels to cap at 50 -->
+	<set xpath="//crafting_skill[@name='craftingRobotics']/display_entry[@item='meleeWpnBatonT0PipeBaton']/@unlock_level">2,4,8,12,16,20</set>
+	<set xpath="//crafting_skill[@name='craftingRobotics']/display_entry[@item='gunBotT1JunkSledge']/@unlock_level">5,8,12,16,20,25</set>
+	<set xpath="//crafting_skill[@name='craftingRobotics']/display_entry[@item='meleeWpnBatonT2StunBaton']/@unlock_level">10,15,20,25,30,35</set>
+	<set xpath="//crafting_skill[@name='craftingRobotics']/display_entry[@item='gunBotT2JunkTurret']/@unlock_level">25,30,35,40,45,50</set>
+	<set xpath="//crafting_skill[@name='craftingRobotics']/display_entry[@item='gunBotT3JunkDrone']/@unlock_level">50,50,50,50,50,50</set>
+	
+	<!-- Move Chemistry Station from T4 (50 books) to T2 (20 books) in workstations -->
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[@tags='chemistryStation']/@level">20,50</set>
+	<!-- Remove from T4 display_entry -->
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@name_key='workstationsT4-1,workstationsT4-3,workstationsT4-5,workstationsT4-6']/@icon">toolApiaryExtractor,toolApiaryBroodBox,resourceWaterFilter</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@name_key='workstationsT4-1,workstationsT4-3,workstationsT4-5,workstationsT4-6']/@name_key">workstationsT4-1,workstationsT4-3,workstationsT4-5</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@name_key='workstationsT4-1,workstationsT4-3,workstationsT4-5']/@unlock_level">40,44,48</set>
+	<remove xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@name_key='workstationsT4-1,workstationsT4-3,workstationsT4-5']/unlock_entry[@item='chemistryStation']"/>
+	<!-- Add to T2 display_entry -->
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@name_key='workstationsT2-1,workstationsT2-3,workstationsT2-6']/@icon">cntDewCollector,toolAnvil,toolDewGatherer,chemistryStation</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@name_key='workstationsT2-1,workstationsT2-3,workstationsT2-6']/@name_key">workstationsT2-1,workstationsT2-3,workstationsT2-6,workstationsT2-7</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@name_key='workstationsT2-1,workstationsT2-3,workstationsT2-6,workstationsT2-7']/@unlock_level">16,20,26,20</set>
+	<append xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@name_key='workstationsT2-1,workstationsT2-3,workstationsT2-6,workstationsT2-7']">
+		<unlock_entry item="chemistryStation" unlock_tier="2"/>
+	</append>
+	
+	<!-- Note: All crafting skills now capped at 50 -->
+
+</configs>

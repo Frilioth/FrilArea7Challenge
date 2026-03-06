@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    FrilArea7Challenge - Buffs
+    Author: Frilioth
+    Version: 2.1.1
+
+-->
+
+<configs>
+  <!-- Remove the Duke's note notification buff -->
+  <remove xpath="/buffs/buff[@name='buffDukeNote']"/>
+
+  <set xpath="/buffs/buff[@name='buffForest_Hazard']/@hidden">true</set>
+
+  <append xpath="/buffs">
+
+
+    <!-- Supply drop timer, tuned for 60 minute days -->
+    <buff name="frilTimer">
+      <stack_type value="ignore"/>
+      <duration value="3600"/>
+      <effect_group/>
+    </buff>
+
+    <!-- Victory buff - triggers completion quest when Escape challenge is redeemed -->
+    <buff name="frilArea7Victory">
+      <duration value="10"/>
+      <stack_type value="ignore"/>
+      <effect_group>
+        <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="quest_complete"/>
+      </effect_group>
+    </buff>
+
+    <buff name="buffArea7CentralRadiation" name_key="buffRadiation03Name" description_key="buffRadiation03Desc" tooltip_key="buffRadiation03Tooltip" icon="ui_game_symbol_radiation" icon_color="255,0,0" icon_blink="true">
+      <damage_type value="radiation"/>
+      <stack_type value="ignore"/>
+      <duration value="5000"/>
+      <update_rate value="1"/>
+
+      <effect_group>
+        <passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,10" value="1,1"/>
+        <passive_effect name="HealthChangeOT" operation="base_subtract" duration="10,50" value="1,30"/>
+        <passive_effect name="HealthChangeOT" operation="base_subtract" duration="50,1000" value="40,1000"/>
+
+        <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="add" value="1"/>
+
+        <triggered_effect trigger="onSelfBuffUpdate" action="RemoveCVar" cvar="RadiationSignal">
+          <requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="2"/>
+        </triggered_effect>
+
+        <triggered_effect trigger="onSelfBuffUpdate" action="RemoveCVar" cvar="RadiationSignal"/>
+
+        <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="a_radiated_strong_lp"/>
+
+        <triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="1" fade=".7" effect_name="Hot">
+          <requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="1"/>
+        </triggered_effect>
+
+        <triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0" fade=".7" effect_name="Hot">
+          <requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="0"/>
+        </triggered_effect>
+
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+
+        <triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Radiation" intensity=".6" fade="2"/>
+        <triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="2"/>
+      </effect_group>
+    </buff>
+	
+	<buff name="buffArea7RadPermit" icon="ui_game_symbol_wasteland_hazard" icon_color="120,180,255" icon_blink="false">
+	<stack_type value="replace"/>
+	<duration value="0"/>
+	<update_rate value="1"/>
+
+	<display_value value="$Area7RadPermitTimer"/>
+	<display_value_format value="time"/>
+
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffArea7CentralRadiation"/>
+		<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="forge_item_complete"/>
+
+		<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$Area7RadPermitTimer" operation="set" value="300"/>
+		<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$Area7RadPermitTimer" operation="set" value="300"/>
+
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$Area7RadPermitTimer" operation="add" value="-1"/>
+
+		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArea7RadPermit">
+			<requirement name="CVarCompare" cvar="$Area7RadPermitTimer" operation="LTE" value="0"/>
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$Area7RadPermitTimer"/>
+	</effect_group>
+</buff>
+
+<buff name="buffArea7RadPermitArmor" icon="ui_game_symbol_wasteland_hazard" icon_color="120,180,255" icon_blink="false">
+  <duration value="999999"/>
+  <stack_type value="ignore"/>
+  <effect_group>
+    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffArea7CentralRadiation"/>
+  </effect_group>
+</buff>
+
+<buff name="buffArea7PostDeathRadiation" hidden="true">
+    <damage_type value="radiation"/>
+    <stack_type value="ignore"/>
+    <duration value="9999"/>
+    <update_rate value="1"/>
+    <effect_group>
+        <passive_effect name="HealthChangeOT" operation="base_subtract" value="50"/>
+        <passive_effect name="StaminaChangeOT" operation="base_subtract" value="100"/>
+        <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInternalBleedingAC"/>
+        <triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="0" effect_name="Hot"/>
+    </effect_group>
+</buff>
+
+  </append>
+</configs>

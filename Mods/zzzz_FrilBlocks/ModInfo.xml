@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<Name value="FrilArea7CreativeBlock"/>
+	<DisplayName value="Area 7 Creative Block"/>
+	<Version value="1.0.0"/>
+	<Description value="Removes all items and blocks from the creative menu. Remove this mod when updating items.xml or blocks.xml."/>
+	<Author value="Frilioth"/>
+	<Website value=""/>
+</xml>

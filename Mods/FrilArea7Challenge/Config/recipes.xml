@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Area 7 Challenge - Recipe Modifications
+	Author: Frilioth
+	Version: 2.1.1
+	
+	MODIFICATIONS:
+	1. Emergency Transmitter Recipe - Craftable at workbench (1 min craft time)
+	2. Biome Weather Gear - Removed (players must use serum)
+	3. Seed crafting costs reduced to 2
+	4. Car battery simplified to 100 lead
+	5. Engine recipe added
+	6. Keystone block removed
+-->
+<configs>
+
+<!-- ========================================
+     EMERGENCY TRANSMITTER RECIPE
+     1 minute craft time, requires Advanced Engineering
+     ======================================== -->
+<append xpath="/recipes">
+	<recipe name="satelliteUnitLargeArea7" count="1" craft_area="workbench" craft_time="60" tags="perkAdvancedEngineering">
+		<ingredient name="resourceForgedSteel" count="125"/>
+		<ingredient name="resourceMechanicalParts" count="50"/>
+		<ingredient name="resourceElectricParts" count="50"/>
+		<ingredient name="carBattery" count="5"/>
+		<ingredient name="resourceDuctTape" count="20"/>
+	</recipe>
+	
+<!-- ========================================
+     ENGINE RECIPE
+     1 minute craft time, no skill required
+     ======================================== -->
+	 
+	 
+	<recipe name="smallEngine" count="1" craft_area="workbench" craft_time="60">
+		<ingredient name="resourceForgedSteel" count="10"/>
+		<ingredient name="resourceElectricParts" count="10"/>
+		<ingredient name="resourceMechanicalParts" count="20"/>
+		<ingredient name="resourceOil" count="1"/>
+	</recipe>
+	
+<!-- ========================================
+     DUKES RECIPE
+     Diamonds, Gold and Silver can be crafted into Dukes
+     ======================================== -->
+	
+    <recipe name="casinoCoin" count="100" craft_time="60">
+        <ingredient name="resourceSilverNugget" count="1"/>
+    </recipe>
+    <recipe name="casinoCoin" count="250" craft_time="60">
+        <ingredient name="resourceGoldNugget" count="1"/>
+    </recipe>
+    <recipe name="casinoCoin" count="500" craft_time="60">
+        <ingredient name="resourceRawDiamond" count="1"/>
+    </recipe>
+	
+<!-- ========================================
+     ACID RECIPE
+     Add a recipe for Acid
+     ======================================== -->
+	
+	
+	<recipe name="resourceAcid" count="1" craft_time="300" craft_area="campfire" craft_tool="toolBeaker">
+		<ingredient name="foodCropMushroomsRadiated" count="10"/>
+		<ingredient name="drinkJarRiverWater" count="1"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+	</recipe>
+
+</append>
+
+<!-- ========================================
+     BIOME WEATHER GEAR REMOVAL
+     Players must use serum to travel outside
+     ======================================== -->
+<remove xpath="/recipes/recipe[@name='biomeWeatherItem1']"/>
+<remove xpath="/recipes/recipe[@name='biomeWeatherItem2']"/>
+<remove xpath="/recipes/recipe[@name='biomeWeatherItem3']"/>
+<remove xpath="/recipes/recipe[@name='biomeWeatherItem4']"/>
+
+<!-- ========================================
+     SEED CRAFTING UNLOCKS
+     Reduce ingredient cost from 5 to 2
+     Mushrooms require 2 plants + 5 clay
+     Cotton/Goldenrod/Chrysanthemum/Hop/GraceCorn reduced to 2
+     ======================================== -->
+
+<set xpath="/recipes/recipe[@name='plantedAloe1']/ingredient/@count">2</set>
+<set xpath="/recipes/recipe[@name='plantedBlueberry1']/ingredient/@count">2</set>
+<set xpath="/recipes/recipe[@name='plantedCoffee1']/ingredient/@count">2</set>
+<set xpath="/recipes/recipe[@name='plantedCorn1']/ingredient/@count">2</set>
+<set xpath="/recipes/recipe[@name='plantedMushroom1']/ingredient[@name='foodCropMushrooms']/@count">2</set>
+<set xpath="/recipes/recipe[@name='plantedPotato1']/ingredient/@count">2</set>
+<set xpath="/recipes/recipe[@name='plantedPumpkin1']/ingredient/@count">2</set>
+<set xpath="/recipes/recipe[@name='plantedYucca1']/ingredient/@count">2</set>
+
+
+<!-- Set count to 2 for seeds that previously had no patches -->
+<set xpath="/recipes/recipe[@name='plantedCotton1']/ingredient/@count">2</set>
+<set xpath="/recipes/recipe[@name='plantedGoldenrod1']/ingredient/@count">2</set>
+<set xpath="/recipes/recipe[@name='plantedChrysanthemum1']/ingredient/@count">2</set>
+<set xpath="/recipes/recipe[@name='plantedHop1']/ingredient/@count">2</set>
+<set xpath="/recipes/recipe[@name='plantedGraceCorn1']/ingredient/@count">2</set>
+
+<!-- ========================================
+     FALLOUT FLUSH RECIPE MODIFICATION
+     Replace Grace Corn with regular Corn
+     ======================================== -->
+<remove xpath="/recipes/recipe[@name='foodAtomicSmoothie']/ingredient[@name='foodCropGraceCorn']"/>
+<remove xpath="/recipes/recipe[@name='foodAtomicSmoothie']/ingredient[@name='foodCropMushroomsRadiated']"/>
+<append xpath="/recipes/recipe[@name='foodAtomicSmoothie']">
+	<ingredient name="foodCropCorn" count="5"/>
+	<ingredient name="foodCropMushroomsRadiated" count="15"/>
+</append>
+
+
+<!-- Keystone block removal -->
+<remove xpath="/recipes/recipe[@name='keystoneBlock']"/>
+
+<!-- Simplify car battery recipe to only require 100 lead -->
+<set xpath="/recipes/recipe[@name='carBattery']/@craft_area">workbench</set>
+<set xpath="/recipes/recipe[@name='carBattery']/@tags">learnable,workbenchCrafting</set>
+<set xpath="/recipes/recipe[@name='carBattery']/ingredient[@name='resourceScrapLead']/@count">100</set>
+<remove xpath="/recipes/recipe[@name='carBattery']/ingredient[@name='resourceLegendaryParts']"/>
+<remove xpath="/recipes/recipe[@name='carBattery']/effect_group"/>
+
+</configs>

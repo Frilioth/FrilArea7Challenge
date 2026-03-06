@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Area 7 Challenge - Loot Modifications
+	Author: Frilioth
+	Version: 2.1.1
+	
+-->
+	
+	<configs>
+	<remove xpath="//lootgroup[@name='groupTreasureMaps']"/>
+	<remove xpath="//lootgroup//item[@group='groupTreasureMaps']"/>
+	<remove xpath="//lootgroup//item[@name='seedSkillMagazine']"/>
+	<remove xpath="//item[@name='smallEngine']"/>
+	<remove xpath="//item[@name='resourcePaper']"/>
+	<remove xpath="//lootgroup//item[@name='vehicleBicycleHandlebars']"/>
+	<remove xpath="//lootgroup//item[@name='vehicleMinibikeHandlebars']"/>
+	<remove xpath="//lootgroup//item[@name='vehicleMotorcycleHandlebars']"/>
+	<remove xpath="//lootgroup//item[@name='vehicleBicycleChassis']"/>
+	<remove xpath="//lootgroup//item[@name='vehicleMinibikeChassis']"/>
+	<remove xpath="//lootgroup//item[@name='vehicleMotorcycleChassis']"/>
+	<remove xpath="//lootgroup//item[@name='vehicleTruck4x4Chassis']"/>
+	<remove xpath="//lootgroup//item[@name='vehicleTruck4x4Accessories']"/>
+	<remove xpath="//lootgroup//item[@name='vehicleGyroCopterChassis']"/>
+
+	<removeattribute xpath="//lootcontainer/@destroy_on_close" />
+	<setattribute xpath="//lootcontainer[@name='junk']" name="destroy_on_close">empty</setattribute>
+	<setattribute xpath="//lootcontainer[@name='laundryBasket']" name="destroy_on_close">empty</setattribute>
+
+	<!-- Add Forge Ahead and Car books to vanilla book pool with base 30% chance (scales with perks) -->
+	<append xpath="//lootgroup[@name='booksAllScaled']">
+		<item name="workstationSkillMagazine" count="1" prob="0.7"/>
+		<item name="vehiclesSkillMagazine" count="1" prob="0.9"/>
+		<item name="electricianSkillMagazine" count="1" prob="0.7"/>
+	</append>
+	
+	<!-- Add Battery to Utility cart  -->
+	<append xpath="//lootgroup[@name='groupUtilityCart']">
+		<item name="carBattery" count="1"/>
+		<item name="resourceWaterFilter" count="1" loot_prob_template="veryLow" force_prob="true"/>
+	</append>
+
+	<insertafter xpath="//lootgroup[@name='groupSchematicsAll']">
+	
+		<lootgroup name="frilArea7CopsLoot" count="1">
+			<item name="ammo9mmBulletBall" count="10,30" prob="0.30"/>
+			<item name="ammo762mmBulletBall" count="10,30" prob="0.30"/>
+			<item name="gunHandgunT1Pistol" count="1" prob="0.02"/>
+			<item name="gunHandgunT1PistolParts" count="1,2" prob="0.15"/>
+			<item name="gunMGT1AK47Parts" count="1,2" prob="0.15"/>
+			<item name="handgunsSkillMagazine" count="1" prob="0.08"/>
+			<item name="machineGunsSkillMagazine" count="1" prob="0.07"/>
+			<item name="resourceAcid" count="1" prob="0.05"/>
+			<item name="bookAutoWeaponsMachineGuns" count="1" prob="0.025"/>
+		</lootgroup>
+
+		<lootgroup name="frilArea7ElectricalLoot">
+			<item name="resourceElectricParts" count="2,5" prob="0.6"/>
+			<item name="carBattery" count="1" prob="0.2"/>
+			<item name="resourceHeadlight" count="1,2" prob="0.25"/>
+			<item name="resourceMetalPipe" count="3,8" prob="0.4"/>
+			<item name="resourceSpring" count="1,3" prob="0.3"/>
+			<item name="electricianSkillMagazine" count="1" prob="0.15"/>
+		</lootgroup>
+
+		<lootgroup name="frilArea7MechanicalLoot">
+			<item name="resourceMechanicalParts" count="2,5" prob="0.6"/>
+			<item name="resourceForgedSteel" count="5,10" prob="0.4"/>
+			<item name="resourceForgedIron" count="5,30" prob="0.5"/>
+			<item name="resourceLeather" count="3,5" prob="0.3"/>
+			<item name="resourceScrapPolymers" count="5,10" prob="0.35"/>
+		</lootgroup>
+
+		<lootgroup name="frilArea7VehicleParts">
+			<item name="vehicleWheels" count="1,2" prob="0.2"/>
+			<item name="carBattery" count="1" prob="0.25"/>
+			<item name="resourceMechanicalParts" count="8,15" prob="0.5"/>
+			<item name="resourceElectricParts" count="5,10" prob="0.4"/>
+			<item name="vehiclesSkillMagazine" count="1" prob="0.15"/>
+		</lootgroup>
+
+		<!-- Vehicle lottery rolls (updated: vehicle-specific IOUs, same total odds) -->
+		<lootgroup name="frilArea7VehicleRollTier1">
+			<item name="noteArea7IOU1" count="1" prob="0.50"/> <!-- Bicycle denied -->
+			<item name="vehicleBicyclePlaceable" count="1" prob="0.50"/>
+		</lootgroup>
+
+		<lootgroup name="frilArea7VehicleRollTier2">
+			<item name="noteArea7IOU1" count="1" prob="0.15"/> <!-- Bicycle denied -->
+			<item name="noteArea7IOU2" count="1" prob="0.15"/> <!-- Minibike denied -->
+			<item name="vehicleBicyclePlaceable" count="1" prob="0.35"/>
+			<item name="vehicleMinibikePlaceable" count="1" prob="0.35"/>
+		</lootgroup>
+
+		<lootgroup name="frilArea7VehicleRollTier3">
+			<item name="noteArea7IOU2" count="1" prob="0.10"/> <!-- Minibike denied -->
+			<item name="noteArea7IOU3" count="1" prob="0.10"/> <!-- Motorcycle denied -->
+			<item name="vehicleMinibikePlaceable" count="1" prob="0.30"/>
+			<item name="vehicleMotorcyclePlaceable" count="1" prob="0.50"/>
+		</lootgroup>
+
+		<lootgroup name="frilArea7VehicleRollTier4">
+			<item name="noteArea7IOU3" count="1" prob="0.075"/> <!-- Motorcycle denied -->
+			<item name="noteArea7IOU4"  count="1" prob="0.075"/> <!-- 4x4 denied  -->
+			<item name="vehicleMotorcyclePlaceable" count="1" prob="0.35"/>
+			<item name="vehicleTruck4x4Placeable" count="1" prob="0.50"/>
+		</lootgroup>
+
+		<lootgroup name="frilArea7VehicleRollTier5">
+			<item name="noteArea7IOU4"  count="1" prob="0.03"/> <!-- 4x4 denied -->
+			<item name="noteArea7IOU5" count="1" prob="0.05"/> <!-- Gyrocopter denied -->
+			<item name="vehicleMotorcyclePlaceable" count="1" prob="0.20"/>
+			<item name="vehicleTruck4x4Placeable" count="1" prob="0.30"/>
+			<item name="vehicleGyrocopterPlaceable" count="1" prob="0.40"/>
+		</lootgroup>
+
+		<!-- Airdrop tier groups - MUST be after vehicle rolls -->
+		<lootgroup name="frilArea7AirdropTier1" count="all">
+			<item name="biomeWeatherItem4" count="1"/>
+			<item group="frilArea7VehicleRollTier1" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="frilArea7AirdropTier2" count="all">
+			<item name="biomeWeatherItem4" count="1"/>
+			<item group="frilArea7VehicleRollTier2" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="frilArea7AirdropTier3" count="all">
+			<item name="biomeWeatherItem4" count="1"/>
+			<item group="frilArea7VehicleRollTier3" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="frilArea7AirdropTier4" count="all">
+			<item name="biomeWeatherItem4" count="1"/>
+			<item group="frilArea7VehicleRollTier4" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="frilArea7AirdropTier5" count="all">
+			<item name="biomeWeatherItem4" count="1"/>
+			<item group="frilArea7VehicleRollTier5" count="1"/>
+		</lootgroup>
+
+		<!-- Area 7 Toilet Loot -->
+		<lootgroup name="frilArea7ToiletLoot">
+			<item name="resourcePaper" count="1,3" prob="0.8"/>
+			<item name="drinkJarRiverWater" count="1" prob="0.05"/>
+			<item name="drugPainkillers" count="1" prob="0.01"/>
+			<item name="drugHerbalAntibiotics" count="1" prob="0.01"/>
+			<item name="meleeWpnBladeT1HuntingKnife" count="1" prob="0.05"/>			
+			<item name="gunHandgunT1Pistol" count="1" prob="0.002"/>
+		</lootgroup>
+		
+		<lootgroup name="frilArea7StrongGuaranteedParts" count="1">
+			<item group="frilArea7MechanicalLoot" count="1" prob="0.60"/>
+			<item group="frilArea7ElectricalLoot" count="1" prob="0.40"/>
+		</lootgroup>
+
+		<lootgroup name="frilArea7RegCrops" count="1">
+			<item name="plantedAloe1" count="1" prob="0.12"/>
+			<item name="plantedBlueberry1" count="1" prob="0.10"/>
+			<item name="plantedChrysanthemum1" count="1" prob="0.10"/>
+			<item name="plantedCoffee1" count="1" prob="0.06"/>
+			<item name="plantedCorn1" count="1" prob="0.10"/>
+			<item name="plantedCotton1" count="1" prob="0.10"/>
+			<item name="plantedGoldenrod1" count="1" prob="0.10"/>
+			<item name="plantedGraceCorn1" count="1" prob="0.06"/>
+			<item name="plantedHop1" count="1" prob="0.06"/>
+			<item name="plantedPotato1" count="1" prob="0.10"/>
+			<item name="plantedMushroom1" count="1" prob="0.08"/>
+			<item name="plantedYucca1" count="1" prob="0.08"/>
+			<item name="plantedPumpkin1" count="1" prob="0.04"/>
+		</lootgroup>
+
+		<lootgroup name="frilArea7NurseBonus" count="1">
+			<item name="medicalBandage" count="1" prob="0.40"/>
+			<item name="medicalFirstAidBandage" count="1" prob="0.20"/>
+			<item name="medicalFirstAidKit" count="1" prob="0.08"/>
+			<item name="drugPainkillers" count="1" prob="0.20"/>
+			<item name="drugHerbalAntibiotics" count="1" prob="0.12"/>
+		</lootgroup>
+
+		<lootgroup name="frilArea7LabBonus" count="1">
+			<item group="frilArea7ElectricalLoot" count="1" prob="0.50"/>
+			<item name="resourceGlue" count="1,2" prob="0.20"/>
+		</lootgroup>
+
+		<lootgroup name="frilArea7UtilityBonus" count="1">
+			<item group="frilArea7MechanicalLoot" count="1" prob="0.50"/>
+			<item name="resourceSpring" count="1,2" prob="0.20"/>
+		</lootgroup>
+
+		<!-- Picks one essential magazine: Electrical 101, Forge Ahead, or Vehicle Adventures -->
+		<lootgroup name="frilArea7EssentialMags" count="1">
+			<item name="electricianSkillMagazine" count="1"/>
+			<item name="workstationSkillMagazine" count="1"/>
+			<item name="vehiclesSkillMagazine" count="1"/>
+		</lootgroup>
+
+		<!-- Wrapper group for book bags: rolls both independently -->
+		<lootgroup name="frilArea7BooksAll" count="all">
+			<item group="skillMagazines" count="1,3"/>
+			<item group="frilArea7EssentialMags" count="1"/>
+		</lootgroup>
+	</insertafter>
+
+	<insertafter xpath="//lootcontainer[@name='playerBackpack']">
+		<!-- Area 7 Airdrop Containers - Tier-based vehicle lottery -->
+
+		<!-- Tier 1: 0-4 magazines (No qualifications) -->
+		<lootcontainer name="210" count="1" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="frilArea7AirdropTier1"/>
+		</lootcontainer>
+
+		<!-- Tier 2: 5-19 magazines (Bicycle certified) -->
+		<lootcontainer name="211" count="1" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="frilArea7AirdropTier2"/>
+		</lootcontainer>
+
+		<!-- Tier 3: 20-44 magazines (Motorized certified) -->
+		<lootcontainer name="212" count="1" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="frilArea7AirdropTier3"/>
+		</lootcontainer>
+
+		<!-- Tier 4: 45-69 magazines (Advanced mechanic) -->
+		<lootcontainer name="213" count="1" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="frilArea7AirdropTier4"/>
+		</lootcontainer>
+
+		<!-- Tier 5: 70+ magazines (Master mechanic - GYRO UNLOCKED!) -->
+		<lootcontainer name="214" count="1" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="frilArea7AirdropTier5"/>
+		</lootcontainer>
+
+		<lootcontainer id="Area7Medical" name="Area7Medical" count="2,4" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupMedicalAll"/>
+			<item name="resourceAcid" count="1" prob="0.08"/>
+		</lootcontainer>
+
+		<lootcontainer id="Area7Biker" name="Area7Biker" count="2,4" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupGarage01"/>
+		</lootcontainer>
+
+		<lootcontainer id="Area7Cops" name="Area7Cops" count="2,4" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="frilArea7CopsLoot"/>
+		</lootcontainer>
+
+		<lootcontainer id="Area7Tokens" name="Area7Tokens" count="2,3" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item name="casinoCoin" count="5,50"/>
+			<item group="groupFoodCommon"/>
+		</lootcontainer>
+
+		<lootcontainer id="Area7Heavy" name="Area7Heavy" count="3,5" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupConstructionCrate"/>
+			<item name="workstationSkillMagazine" count="1" prob="0.4"/>
+		</lootcontainer>
+
+		<lootcontainer id="Area7Bubbles" name="Area7Bubbles" count="2,4" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupMedicalAll"/>
+			<item name="resourceAcid" count="1" prob="0.08"/>
+		</lootcontainer>
+
+		<lootcontainer id="Area7Creepy" name="Area7Creepy" count="2,4" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="groupFoodPileCommon"/>
+		</lootcontainer>
+
+		<lootcontainer id="Area7Books" name="Area7Books" count="1" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item group="frilArea7BooksAll"/>
+		</lootcontainer>
+	</insertafter>
+
+	<!-- Override vanilla toilet loot container to use Area 7 loot -->
+	<set xpath="//lootcontainer[@name='toilet']/item[@group]/@group">frilArea7ToiletLoot</set>
+
+
+<!-- ===================== -->
+<!-- Area 7: Buff zombie bag loot only (vanilla mob-specific packs) -->
+<!-- NOTE: groupZpack* are wrapper lootgroups; use RandomRoll requirements for chance-gated extras -->
+<!-- ===================== -->
+
+<append xpath="//lootgroup[@name='groupZpackReg']">
+	<item group="groupToolsT0" count="1">
+		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+	</item>
+	<item group="groupFoodCommon" count="1">
+		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+	</item>
+	<item group="groupMedicalAll" count="1">
+		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+	</item>
+
+	<!-- Hydroponics Farming mod crops: roll at most ONE crop, low chance -->
+	<item group="frilArea7RegCrops" count="1">
+		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="12"/>
+	</item>
+</append>
+
+<append xpath="//lootgroup[@name='groupZpackStrong']">
+	<!-- Guaranteed: exactly one of Mechanical/Electrical -->
+	<item group="frilArea7StrongGuaranteedParts" count="1"/>
+
+	<!-- Extra juice for strong mobs (chance-based) -->
+	<item group="groupToolsT1" count="1">
+		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+	</item>
+	<item group="groupFoodCommon" count="1">
+		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+	</item>
+	<item group="groupMedicalAll" count="1">
+		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+	</item>
+	<item group="frilArea7VehicleParts" count="1">
+		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+	</item>
+</append>
+
+<append xpath="//lootgroup[@name='groupZpackNurse']">
+	<!-- Nurse bonus: roll ONE bonus item, not all -->
+	<item group="frilArea7NurseBonus" count="1">
+		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
+	</item>
+</append>
+
+<append xpath="//lootgroup[@name='groupZpackLab']">
+	<item group="frilArea7LabBonus" count="1">
+		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="45"/>
+	</item>
+</append>
+
+<append xpath="//lootgroup[@name='groupZpackUtility']">
+	<item group="frilArea7UtilityBonus" count="1">
+		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="45"/>
+	</item>
+</append>
+
+
+	<!-- Replace all oldCash (Duke's Casino Tokens) with casinoCoin -->
+	<set xpath="//item[@name='oldCash']/@name">casinoCoin</set>
+
+
+	<!-- vehiclesSkillMagazine in car/truck loot and toolboxes -->
+	<append xpath="//lootcontainer[@name='cars']">
+		<item name="vehiclesSkillMagazine" count="1" prob="0.2"/>
+	</append>
+	<append xpath="//lootcontainer[@name='armyTruck']">
+		<item name="vehiclesSkillMagazine" count="1" prob="0.2"/>
+	</append>
+	<append xpath="//lootcontainer[@name='farmTruck']">
+		<item name="vehiclesSkillMagazine" count="1" prob="0.2"/>
+	</append>
+	<append xpath="//lootcontainer[@name='policeCars']">
+		<item name="vehiclesSkillMagazine" count="1" prob="0.2"/>
+	</append>
+	<append xpath="//lootcontainer[@name='toolBox']">
+		<item name="vehiclesSkillMagazine" count="1" prob="0.15"/>
+	</append>
+
+	<!-- workstationSkillMagazine in broken workstations -->
+	<append xpath="//lootcontainer[@name='collapsedForge']">
+		<item name="workstationSkillMagazine" count="1"/>
+	</append>
+	<append xpath="//lootcontainer[@name='collapsedWorkbench']">
+		<item name="workstationSkillMagazine" count="1"/>
+	</append>
+	<append xpath="//lootcontainer[@name='collapsedCementMixer']">
+		<item name="workstationSkillMagazine" count="1"/>
+	</append>
+	<append xpath="//lootcontainer[@name='collapsedChemistryStation']">
+		<item name="workstationSkillMagazine" count="1"/>
+	</append>
+
+
+	<!-- Guaranteed crucible in the Area 7 military chest (cntHardenedChestSecure / T4) -->
+	<append xpath="//lootgroup[@name='groupHardenedChestT4']">
+		<item name="toolForgeCrucible" count="1"/>
+	</append>
+
+	<!-- ========================================
+	     ACID IN MEDICAL AND VEHICLE SOURCES
+	     Ensures acid is findable without the
+	     Wasteland Treasures book
+	     ======================================== -->
+
+	<!-- Acid in vanilla medical containers -->
+	<append xpath="//lootgroup[@name='groupMedicalAll']">
+		<item name="resourceAcid" count="1" loot_prob_template="veryLow"/>
+	</append>
+
+	<!-- Acid in vanilla medical piles -->
+	<append xpath="//lootgroup[@name='groupMedicalSmall01']">
+		<item name="resourceAcid" count="1" loot_prob_template="veryLow"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupMedicalSmall02']">
+		<item name="resourceAcid" count="1" loot_prob_template="veryLow"/>
+	</append>
+	<append xpath="//lootgroup[@name='groupMedicalSmall03']">
+		<item name="resourceAcid" count="1" loot_prob_template="veryLow"/>
+	</append>
+
+</configs>

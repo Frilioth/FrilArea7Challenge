@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Area 7 Challenge - Quest System
+    Author: Frilioth
+    Version: 2.1.1
+
+    MODIFICATIONS:
+    1. Area 7 Rules Message Window - Triggered when reading the rules note
+    2. Extraction Order Message Window - Triggered when player buys Extraction Order from Hugh
+-->
+<configs>
+	<append xpath="/quests">
+		<quest id="quest_Area7Rules">
+			<property name="name_key" value="area7RulesWindowTitle"/>
+			<property name="subtitle_key" value="area7RulesWindowTitle"/>
+			<property name="description_key" value="area7RulesOfferTeaser"/>
+			<property name="offer_key" value="area7RulesOfferTeaser"/>
+			<property name="icon" value="ui_game_symbol_map_city"/>
+			<property name="category_key" value="challenge"/>
+			<property name="completiontype" value="AutoComplete"/>
+			
+			<action type="ShowMessageWindow">
+				<property name="title" value="area7RulesWindowTitle"/>
+				<property name="message" value="area7RulesWindowMessage"/>
+			</action>
+		</quest>
+
+		<quest id="quest_Area7Extraction">
+			<property name="name_key" value="area7ExtractionWindowTitle"/>
+			<property name="subtitle_key" value="area7ExtractionWindowTitle"/>
+			<property name="description_key" value="area7ExtractionOfferTeaser"/>
+			<property name="offer_key" value="area7ExtractionOfferTeaser"/>
+			<property name="icon" value="ui_game_symbol_map_city"/>
+			<property name="category_key" value="challenge"/>
+			<property name="completiontype" value="AutoComplete"/>
+
+			<action type="ShowMessageWindow">
+				<property name="title" value="area7ExtractionWindowTitle"/>
+				<property name="message" value="area7ExtractionWindowMessage"/>
+			</action>
+		</quest>
+	</append>
+</configs>

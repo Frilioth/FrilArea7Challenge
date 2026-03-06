@@ -1,0 +1,7 @@
+<configs>
+  <set xpath="/item_modifiers/item_modifier/property[@name='CreativeMode']/@value">None</set>
+
+  <append xpath="/item_modifiers/item_modifier[not(property[@name='CreativeMode'])]">
+    <property name="CreativeMode" value="None"/>
+  </append>
+</configs>

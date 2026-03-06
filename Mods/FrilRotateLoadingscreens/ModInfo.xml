@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <Name value="FrilRotateLoadingScreen" />
+    <DisplayName value="Fril Rotate Loading Screen" />
+    <Version value="1.0.0" />
+    <Description value="Cycles loading screen backgrounds with fade transitions every 6 seconds" />
+    <Author value="Frilioth" />
+</xml>

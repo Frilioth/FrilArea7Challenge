@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    FrilArea7Challenge - Entity Groups
+    Author: Frilioth
+    Version: 2.1.1
+
+-->
+
+<configs>
+
+<!-- AREA 7 ZOMBIE LOOT ENHANCEMENTS -->
+<!-- Zombies in Area 7 drop more books and crafting materials -->
+
+<append xpath="/entitygroups">
+
+	<!-- Area 7 Zombie Loot Group -->
+	<!-- Add this to zombies that spawn in Area 7 bunker -->
+	<lootgroup name="frilArea7ZombieLoot">
+		
+		<!-- Skill books - 10% chance -->
+		<item name="perkElectricianElectrocutioner" count="1" prob="0.10"/>  <!-- Electrical books -->
+		<item name="perkGreaseMonkey" count="1" prob="0.05"/>  <!-- Grease Monkey books -->
+		
+		<!-- Crafting materials zombies might have -->
+		<item name="resourceElectricParts" count="1,3" prob="0.15"/>
+		<item name="resourceMechanicalParts" count="1,3" prob="0.15"/>
+		<item name="resourceDuctTape" count="1,2" prob="0.10"/>
+		<item name="resourceScrapPolymers" count="2,4" prob="0.10"/>
+		
+		<!-- Small chance for rare items -->
+		<item name="carBattery" count="1" prob="0.03"/>
+		<item name="resourceHeadlight" count="1" prob="0.05"/>
+		
+	</lootgroup>
+
+</append>
+
+<!-- APPLY LOOT TO AREA 7 ZOMBIES -->
+<!-- You'll need to add this loot group to specific zombie entities in Area 7 -->
+<!-- This is a template - actual implementation depends on which zombies spawn in Area 7 -->
+
+<append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+	<!-- Example: Add extra loot to all zombies when in Area 7 POI -->
+	<!-- Note: This is global. For POI-specific, you'd need to create custom zombie variants -->
+	<!-- 
+	<lootgroup name="frilArea7ZombieLoot" count="1"/>
+	-->
+</append>
+
+</configs>

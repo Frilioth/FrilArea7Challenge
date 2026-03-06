@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<loadingscreen>
+    <!-- 
+        JPG only - other formats cause crashing.
+        Use 3840x2560 images or they will stretch.
+        Add/remove tex entries as needed.
+    -->
+    <remove xpath="doc/backgrounds"/>
+    <append xpath="doc">
+        <backgrounds>
+            <tex file="@modfolder:/Images/LoadingScreens/1.jpg"/>
+            <tex file="@modfolder:/Images/LoadingScreens/2.jpg"/>
+            <tex file="@modfolder:/Images/LoadingScreens/3.jpg"/>
+            <tex file="@modfolder:/Images/LoadingScreens/4.jpg"/>
+            <tex file="@modfolder:/Images/LoadingScreens/5.jpg"/>
+            <tex file="@modfolder:/Images/LoadingScreens/6.jpg"/>
+            <tex file="@modfolder:/Images/LoadingScreens/7.jpg"/>
+            <tex file="@modfolder:/Images/LoadingScreens/8.jpg"/>
+            <tex file="@modfolder:/Images/LoadingScreens/9.jpg"/>
+            <tex file="@modfolder:/Images/LoadingScreens/10.jpg"/>
+            <tex file="@modfolder:/Images/LoadingScreens/11.jpg"/>
+            <tex file="@modfolder:/Images/LoadingScreens/12.jpg"/>
+            <tex file="@modfolder:/Images/LoadingScreens/13.jpg"/>
+            <tex file="@modfolder:/Images/LoadingScreens/14.jpg"/>
+            <tex file="@modfolder:/Images/LoadingScreens/15.jpg"/>
+        </backgrounds>
+    </append>
+
+    <!-- Optional: custom loading tips (add keys to Localization.txt) -->
+    <!--
+    <remove xpath="doc/tips"/>
+    <append xpath="doc">
+        <tips>
+            <tip key="loading_Area7_Tip1"/>
+            <tip key="loading_Area7_Tip2"/>
+            <tip key="loading_Area7_Tip3"/>
+        </tips>
+    </append>
+    -->
+</loadingscreen>

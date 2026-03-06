@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    FrilArea7Challenge - Entity Classes
+    Author: Frilioth
+    Version: 2.1.1
+
+-->
+
+<configs>
+	<!-- Override vanilla supply crate to use our Area 7 vehicle lottery loot -->
+	<!-- COMMENTED OUT - xpath not matching, will handle via loot container IDs instead -->
+	<!-- <set xpath="//entity_class[@name='sc_General']/property[@name='LootListOnDeath']/@value">210</set> -->zombieBoe
+
+	<append xpath="/entity_classes">
+		<!-- Area 7 Custom Supply Crates - One per tier -->
+		<entity_class name="sc_Area7_Tier1">
+			<property name="Class" value="EntitySupplyCrate"/>
+			<property name="Parent" value="SupplyCrates"/>
+			<property name="Prefab" value="SupplyCrate"/>
+			<property name="Mesh" value="@:Entities/SupplyCrate/SupplyCrateEntityPrefab.prefab"/>
+			<property name="ModelType" value="SupplyCrate"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="Weight" value="300"/>
+			<property name="ParticleOnDeath" value="supply_crate_gib_Prefab"/>
+			<property name="SoundParachuteOpen" value="SupplyDrops/Parachute_Opens"/>
+			<property name="SoundLanding" value="SupplyDrops/Supply_Crate_Land"/>
+			<property name="LootListAlive" value="210"/>
+			<property name="NavObject" value="supply_drop"/>
+			<property name="DisplayType" value="supplyDrop"/>
+			<property name="Activated" value="UseRequireHoldAction"/>
+			<property name="ActivateText" value="lblContextActionOpen"/>
+			<property name="ActivateHoldTime" value="1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+			</effect_group>
+			<property name="TimeStayAfterDeath" value="120"/>
+		</entity_class>
+
+		<entity_class name="sc_Area7_Tier2">
+			<property name="Class" value="EntitySupplyCrate"/>
+			<property name="Parent" value="SupplyCrates"/>
+			<property name="Prefab" value="SupplyCrate"/>
+			<property name="Mesh" value="@:Entities/SupplyCrate/SupplyCrateEntityPrefab.prefab"/>
+			<property name="ModelType" value="SupplyCrate"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="Weight" value="300"/>
+			<property name="ParticleOnDeath" value="supply_crate_gib_Prefab"/>
+			<property name="SoundParachuteOpen" value="SupplyDrops/Parachute_Opens"/>
+			<property name="SoundLanding" value="SupplyDrops/Supply_Crate_Land"/>
+			<property name="LootListAlive" value="211"/>
+			<property name="NavObject" value="supply_drop"/>
+			<property name="DisplayType" value="supplyDrop"/>
+			<property name="Activated" value="UseRequireHoldAction"/>
+			<property name="ActivateText" value="lblContextActionOpen"/>
+			<property name="ActivateHoldTime" value="1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+			</effect_group>
+			<property name="TimeStayAfterDeath" value="120"/>
+		</entity_class>
+
+		<entity_class name="sc_Area7_Tier3">
+			<property name="Class" value="EntitySupplyCrate"/>
+			<property name="Parent" value="SupplyCrates"/>
+			<property name="Prefab" value="SupplyCrate"/>
+			<property name="Mesh" value="@:Entities/SupplyCrate/SupplyCrateEntityPrefab.prefab"/>
+			<property name="ModelType" value="SupplyCrate"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="Weight" value="300"/>
+			<property name="ParticleOnDeath" value="supply_crate_gib_Prefab"/>
+			<property name="SoundParachuteOpen" value="SupplyDrops/Parachute_Opens"/>
+			<property name="SoundLanding" value="SupplyDrops/Supply_Crate_Land"/>
+			<property name="LootListAlive" value="212"/>
+			<property name="NavObject" value="supply_drop"/>
+			<property name="DisplayType" value="supplyDrop"/>
+			<property name="Activated" value="UseRequireHoldAction"/>
+			<property name="ActivateText" value="lblContextActionOpen"/>
+			<property name="ActivateHoldTime" value="1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+			</effect_group>
+			<property name="TimeStayAfterDeath" value="120"/>
+		</entity_class>
+
+		<entity_class name="sc_Area7_Tier4">
+			<property name="Class" value="EntitySupplyCrate"/>
+			<property name="Parent" value="SupplyCrates"/>
+			<property name="Prefab" value="SupplyCrate"/>
+			<property name="Mesh" value="@:Entities/SupplyCrate/SupplyCrateEntityPrefab.prefab"/>
+			<property name="ModelType" value="SupplyCrate"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="Weight" value="300"/>
+			<property name="ParticleOnDeath" value="supply_crate_gib_Prefab"/>
+			<property name="SoundParachuteOpen" value="SupplyDrops/Parachute_Opens"/>
+			<property name="SoundLanding" value="SupplyDrops/Supply_Crate_Land"/>
+			<property name="LootListAlive" value="213"/>
+			<property name="NavObject" value="supply_drop"/>
+			<property name="DisplayType" value="supplyDrop"/>
+			<property name="Activated" value="UseRequireHoldAction"/>
+			<property name="ActivateText" value="lblContextActionOpen"/>
+			<property name="ActivateHoldTime" value="1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+			</effect_group>
+			<property name="TimeStayAfterDeath" value="120"/>
+		</entity_class>
+
+		<entity_class name="sc_Area7_Tier5">
+			<property name="Class" value="EntitySupplyCrate"/>
+			<property name="Parent" value="SupplyCrates"/>
+			<property name="Prefab" value="SupplyCrate"/>
+			<property name="Mesh" value="@:Entities/SupplyCrate/SupplyCrateEntityPrefab.prefab"/>
+			<property name="ModelType" value="SupplyCrate"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="Weight" value="300"/>
+			<property name="ParticleOnDeath" value="supply_crate_gib_Prefab"/>
+			<property name="SoundParachuteOpen" value="SupplyDrops/Parachute_Opens"/>
+			<property name="SoundLanding" value="SupplyDrops/Supply_Crate_Land"/>
+			<property name="LootListAlive" value="214"/>
+			<property name="NavObject" value="supply_drop"/>
+			<property name="DisplayType" value="supplyDrop"/>
+			<property name="Activated" value="UseRequireHoldAction"/>
+			<property name="ActivateText" value="lblContextActionOpen"/>
+			<property name="ActivateHoldTime" value="1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+			</effect_group>
+			<property name="TimeStayAfterDeath" value="120"/>
+		</entity_class>
+
+		<!-- Other loot container entities -->
+		<entity_class name="EntityLootContainerArea7Medical" extends="EntityLootContainerRegular">
+	<property name="LootListOnDeath" value="Area7Medical" />
+	<property name="OverrideName" value="lootMedicalBag" />
+	<property name="SizeScale" value="0.9"/>
+	<property name="SoundSpawn" value="zpack_spawn"/>
+</entity_class>
+
+<entity_class name="EntityLootContainerArea7Biker" extends="EntityLootContainerRegular">
+	<property name="LootListOnDeath" value="Area7Biker" />
+	<property name="OverrideName" value="lootBikerBag" />
+	<property name="SizeScale" value="0.9"/>
+	<property name="SoundSpawn" value="zpack_spawn"/>
+</entity_class>
+
+<entity_class name="EntityLootContainerArea7Cops" extends="EntityLootContainerRegular">
+	<property name="LootListOnDeath" value="Area7Cops" />
+	<property name="OverrideName" value="lootCopsBag" />
+	<property name="SizeScale" value="0.9"/>
+	<property name="SoundSpawn" value="zpack_spawn"/>
+</entity_class>
+
+<entity_class name="EntityLootContainerArea7Tokens" extends="EntityLootContainerRegular">
+	<property name="LootListOnDeath" value="Area7Tokens" />
+	<property name="OverrideName" value="lootTokensBag" />
+	<property name="SizeScale" value="0.9"/>
+	<property name="SoundSpawn" value="zpack_spawn"/>
+</entity_class>
+
+<entity_class name="EntityLootContainerArea7Heavy" extends="EntityLootContainerRegular">
+	<property name="LootListOnDeath" value="Area7Heavy" />
+	<property name="OverrideName" value="lootHeavyBag" />
+	<property name="SizeScale" value="0.9"/>
+	<property name="SoundSpawn" value="zpack_spawn"/>
+</entity_class>
+
+<entity_class name="EntityLootContainerArea7Bubbles" extends="EntityLootContainerRegular">
+	<property name="LootListOnDeath" value="Area7Bubbles" />
+	<property name="OverrideName" value="lootHazmatBag" />
+	<property name="SizeScale" value="0.9"/>
+	<property name="SoundSpawn" value="zpack_spawn"/>
+</entity_class>
+
+<entity_class name="EntityLootContainerArea7Creepy" extends="EntityLootContainerRegular">
+	<property name="LootListOnDeath" value="Area7Creepy" />
+	<property name="OverrideName" value="lootResearcherBag" />
+	<property name="SizeScale" value="0.9"/>
+	<property name="SoundSpawn" value="zpack_spawn"/>
+</entity_class>
+
+<entity_class name="EntityLootContainerArea7Books" extends="EntityLootContainerRegular">
+	<property name="LootListOnDeath" value="Area7Books" />
+	<property name="OverrideName" value="lootBookBag" />
+	<property name="Mesh" value="@:Entities/LootContainers/backpack_vehicleDroppedPrefab.prefab"/>
+	<property name="SizeScale" value="0.75"/>
+	<property name="SoundSpawn" value="zpack_spawn"/>
+</entity_class>
+	</append>
+
+	<set xpath="//entity_class[contains(@name, 'player')]/property[contains(@name, 'ItemsOnEnterGame')]/@value">noteArea7Rules,meleeWpnBladeT1HuntingKnife,medicalFirstAidBandage,drinkJarBoiledWater,foodCanChili</set>
+	<remove xpath="//entity_class[contains(@name, 'player')]/property[@name='ItemsOnEnterGame.GameModeSurvival']"/>
+
+	<set xpath="//entity_class[@name='zombieTemplateMale']/property[@name='LootDropProb']/@value">0.1</set>
+	<set xpath="//entity_class[contains(@name, 'zombie')]/property[@name='LootDropProb']/@value">0.1</set>
+
+
+	<!-- ==========================================
+	     AREA 7 LOOT BAG ASSIGNMENTS
+	     Custom bags drop independently from vanilla
+	     yellow bags (both can drop simultaneously)
+	     Variants (Feral/Radiated/Charged/Infernal)
+	     inherit these properties automatically.
+	     ========================================== -->
+
+	<!-- MEDICAL BAG -->
+	<append xpath="//entity_class[@name='zombieNurse']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Medical"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieLab']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Medical"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+
+	<!-- BIKER BAG -->
+	<append xpath="//entity_class[@name='zombieBiker']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Biker"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieLumberjack']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Biker"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+
+	<!-- COPS BAG -->
+	<append xpath="//entity_class[@name='zombieFatCop']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Cops"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieSoldier']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Cops"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+
+	<!-- TOKENS BAG -->
+	<append xpath="//entity_class[@name='zombieBusinessMan']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Tokens"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieInmate']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Tokens"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombiePartyGirl']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Tokens"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+
+	<!-- HEAVY BAG -->
+	<append xpath="//entity_class[@name='zombieUtilityWorker']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Heavy"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieJanitor']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Heavy"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+
+	<!-- BUBBLES BAG -->
+	<append xpath="//entity_class[@name='zombieMaleHazmat']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Bubbles"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+
+	<!-- CREEPY BAG -->
+	<append xpath="//entity_class[@name='zombieScreamer']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Creepy"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieSpider']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Creepy"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+
+	<!-- BOOK BAG (generic zombies without themed bags) -->
+	<append xpath="//entity_class[@name='zombieBoe']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieJoe']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieSteve']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieMoe']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieYo']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieArlene']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieDarlene']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieMarlene']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieSkateboarder']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieFatHawaiian']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieMutated']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieFrostclaw']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieWightFeral']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieTomClark']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieBowler']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+	<append xpath="//entity_class[@name='zombieFemaleFat']">
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>
+		<property name="Area7LootDropProb" value="0.2"/>
+	</append>
+
+
+</configs>

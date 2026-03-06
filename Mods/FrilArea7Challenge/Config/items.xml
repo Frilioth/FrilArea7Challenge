@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    FrilArea7Challenge - Item Modifications
+    Author: Frilioth
+    Version: 2.1.1
+
+-->
+
+<configs>
+
+  <!-- Stop vanilla cough suppressant icon from appearing -->
+  <remove xpath="/items/item[@name='foodAtomicSmoothie']/effect_group[@name='Hazard Reducer']/triggered_effect[@action='AddBuff' and @buff='buffWasteland_Hazard_Over']"/>
+
+  <!-- Atomic Smoothie grants the 5 minute Area7 permit -->
+  <append xpath="/items/item[@name='foodAtomicSmoothie']">
+  <effect_group tiered="false" name="Area7 Radiation Permit">
+    <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffArea7RadPermit">
+      <requirement name="WornItems" tags="biomeBadge4" operation="EQ" value="0"/>
+    </triggered_effect>
+  </effect_group>
+</append>
+
+  <!-- Wearing the Biome Badge grants permit until removed -->
+  <append xpath="/items/item[@name='biomeWeatherItem4']">
+  <effect_group name="Area7 Radiation Armor Permit">
+    <triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="buffArea7RadPermit"/>
+    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffArea7RadPermitArmor"/>
+    <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffArea7RadPermitArmor"/>
+
+    <triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffArea7RadPermitArmor">
+      <requirement name="WornItems" tags="biomeBadge4" operation="GTE" value="1"/>
+    </triggered_effect>
+  </effect_group>
+</append>
+
+</configs>

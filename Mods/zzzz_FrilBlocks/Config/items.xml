@@ -1,0 +1,9 @@
+<configs>
+  <!-- Force any existing CreativeMode values to None -->
+  <set xpath="/items/item/property[@name='CreativeMode']/@value">None</set>
+
+  <!-- Add CreativeMode where it doesn't exist (works even if the item has no properties) -->
+  <append xpath="/items/item[not(property[@name='CreativeMode'])]">
+    <property name="CreativeMode" value="None"/>
+  </append>
+</configs>

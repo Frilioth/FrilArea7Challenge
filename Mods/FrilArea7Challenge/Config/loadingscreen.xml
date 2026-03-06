@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    FrilArea7Challenge - Loading Screen
+    Author: Frilioth
+    Version: 2.1.1
+
+-->
+
+<configs>
+    <remove xpath="/doc/tips/tip" />
+    <append xpath="/doc/tips">
+        <tip key="loadingTipArea71" />
+        <tip key="loadingTipArea72" />
+        <tip key="loadingTipArea73" />
+        <tip key="loadingTipArea74" />
+        <tip key="loadingTipArea75" />
+        <tip key="loadingTipArea76" />
+        <tip key="loadingTipArea77" />
+        <tip key="loadingTipArea78" />
+        <tip key="loadingTipArea79" />
+        <tip key="loadingTipArea710" />
+        <tip key="loadingTipArea711" />
+        <tip key="loadingTipArea712" />
+        <tip key="loadingTipArea713" />
+        <tip key="loadingTipArea714" />
+		<tip key="loadingTipArea715" />
+    </append>
+
+</configs>

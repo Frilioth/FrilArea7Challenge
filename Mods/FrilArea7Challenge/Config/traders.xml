@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Area 7 Challenge - Traders
+    Author: Frilioth
+    Version: 2.1.1
+
+    Overrides Trader Hugh (trader_info id="7") to sell only the Extraction Order.
+    noteArea7Extraction is defined in 0_Area7Items which loads before this parses,
+    so the item exists by the time TradersFromXml.parseItemList runs.
+
+    Hugh costs 1 duke (EconomicValue=1 on the item, override_buy_markup=1 here).
+    reset_interval="999" so his stock effectively never refreshes.
+-->
+<configs>
+    <!-- Remove Hugh's entire trader_info and replace with our custom version -->
+    <remove xpath="/traders/trader_info[@id='7']"/>
+
+    <append xpath="/traders">
+        <trader_info id="7" reset_interval="999" open_time="0:00" close_time="23:59" override_buy_markup="0">
+            <trader_items count="all">
+                <item name="noteArea7Extraction" count="1" quality="0"/>
+            </trader_items>
+        </trader_info>
+    </append>
+</configs>

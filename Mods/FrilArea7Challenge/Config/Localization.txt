@@ -1,0 +1,274 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+
+# ============================================================
+# BLOCKS & STRUCTURES
+# ============================================================
+
+frilArmyBaseGateDesc,blocks,Block,,,"Camp Frilsville security gate - LOCKED. This gate will only open once an emergency distress signal has been received and verified by base command."
+frilArmyBaseGateUnlockedDesc,blocks,Block,,,"Camp Frilsville security gate - UNLOCKED. Emergency signal received. Extraction authorized."
+
+# ============================================================
+# ITEMS - NOTES & DOCUMENTS
+# ============================================================
+
+noteArea7Rules,items,Item,,,"Area 7 Survival Guide"
+noteArea7RulesDesc,items,Item,,,"You wake at Area 7's gates. Your Fallout Flush is nearly spent - radiation surrounds the facility.
+
+Build an Emergency Transmitter. Request an airdrop. Escape to Camp Frilsville - Hugh is waiting."
+
+noteArea7IOU1,items,Item,,,"MILITARY SUPPLY REQUEST FORM"
+noteArea7IOU1Desc,items,Item,,,"REQUESTED: Bicycle - DENIED
+
+Pedal-powered vehicles insufficient for hazard zone evacuation.
+
+Supply shortage. Ground evac authorized."
+
+noteArea7IOU2,items,Item,,,"MILITARY SUPPLY REQUEST FORM"
+noteArea7IOU2Desc,items,Item,,,"REQUESTED: Minibike - DENIED
+
+Fuel reserves depleted. Motor vehicles unavailable.
+
+Supply shortage. Ground evac authorized."
+
+noteArea7IOU3,items,Item,,,"MILITARY SUPPLY REQUEST FORM"
+noteArea7IOU3Desc,items,Item,,,"REQUESTED: Motorcycle - DENIED
+
+All motorcycles allocated to Priority Alpha personnel.
+
+Supply shortage. Ground evac authorized."
+
+noteArea7IOU,items,Item,,,"MILITARY SUPPLY REQUEST FORM"
+noteArea7IOUDesc,items,Item,,,"REQUESTED: 4x4 Vehicle - DENIED
+
+Heavy transport reserved for critical cargo operations.
+
+Supply shortage. Ground evac authorized."
+
+noteArea7IOU5,items,Item,,,"MILITARY SUPPLY REQUEST FORM"
+noteArea7IOU5Desc,items,Item,,,"REQUESTED: Gyrocopter - DENIED
+
+Airspace compromised by atmospheric interference.
+
+Supply shortage. Ground evac authorized."
+
+# ============================================================
+# ITEMS - TRANSMITTER
+# ============================================================
+
+satelliteUnitLargeArea7,items,Item,,,"Emergency Transmitter"
+satelliteUnitLargeArea7Desc,items,Item,,,"A portable emergency transmitter capable of piercing the radiation interference. Activate to broadcast SOS signal to Camp Frilsville."
+
+# ============================================================
+# CHALLENGES - GROUPS
+# ============================================================
+
+challengeGroupBasicsArea7,challenges,Challenge,,,"Clear the Area"
+challengeGroupBasicsReward,challenges,Challenge,,,"Clear the ground above"
+
+challengeGroupGenerator,challenges,Challenge,,,"Build the Transmitter"
+challengeGroupGeneratorReward,challenges,Challenge,,,"Find materials to build a transmitter"
+
+challengeGroupDeploy,challenges,Challenge,,,"Deploy the Transmitter"
+challengeGroupDeployReward,challenges,Challenge,,,"Place the transmitter above ground"
+
+challengeGroupEscape,challenges,Challenge,,,"Escape"
+challengeGroupEscapeReward,challenges,Challenge,,,"It's time to leave"
+
+# ============================================================
+# CHALLENGES - INDIVIDUAL
+# ============================================================
+
+# --- Kill Zombies ---
+challengeKillZombiesArea7,challenges,Challenge,,,"Clear the Area"
+challengeKillZombiesArea7Short,challenges,Challenge,,,"Kill 10 zombies"
+challengeKillZombiesArea7Desc,challenges,Challenge,,,"The surface belongs to the dead. Zombie soldiers patrol what was once a secure perimeter. Cut through them before you descend into the facility — or they'll follow you down."
+
+# --- Gather Steel ---
+challengeGatherSteel,challenges,Challenge,,,"Gather Forged Steel"
+challengeGatherSteelShort,challenges,Challenge,,,"Collect 125 forged steel"
+challengeGatherSteelDesc,challenges,Challenge,,,"Scavenge or forge 125 forged steel. Search workbenches, tool cabinets, and construction areas throughout the bunker."
+challengeGatherSteelHint,challenges,Challenge,,,"Smelt iron in forge to make forged steel"
+
+# --- Gather Mechanical Parts ---
+challengeGatherMechanicalParts,challenges,Challenge,,,"Gather Mechanical Parts"
+challengeGatherMechanicalPartsShort,challenges,Challenge,,,"Collect 50 mechanical parts"
+challengeGatherMechanicalPartsDesc,challenges,Challenge,,,"Find 50 mechanical parts. Wrench vehicles, air conditioners, and mechanical equipment throughout the facility."
+challengeGatherMechanicalPartsHint,challenges,Challenge,,,"Wrench vehicles and machinery"
+
+# --- Gather Electrical Parts ---
+challengeGatherElectricalParts,challenges,Challenge,,,"Gather Electrical Parts"
+challengeGatherElectricalPartsShort,challenges,Challenge,,,"Collect 50 electrical parts"
+challengeGatherElectricalPartsDesc,challenges,Challenge,,,"The facility's wiring holds what you need. Pull it from computers, junction boxes, anything with a circuit."
+challengeGatherElectricalPartsHint,challenges,Challenge,,,"Wrench electronics and computers"
+
+# --- Gather Batteries ---
+challengeGatherBatteries,challenges,Challenge,,,"Gather Car Battery"
+challengeGatherBatteriesShort,challenges,Challenge,,,"Find 5 batteries"
+challengeGatherBatteriesDesc,challenges,Challenge,,,"Find 5 car batteries to power the transmitter. Search vehicles, storage rooms, and utility areas."
+challengeGatherBatteriesHint,challenges,Challenge,,,"Wrench vehicles or check storage"
+
+# --- Gather Duct Tape ---
+challengeGatherDuctTape,challenges,Challenge,,,"Gather Duct Tape"
+challengeGatherDuctTapeShort,challenges,Challenge,,,"Collect 20 duct tape"
+challengeGatherDuctTapeDesc,challenges,Challenge,,,"Twenty rolls to hold it all together. This facility ran on the stuff."
+challengeGatherDuctTapeHint,challenges,Challenge,,,"Search containers and zombies"
+
+# --- Craft Transmitter ---
+challengeCraftTransmitter,challenges,Challenge,,,"Build the Transmitter"
+challengeCraftTransmitterShort,challenges,Challenge,,,"Craft 1 transmitter"
+challengeCraftTransmitterDesc,challenges,Challenge,,,"Assemble the emergency transmitter using the materials you've gathered. Craft at a workbench."
+challengeCraftTransmitterHint,challenges,Challenge,,,"Use workbench to craft transmitter"
+
+# --- Deploy Transmitter ---
+challengeDeployTransmitter,challenges,Challenge,,,"Deployment: Point of No Return"
+challengeDeployTransmitterShort,challenges,Challenge,,,"Activate the emergency broadcast"
+challengeDeployTransmitterDesc,challenges,Challenge,,,"Place and activate the emergency transmitter.\n\nYour distress beacon will pierce the irradiated atmosphere and reach Command.\n\nBlood moon horde: 10pm tonight\nAirdrop arrival: 4am tomorrow\n\nWARNING: The signal will reactivate dormant sections of the facility.\n\nCheck your map for Camp Frilsville location."
+challengeDeployTransmitterHint,challenges,Challenge,,,"Secure a defensive position before activation"
+
+# --- Escape ---
+challengeEscapeArea7,challenges,Challenge,,,"Reach Camp Frilsville"
+challengeEscapeArea7Short,challenges,Challenge,,,"Reach safety"
+challengeEscapeArea7Desc,challenges,Challenge,,,"Make your way to Camp Frilsville by any means necessary. The gates will be unlocked because you activated the emergency signal. Find Hugh to complete your escape."
+challengeEscapeArea7Hint,challenges,Challenge,,,"Check your waypoints for Camp Frilsville"
+
+challenge_reward_500xp,challenges,Challenge,,,"500 XP + Survival Gear"
+
+# ============================================================
+# LOOT BAGS - ENTITY NAMES
+# ============================================================
+
+lootMedicalBag,Loot,,,,"Medical Supplies Bag"
+lootBikerBag,Loot,,,,"Biker's Loot Bag"
+lootCopsBag,Loot,,,,"Police Evidence Bag"
+lootTokensBag,Loot,,,,"VIP Loot Bag"
+lootHeavyBag,Loot,,,,"Heavy Equipment Bag"
+lootHazmatBag,Loot,,,,"Hazmat Supplies Bag"
+lootResearcherBag,Loot,,,,"Researcher's Remains"
+lootBookBag,Loot,,,,"Book Bag"
+
+# ============================================================
+# ENTITIES - SUPPLY CRATES
+# ============================================================
+
+sc_Area7_Tier1,EntityClass,,,,"Area 7 Supply Crate"
+sc_Area7_Tier2,EntityClass,,,,"Area 7 Supply Crate"
+sc_Area7_Tier3,EntityClass,,,,"Area 7 Supply Crate"
+sc_Area7_Tier4,EntityClass,,,,"Area 7 Supply Crate"
+sc_Area7_Tier5,EntityClass,,,,"Area 7 Supply Crate"
+
+# ============================================================
+# LOADING TIPS
+# ============================================================
+
+loadingTipArea71_title,ui,tips,,,"Area 7: The Bunker"
+loadingTipArea71,ui,tips,,,"Area 7 is a classified military bunker sealed since the outbreak. Radiation has contaminated the surrounding area."
+
+loadingTipArea72_title,ui,tips,,,"Radiation: Area outside the base"
+loadingTipArea72,ui,tips,,,"The area surrounding the base is heavily irradiated. Entering it without protection is fatal."
+
+loadingTipArea73_title,ui,tips,,,"Resources: Scavenge Smart"
+loadingTipArea73,ui,tips,,,"The bunker contains everything you need to build a transmitter. Search offices for electrical parts, vehicles for mechanical parts."
+
+loadingTipArea74_title,ui,tips,,,"Zombies: Enhanced Drops"
+loadingTipArea74,ui,tips,,,"Bunker zombies have a 10% chance to drop loot bags containing valuable supplies and a 20% chance to drop themed bags with even better rewards."
+
+loadingTipArea75_title,ui,tips,,,"Transmitter: Your Lifeline"
+loadingTipArea75,ui,tips,,,"The emergency transmitter is your only way to signal for rescue. Gather materials: steel, mechanical parts, electrical parts, battery, duct tape."
+
+loadingTipArea76_title,ui,tips,,,"Blood Moon: Signal Detected"
+loadingTipArea76,ui,tips,,,"Activating the transmitter will trigger a blood moon horde at 10pm. Be prepared to defend yourself, prepare your defences or hide. Your choice."
+
+loadingTipArea77_title,ui,tips,,,"Supply Drop: Reinforcements"
+loadingTipArea77,ui,tips,,,"Command will send a supply airdrop at 4am the day after you activate the transmitter. It contains radiation gear and potentially a vehicle."
+
+loadingTipArea78_title,ui,tips,,,"Vehicle Lottery: Magazine Progression"
+loadingTipArea78,ui,tips,,,"Your chance of receiving a vehicle in the airdrop increases with vehicle skill magazines read. 40+ magazines unlocks gyrocopter eligibility! That's 10 less than is needed to craft one yourself"
+
+loadingTipArea79_title,ui,tips,,,"Camp Frilsville: Extraction Point"
+loadingTipArea79,ui,tips,,,"Camp Frilsville is the extraction point. Check your map waypoint after transmitter activation. Hugh will be there with your extraction paperwork."
+
+loadingTipArea710_title,ui,tips,,,"Hugh: Your Contact"
+loadingTipArea710,ui,tips,,,"Hugh at Camp Frilsville is your extraction contact. Reach him to complete the challenge and escape Area 7."
+
+loadingTipArea711_title,ui,tips,,,"Progression: Read Everything"
+loadingTipArea711,ui,tips,,,"Magazines are your key to better equipment. Read every book you find — vehicle mags determine your airdrop vehicle tier."
+
+loadingTipArea712_title,ui,tips,,,"Crafting: The Forge"
+loadingTipArea712,ui,tips,,,"You'll need a forge to smelt forged steel for the transmitter. Build one early — it's essential."
+
+loadingTipArea713_title,ui,tips,,,"Loot: Military Chest"
+loadingTipArea713,ui,tips,,,"The hardened military chest at the end of the bunker always contains a crucible. You'll need it to smelt Iron into Steel."
+
+loadingTipArea714_title,ui,tips,,,"The Goal: Survive and Escape"
+loadingTipArea714,ui,tips,,,"Reach Hugh at Camp Frilsville to complete your escape. Good luck, survivor."
+
+loadingTipArea715_title,ui,tips,,,"Mission Debrief"
+loadingTipArea715,ui,tips,,,"Your mission stats are saved after each run. View your debrief at Mods/FrilArea7Challenge/stats/Area7_Debrief.html"
+
+# ============================================================
+# UI & MENU
+# ============================================================
+
+respawnTitleMessage,UI,Respawn Window,x,,READY TO WAKE UP IN AREA 7?
+lblSpawn,UI,Spawn Menu,x,,Enter Area 7
+lblSpawnRandom,UI,Spawn Menu,x,,This is how you died...
+lblSpawnNearBedroll,UI,Spawn Menu,x,,Wake up near your bunk
+lblSpawnOnBedroll,UI,Spawn Menu,x,,Wake up in your bunk
+lblSpawnNearBackpack,UI,Spawn Menu,x,,Crawl back to your gear
+
+# ============================================================
+# GAME OPTIONS
+# ============================================================
+
+goAirDropFrequency,UI,Menu,x,,Air Drops ([ff0000]DISABLED[-])
+goAirDropFrequencyDesc,UI,Menu,x,,"Set to DISABLED. Vanilla airdrops cannot be reached in the Area 7 Challenge."
+
+goBiomeProgression,UI,Menu,,,Biome Progression ([ff0000]OFF[-])
+goBiomeProgressionDesc,UI,Menu,,,"Set to ON. Required for Area 7 Challenge to work properly."
+
+goLootRespawnDays,UI,Menu,x,,Loot Respawn ([00ff00]5 Days[-])
+goLootRespawnDaysDesc,UI,Menu,x,,"The number of days for loot to respawn if there is no one around.\n\nSelect anything except [00ff00]Disabled[-]."
+
+goGameWorld,UI,Menu,x,,Choose Area 7 (Biome)
+goGameWorldDesc,UI,Menu,x,,Choose Area 7 Challenge and the world you want to play on.
+
+# ============================================================
+# VERSION INFO & POI NAMES
+# ============================================================
+
+
+Area7_Challenge,blocks,POI,,,"Area 7 Military Base"
+Fril_Area7_Challenge_Army_Base,blocks,POI,,,"Camp Frilsville"
+
+# Area 7 Rules Message Window
+area7RulesWindowTitle,UI,,,,"AREA 7 - SURVIVAL PROTOCOL"
+area7RulesWindowMessage,UI,,,,"Welcome to Area 7.\n\nYou've made it through the gates and regained consciousness just as your radiation protection wears off. The surrounding area is [cd5c5c]lethally irradiated[-] and entering it without protection means [cd5c5c]DEATH[-]. The facility is your only safe zone.\n\nThis was a top-secret military research facility. God knows what they were researching or what samples are loose inside now.\n\nComplete challenges to unlock equipment. Deploy the emergency transmitter to call for extraction - this triggers a [cd5c5c]massive blood moon horde[-] and awakens some [cd5c5c]Zombies in the Bunker[-]. An airdrop arrives at [cd5c5c]first light[-] with your extraction vehicle and Radiation Respirator. You can always make a smoothie if you don't want to wait.\n\nYour vehicle depends on your qualifications. Read magazines and level Grease Monkey. You might get [cd5c5c]nothing but an IOU[-] - craft your own as backup.\n\nCamp Frilsville is out there. Deploy the transmitter and coordinates appear on your map. Hugh has your extraction paperwork. Find him at Camp Frilsville.\n\nYou're a survivor who got lucky. [cd5c5c]Make it count.[-]"
+area7RulesOfferTeaser,UI,,,,"You've reached Area 7, a top-secret facility now lost to the outbreak. Complete challenges, deploy the transmitter, survive the horde, and escape.\n\nAccept to read the full briefing."
+
+noteArea7Extraction,items,Item,,,"Extraction Order"
+noteArea7ExtractionDesc,items,Item,,,"Official extraction authorisation issued by Northern Command. Operation Exodus is underway."
+
+area7ExtractionWindowTitle,UI,,,,"OPERATION EXODUS - EXTRACTION CONFIRMED - CHALLENGE COMPLETED"
+area7ExtractionWindowMessage,UI,,,,"[cd5c5c]CLASSIFIED - EYES ONLY[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]CHALLENGE STATUS: COMPLETE[-]\nSURVIVOR EXTRACTED SUCCESSFULLY.\nAREA 7 PROTOCOL CONCLUDED.\n\nYou endured the irradiated zone, cleared the facility,\nand held the line on blood moon. Not many do.\n\n[7fff00]WELL DONE, SURVIVOR.[-]\n[cd5c5c]AREA 7 IS BEHIND YOU.[-]\n\n[ff8c00]Mission debrief saved to:[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]"
+area7ExtractionOfferTeaser,UI,,,,"Extraction authorised. Northern Command is en route. Read your orders."
+plantedAloe1,items,Item,,,Aloe Vera Seeds
+plantedBlueberry1,items,Item,,,Blueberry Seeds
+plantedChrysanthemum1,items,Item,,,Chrysanthemum Seeds
+plantedCoffee1,items,Item,,,Coffee Seeds
+plantedCorn1,items,Item,,,Corn Seeds
+plantedCotton1,items,Item,,,Cotton Seeds
+plantedGoldenrod1,items,Item,,,Goldenrod Seeds
+plantedGraceCorn1,items,Item,,,Super Corn Seeds
+plantedHop1,items,Item,,,Hop Seeds
+plantedMushroom1,items,Item,,,Mushroom Spores
+plantedPotato1,items,Item,,,Potato Seeds
+plantedPumpkin1,items,Item,,,Pumpkin Seeds
+plantedYucca1,items,Item,,,Yucca Seeds
+
+
+posterProstateDesc,blocks,blocks,,,"Hospital poster \n\nCheck your Prostate."
+posterProstate,blocks,blocks,,,Prostate Poster
+posterARUKDesc,blocks,blocks,,,"Hospital poster \n\nARUK."
+posterProstate,blocks,blocks,,,ARUK Poster
+posterProstateDesc,blocks,blocks,,,"Hospital poster \n\nARUK1."
+posterProstate,blocks,blocks,,,ARUK1 Poster
