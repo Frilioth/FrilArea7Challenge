@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Servers>
+    <ServerGroup Name="Area 7 Challenge" Logo="" Description="Survive a military research facility surrounded by lethal radiation. Build a transmitter, survive the horde, and escape.">
+        <Server Name="Area 7 Challenge" Logo="">
+            <Description>
+                Area 7 Challenge — A self-contained survival challenge mod for 7 Days to Die (V2.6)
+
+                You wake up inside a top-secret military research facility surrounded by lethal radiation. Your only goal: clear the facility, build an emergency transmitter, survive a blood moon horde, and escape to Camp Frilsville before the facility kills you.
+
+                Death is permanent. If you die, your run is over.
+
+                FEATURES:
+
+                4-phase challenge tracked through the in-game challenge journal.
+                Custom POI — a fully built military research facility with sleeper volumes, loot, and progression.
+                Tiered airdrop system — your vehicle reward depends on how many magazines you've read.
+                8 themed zombie loot bag types (Medical, Heavy, Hazmat, Books, Police, Researcher, Biker, VIP).
+                Custom crafting — Emergency Transmitter, simplified Car Battery, craftable Acid, Engine recipe.
+                Permadeath system — lethal radiation zone prevents re-entry after death.
+                Blood moon horde — triggered when you deploy the transmitter.
+                Mission debrief — detailed HTML stats page generated after every run.
+
+                RECOMMENDED SETTINGS:
+
+                Air Drops: Disabled
+                Loot Respawn: 5 days
+                Biome Progression: Off
+
+                EAC must be disabled.
+
+                Created by Frilioth
+                Twitch: twitch.tv/frilioth
+            </Description>
+
+            <Version>2.1.1</Version>
+            <EAC>Disabled</EAC>
+            <Discord></Discord>
+            <Donate></Donate>
+            <DownloadMode>Clone</DownloadMode>
+            <Downloads>
+                <Download>https://github.com/Frilioth/FrilArea7Challenge</Download>
+            </Downloads>
+
+        </Server>
+    </ServerGroup>
+</Servers>
