@@ -1,0 +1,15 @@
+# Area 7 Challenge — Named Zombies
+# Format: PlayerName=ZombieType
+# 
+# Players who complete the challenge can have a zombie named after them.
+# The zombie type must match the localized name shown on the health bar.
+#
+# Examples of zombie types:
+# Soldier, Janitor, Nurse, Lab Worker, Hazmat, Utility Worker,
+# Spider, Arlene, Moe, Joe, Yo, Boe, Businessman, Party Girl,
+# Lumberjack, Mutated, Burnt, Cop, Crawler, Demolition, Thug
+#
+# Not all zombies of that type will be renamed — roughly 1 in 3 will
+# show the completer's name, the rest keep their default name.
+
+Frilioth=Soldier
