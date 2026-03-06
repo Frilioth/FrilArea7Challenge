@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<Name value="Fril_Pickup_Workstations_and_Collectors"/>
+	<DisplayName value="Frils Workstation and Collector Pick Up (v2.5)" />
+	<Version value="2.0.1"/>
+	<Description value="Adds a Pick Up radial option to vanilla workstations and collectors, like being inside a land claim."/>
+	<Author value="Frilioth"/>
+	<Website value=""/>
+</xml>
