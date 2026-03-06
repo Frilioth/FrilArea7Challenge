@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ModInfo>
+	<Name value="0_Area7Items"/>
+	<DisplayName value="Area 7 Item Definitions"/>
+	<Description value="Defines Area 7 custom items. Loads before FrilArea7Challenge so items exist when traders.xml parses. Required companion mod for FrilArea7Challenge."/>
+	<Author value="Frilioth"/>
+	<Version value="1.2.0"/>
+</ModInfo>
