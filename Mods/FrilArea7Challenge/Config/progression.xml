@@ -3,7 +3,7 @@
 <!--
 	Area 7 Challenge - Progression Modifications
 	Author: Frilioth
-	Version: 2.1.3
+	Version: 2.1.5
 	
 	MODIFICATIONS:
 	- Cap crafting skill magazines at level 50 (down from 75/100)
@@ -134,6 +134,19 @@
 	<set xpath="//crafting_skill[@name='craftingRobotics']/display_entry[@item='gunBotT2JunkTurret']/@unlock_level">25,30,35,40,45,50</set>
 	<set xpath="//crafting_skill[@name='craftingRobotics']/display_entry[@item='gunBotT3JunkDrone']/@unlock_level">50,50,50,50,50,50</set>
 	
+	<!-- Update robotics CraftingTier to match display entries -->
+	<!-- Without these, quality tiers stay at vanilla levels even though display shows new values -->
+	<!-- Pipe Baton CraftingTier (index 6): vanilla 2,4,6,8,10,100 → 4,8,12,16,20,50 -->
+	<set xpath="//crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[6]/@level">4,8,12,16,20,50</set>
+	<!-- Robotic Sledge CraftingTier (index 7): vanilla 13,16,19,22,25,100 → 8,12,16,20,25,50 -->
+	<set xpath="//crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[7]/@level">8,12,16,20,25,50</set>
+	<!-- Stun Baton CraftingTier (index 8): vanilla 30,35,40,45,50,100 → 15,20,25,30,35,50 -->
+	<set xpath="//crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[8]/@level">15,20,25,30,35,50</set>
+	<!-- Robotic Turret CraftingTier (index 9): vanilla 55,60,65,70,75,100 → 30,35,40,45,50,50 -->
+	<set xpath="//crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[9]/@level">30,35,40,45,50,50</set>
+	<!-- Robotic Drone CraftingTier (index 10): vanilla 80,85,90,95,100 → 50,50,50,50,50 -->
+	<set xpath="//crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[10]/@level">50,50,50,50,50</set>
+	
 	<!-- Move Chemistry Station from T4 (50 books) to T2 (20 books) in workstations -->
 	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[@tags='chemistryStation']/@level">20,50</set>
 	<!-- Remove from T4 display_entry -->
@@ -150,5 +163,46 @@
 	</append>
 	
 	<!-- Note: All crafting skills now capped at 50 -->
+	
+	<!-- ============================================ -->
+	<!-- Cap Medical Crafting (craftingMedical) at 50 -->
+	<!-- ============================================ -->
+	<!-- Vanilla: 75. New progression:                -->
+	<!--   5: Bandage, 8: Fort Bites,                 -->
+	<!--   15: Plaster Cast, 20: First Aid Kit,       -->
+	<!--   25: Herbal Antibiotics, 30: Recog,         -->
+	<!--   40: Antibiotics, 50: Steroids              -->
+	<set xpath="//crafting_skill[@name='craftingMedical']/@max_level">50</set>
+	
+	<!-- Stop medical magazines from dropping after level 50 -->
+	<set xpath="//perk[@name='perkPhysician']/effect_group/passive_effect[@tags='medicalCSM']/requirement[@operation='LT']/@value">50</set>
+	<set xpath="//perk[@name='perkPhysician']/effect_group/passive_effect[@tags='medicalCSM']/requirement[@operation='Equals']/@value">50</set>
+	
+	<!-- Update recipe unlocks -->
+	<!-- Bandage (index 1): 5 → 5 -->
+	<set xpath="//crafting_skill[@name='craftingMedical']/effect_group/passive_effect[1]/@level">5,50</set>
+	<!-- Fort Bites (index 2): 10 → 8 -->
+	<set xpath="//crafting_skill[@name='craftingMedical']/effect_group/passive_effect[2]/@level">8,50</set>
+	<!-- Plaster Cast (index 3): 20 → 15 -->
+	<set xpath="//crafting_skill[@name='craftingMedical']/effect_group/passive_effect[3]/@level">15,50</set>
+	<!-- Herbal Antibiotics (index 4): 30 → 25 -->
+	<set xpath="//crafting_skill[@name='craftingMedical']/effect_group/passive_effect[4]/@level">25,50</set>
+	<!-- Recog (index 5): 40 → 30 -->
+	<set xpath="//crafting_skill[@name='craftingMedical']/effect_group/passive_effect[5]/@level">30,50</set>
+	<!-- First Aid Kit (index 6): 50 → 20 -->
+	<set xpath="//crafting_skill[@name='craftingMedical']/effect_group/passive_effect[6]/@level">20,50</set>
+	<!-- Antibiotics (index 7): 60 → 40 -->
+	<set xpath="//crafting_skill[@name='craftingMedical']/effect_group/passive_effect[7]/@level">40,50</set>
+	<!-- Steroids (index 8): 75 → 50 -->
+	<set xpath="//crafting_skill[@name='craftingMedical']/effect_group/passive_effect[8]/@level">50,50</set>
+	
+	<!-- Update T1 display: Bandage(5), Fort Bites(8) -->
+	<set xpath="//crafting_skill[@name='craftingMedical']/display_entry[@name_key='medicalT1-1,medicalT1-2']/@unlock_level">5,8</set>
+	
+	<!-- Update T2 display: Plaster Cast(15), Herbal Antibiotics(25), Recog(30) -->
+	<set xpath="//crafting_skill[@name='craftingMedical']/display_entry[@name_key='medicalT2-1,medicalT2-2,medicalT2-3']/@unlock_level">15,25,30</set>
+	
+	<!-- Update T3 display: First Aid Kit(20), Antibiotics(40), Steroids(50) -->
+	<set xpath="//crafting_skill[@name='craftingMedical']/display_entry[@name_key='medicalT3-1,medicalT3-2,medicalT3-3']/@unlock_level">20,40,50</set>
 
 </configs>

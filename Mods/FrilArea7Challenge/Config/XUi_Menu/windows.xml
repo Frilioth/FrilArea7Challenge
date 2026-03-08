@@ -3,12 +3,15 @@
 <!--
 	Area 7 Challenge
 	Author: Frilioth
-	Version: 2.0.0
+	Version: 2.1.5
 -->
 
 <configs>
 	<!-- Area 7 custom menu background -->
 	<set xpath="/windows/window[@name='menuBackground']/texture[@name='bgTexture']/@texture">@modfolder:UIAtlases/ItemIconAtlas/background.jpg</set>
+
+	<!-- Hide the 7 Days to Die logo on the main menu -->
+	<remove xpath="/windows/window[@name='mainMenuLogo']/texture[@name='gameLogo']"/>
 
 	<!-- NEW GAME MENU - Hide irrelevant options -->
 	<remove xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/rect/grid/gameoption[@name='XPMultiplier']" />
