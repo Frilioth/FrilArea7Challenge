@@ -1,0 +1,11 @@
+modVersion=2.2.1
+startWorldTime=7001
+startLevel=1
+zombieKills=1
+totalBagsDropped=0
+airdropTier=None
+highestInfection=1.7341
+highestGamestage=1
+airdropCrateEntityId=-1
+weapon:Hunting Knife=1
+zombie:Soldier=1
