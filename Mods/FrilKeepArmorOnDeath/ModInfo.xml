@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+    <Name value="FrilKeepArmorOnDeath" />
+    <DisplayName value="Keep Armor On Death" />
+    <Version value="2.0.4" />
+    <Description value="Keeps armour visible on the player model during the death animation instead of showing the player naked." />
+    <Author value="Frilioth" />
+    <Website value="https://twitch.tv/frilioth" />
+</xml>
