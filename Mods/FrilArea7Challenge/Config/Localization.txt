@@ -1,51 +1,117 @@
-Key,File,Type,UsedInMainMenu,NoTranslate,english
+Key,File,Type,UsedInMainMenu,NoTranslate,english,french,german,spanish
 
 # ============================================================
 # BLOCKS & STRUCTURES
 # ============================================================
 
-frilArmyBaseGateDesc,blocks,Block,,,"Camp Frilsville security gate - LOCKED. This gate will only open once an emergency distress signal has been received and verified by base command."
-frilArmyBaseGateUnlockedDesc,blocks,Block,,,"Camp Frilsville security gate - UNLOCKED. Emergency signal received. Extraction authorized."
+frilArmyBaseGateDesc,blocks,Block,,,Camp Frilsville security gate - LOCKED. This gate will only open once an emergency distress signal has been received and verified by base command.,Porte de sécurité du Camp Frilsville - VERROUILLÉE. Cette porte ne s'ouvrira qu'après réception et vérification d'un signal de détresse par le commandement.,Sicherheitstor von Camp Frilsville - GESPERRT. Dieses Tor öffnet sich erst nach Empfang und Bestätigung eines Notrufsignals durch die Basisleitung.,Puerta de seguridad del Campamento Frilsville - BLOQUEADA. Esta puerta solo se abrirá cuando el mando base haya recibido y verificado una señal de emergencia.
+frilArmyBaseGateUnlockedDesc,blocks,Block,,,Camp Frilsville security gate - UNLOCKED. Emergency signal received. Extraction authorized.,Porte de sécurité du Camp Frilsville - DÉVERROUILLÉE. Signal d'urgence reçu. Extraction autorisée.,Sicherheitstor von Camp Frilsville - ENTRIEGELT. Notsignal empfangen. Evakuierung genehmigt.,Puerta de seguridad del Campamento Frilsville - DESBLOQUEADA. Señal de emergencia recibida. Extracción autorizada.
 
 # ============================================================
 # ITEMS - NOTES & DOCUMENTS
 # ============================================================
 
-noteArea7Rules,items,Item,,,"Area 7 Survival Guide"
-noteArea7RulesDesc,items,Item,,,"You wake at Area 7's gates. Your Fallout Flush is nearly spent - radiation surrounds the facility.
+noteArea7Rules,items,Item,,,Area 7 Survival Guide,Guide de Survie Zone 7,Überlebenshandbuch Bereich 7,Guía de Supervivencia Zona 7
+noteArea7RulesDesc,items,Item,,,You wake at Area 7's gates. Your Fallout Flush is nearly spent - radiation surrounds the facility.,"Vous vous réveillez aux portes de la Zone 7. Votre Neutralisant de Radiation est presque épuisé - la radiation entoure l'installation.
+
+Construisez un Transmetteur d'Urgence. Demandez un largage aérien. Fuyez vers le Camp Frilsville - Hugh vous attend.","Du erwachst vor den Toren von Bereich 7. Dein Strahlenschutz ist fast aufgebraucht - Strahlung umgibt die Anlage.
+
+Baue einen Notsender. Fordere einen Luftabwurf an. Fliehe zum Camp Frilsville - Hugh wartet.","Despiertas en las puertas de la Zona 7. Tu protección radiológica está casi agotada - la radiación rodea la instalación.
+
+Construye un Transmisor de Emergencia. Solicita un suministro aéreo. Escapa al Campamento Frilsville - Hugh te espera."
 
 Build an Emergency Transmitter. Request an airdrop. Escape to Camp Frilsville - Hugh is waiting."
 
-noteArea7IOU1,items,Item,,,"MILITARY SUPPLY REQUEST FORM"
-noteArea7IOU1Desc,items,Item,,,"REQUESTED: Bicycle - DENIED
+noteArea7IOU1,items,Item,,,MILITARY SUPPLY REQUEST FORM,FORMULAIRE DE DEMANDE DE RAVITAILLEMENT,MILITÄRISCHES VERSORGUNGSANFORDERUNGSFORMULAR,FORMULARIO DE SOLICITUD DE SUMINISTROS MILITARES
+noteArea7IOU1Desc,items,Item,,,REQUESTED: Bicycle - DENIED,"DEMANDÉ : Vélo - REFUSÉ
+
+Véhicules à pédales insuffisants pour évacuation de zone dangereuse.
+
+Pénurie de ravitaillement. Évacuation terrestre autorisée.","ANGEFORDERT: Fahrrad - ABGELEHNT
+
+Tretfahrzeuge unzureichend für Evakuierung aus Gefahrenzone.
+
+Versorgungsengpass. Bodenräumung genehmigt.","SOLICITADO: Bicicleta - DENEGADO
+
+Vehículos a pedal insuficientes para evacuación de zona peligrosa.
+
+Escasez de suministros. Evacuación terrestre autorizada."
 
 Pedal-powered vehicles insufficient for hazard zone evacuation.
 
 Supply shortage. Ground evac authorized."
 
-noteArea7IOU2,items,Item,,,"MILITARY SUPPLY REQUEST FORM"
-noteArea7IOU2Desc,items,Item,,,"REQUESTED: Minibike - DENIED
+noteArea7IOU2,items,Item,,,MILITARY SUPPLY REQUEST FORM,FORMULAIRE DE DEMANDE DE RAVITAILLEMENT,MILITÄRISCHES VERSORGUNGSANFORDERUNGSFORMULAR,FORMULARIO DE SOLICITUD DE SUMINISTROS MILITARES
+noteArea7IOU2Desc,items,Item,,,REQUESTED: Minibike - DENIED,"DEMANDÉ : Mini-moto - REFUSÉ
+
+Réserves de carburant épuisées. Véhicules motorisés indisponibles.
+
+Pénurie de ravitaillement. Évacuation terrestre autorisée.","ANGEFORDERT: Minibike - ABGELEHNT
+
+Treibstoffreserven erschöpft. Motorfahrzeuge nicht verfügbar.
+
+Versorgungsengpass. Bodenräumung genehmigt.","SOLICITADO: Minimoto - DENEGADO
+
+Reservas de combustible agotadas. Vehículos motorizados no disponibles.
+
+Escasez de suministros. Evacuación terrestre autorizada."
 
 Fuel reserves depleted. Motor vehicles unavailable.
 
 Supply shortage. Ground evac authorized."
 
-noteArea7IOU3,items,Item,,,"MILITARY SUPPLY REQUEST FORM"
-noteArea7IOU3Desc,items,Item,,,"REQUESTED: Motorcycle - DENIED
+noteArea7IOU3,items,Item,,,MILITARY SUPPLY REQUEST FORM,FORMULAIRE DE DEMANDE DE RAVITAILLEMENT,MILITÄRISCHES VERSORGUNGSANFORDERUNGSFORMULAR,FORMULARIO DE SOLICITUD DE SUMINISTROS MILITARES
+noteArea7IOU3Desc,items,Item,,,REQUESTED: Motorcycle - DENIED,"DEMANDÉ : Moto - REFUSÉ
+
+Toutes les motos attribuées au personnel Priorité Alpha.
+
+Pénurie de ravitaillement. Évacuation terrestre autorisée.","ANGEFORDERT: Motorrad - ABGELEHNT
+
+Alle Motorräder dem Personal der Prioritätsstufe Alpha zugewiesen.
+
+Versorgungsengpass. Bodenräumung genehmigt.","SOLICITADO: Motocicleta - DENEGADO
+
+Todas las motocicletas asignadas al personal de Prioridad Alfa.
+
+Escasez de suministros. Evacuación terrestre autorizada."
 
 All motorcycles allocated to Priority Alpha personnel.
 
 Supply shortage. Ground evac authorized."
 
-noteArea7IOU,items,Item,,,"MILITARY SUPPLY REQUEST FORM"
-noteArea7IOUDesc,items,Item,,,"REQUESTED: 4x4 Vehicle - DENIED
+noteArea7IOU,items,Item,,,MILITARY SUPPLY REQUEST FORM,FORMULAIRE DE DEMANDE DE RAVITAILLEMENT,MILITÄRISCHES VERSORGUNGSANFORDERUNGSFORMULAR,FORMULARIO DE SOLICITUD DE SUMINISTROS MILITARES
+noteArea7IOUDesc,items,Item,,,REQUESTED: 4x4 Vehicle - DENIED,"DEMANDÉ : Véhicule 4x4 - REFUSÉ
+
+Transport lourd réservé aux opérations de fret critique.
+
+Pénurie de ravitaillement. Évacuation terrestre autorisée.","ANGEFORDERT: 4x4-Fahrzeug - ABGELEHNT
+
+Schwertransport für kritische Frachtoperationen reserviert.
+
+Versorgungsengpass. Bodenräumung genehmigt.","SOLICITADO: Vehículo 4x4 - DENEGADO
+
+Transporte pesado reservado para operaciones de carga crítica.
+
+Escasez de suministros. Evacuación terrestre autorizada."
 
 Heavy transport reserved for critical cargo operations.
 
 Supply shortage. Ground evac authorized."
 
-noteArea7IOU5,items,Item,,,"MILITARY SUPPLY REQUEST FORM"
-noteArea7IOU5Desc,items,Item,,,"REQUESTED: Gyrocopter - DENIED
+noteArea7IOU5,items,Item,,,MILITARY SUPPLY REQUEST FORM,FORMULAIRE DE DEMANDE DE RAVITAILLEMENT,MILITÄRISCHES VERSORGUNGSANFORDERUNGSFORMULAR,FORMULARIO DE SOLICITUD DE SUMINISTROS MILITARES
+noteArea7IOU5Desc,items,Item,,,REQUESTED: Gyrocopter - DENIED,"DEMANDÉ : Gyrocoptère - REFUSÉ
+
+Espace aérien compromis par des interférences atmosphériques.
+
+Pénurie de ravitaillement. Évacuation terrestre autorisée.","ANGEFORDERT: Gyrokopter - ABGELEHNT
+
+Luftraum durch atmosphärische Störungen beeinträchtigt.
+
+Versorgungsengpass. Bodenräumung genehmigt.","SOLICITADO: Girocóptero - DENEGADO
+
+Espacio aéreo comprometido por interferencias atmosféricas.
+
+Escasez de suministros. Evacuación terrestre autorizada."
 
 Airspace compromised by atmospheric interference.
 
@@ -55,220 +121,220 @@ Supply shortage. Ground evac authorized."
 # ITEMS - TRANSMITTER
 # ============================================================
 
-satelliteUnitLargeArea7,items,Item,,,"Emergency Transmitter"
-satelliteUnitLargeArea7Desc,items,Item,,,"A portable emergency transmitter capable of piercing the radiation interference. Activate to broadcast SOS signal to Camp Frilsville."
+satelliteUnitLargeArea7,items,Item,,,Emergency Transmitter,Transmetteur d'Urgence,Notsender,Transmisor de Emergencia
+satelliteUnitLargeArea7Desc,items,Item,,,A portable emergency transmitter capable of piercing the radiation interference. Activate to broadcast SOS signal to Camp Frilsville.,Un transmetteur d'urgence portable capable de percer les interférences radioactives. Activez-le pour diffuser un signal SOS vers le Camp Frilsville.,"Ein tragbarer Notsender, der die Strahlungsinterferenz durchdringen kann. Aktivieren, um ein SOS-Signal an Camp Frilsville zu senden.",Un transmisor de emergencia portátil capaz de penetrar la interferencia radiactiva. Actívalo para emitir una señal SOS al Campamento Frilsville.
 
 # ============================================================
 # CHALLENGES - GROUPS
 # ============================================================
 
-challengeGroupBasicsArea7,challenges,Challenge,,,"Clear the Area"
-challengeGroupBasicsReward,challenges,Challenge,,,"Clear the ground above"
+challengeGroupBasicsArea7,challenges,Challenge,,,Clear the Area,Sécuriser la Zone,Bereich Säubern,Despejar la Zona
+challengeGroupBasicsReward,challenges,Challenge,,,Clear the ground above,Sécurisez la surface,Säubere die Oberfläche,Despeja la superficie
 
-challengeGroupGenerator,challenges,Challenge,,,"Build the Transmitter"
-challengeGroupGeneratorReward,challenges,Challenge,,,"Find materials to build a transmitter"
+challengeGroupGenerator,challenges,Challenge,,,Build the Transmitter,Construire le Transmetteur,Den Sender Bauen,Construir el Transmisor
+challengeGroupGeneratorReward,challenges,Challenge,,,Find materials to build a transmitter,Trouvez les matériaux pour construire un transmetteur,Finde Materialien zum Bau eines Senders,Encuentra materiales para construir un transmisor
 
-challengeGroupDeploy,challenges,Challenge,,,"Deploy the Transmitter"
-challengeGroupDeployReward,challenges,Challenge,,,"Place the transmitter above ground"
+challengeGroupDeploy,challenges,Challenge,,,Deploy the Transmitter,Déployer le Transmetteur,Den Sender Einsetzen,Desplegar el Transmisor
+challengeGroupDeployReward,challenges,Challenge,,,Place the transmitter above ground,Placez le transmetteur en surface,Platziere den Sender über der Erde,Coloca el transmisor en la superficie
 
-challengeGroupEscape,challenges,Challenge,,,"Escape"
-challengeGroupEscapeReward,challenges,Challenge,,,"It's time to leave"
+challengeGroupEscape,challenges,Challenge,,,Escape,Évasion,Flucht,Escapar
+challengeGroupEscapeReward,challenges,Challenge,,,It's time to leave,Il est temps de partir,Es ist Zeit zu gehen,Es hora de irse
 
 # ============================================================
 # CHALLENGES - INDIVIDUAL
 # ============================================================
 
 # --- Kill Zombies ---
-challengeKillZombiesArea7,challenges,Challenge,,,"Clear the Area"
-challengeKillZombiesArea7Short,challenges,Challenge,,,"Kill 10 zombies"
-challengeKillZombiesArea7Desc,challenges,Challenge,,,"The surface belongs to the dead. Zombie soldiers patrol what was once a secure perimeter. Cut through them before you descend into the facility — or they'll follow you down."
+challengeKillZombiesArea7,challenges,Challenge,,,Clear the Area,Sécuriser la Zone,Bereich Säubern,Despejar la Zona
+challengeKillZombiesArea7Short,challenges,Challenge,,,Kill 10 zombies,Tuez 10 zombies,Töte 10 Zombies,Mata 10 zombis
+challengeKillZombiesArea7Desc,challenges,Challenge,,,The surface belongs to the dead. Zombie soldiers patrol what was once a secure perimeter. Cut through them before you descend into the facility — or they'll follow you down.,La surface appartient aux morts. Des soldats zombies patrouillent ce qui était autrefois un périmètre sécurisé. Éliminez-les avant de descendre dans l'installation — ou ils vous suivront.,"Die Oberfläche gehört den Toten. Zombie-Soldaten patrouillieren den ehemals gesicherten Bereich. Kämpfe dich durch, bevor du in die Anlage hinabsteigst — sonst folgen sie dir.",La superficie pertenece a los muertos. Soldados zombis patrullan lo que antes era un perímetro seguro. Elimínalos antes de descender a la instalación — o te seguirán.
 
 # --- Gather Steel ---
-challengeGatherSteel,challenges,Challenge,,,"Gather Forged Steel"
-challengeGatherSteelShort,challenges,Challenge,,,"Collect 125 forged steel"
-challengeGatherSteelDesc,challenges,Challenge,,,"Scavenge or forge 125 forged steel. Search workbenches, tool cabinets, and construction areas throughout the bunker."
-challengeGatherSteelHint,challenges,Challenge,,,"Smelt iron in forge to make forged steel"
+challengeGatherSteel,challenges,Challenge,,,Gather Forged Steel,Récupérer de l'Acier Forgé,Schmiedestahl Sammeln,Recolectar Acero Forjado
+challengeGatherSteelShort,challenges,Challenge,,,Collect 125 forged steel,Collectez 125 aciers forgés,Sammle 125 Schmiedestahl,Recolecta 125 aceros forjados
+challengeGatherSteelDesc,challenges,Challenge,,,"Scavenge or forge 125 forged steel. Search workbenches, tool cabinets, and construction areas throughout the bunker.","Récupérez ou forgez 125 aciers forgés. Fouillez les établis, les armoires à outils et les zones de construction du bunker.","Suche oder schmiede 125 Schmiedestahl. Durchsuche Werkbänke, Werkzeugschränke und Baustellen im gesamten Bunker.","Busca o forja 125 aceros forjados. Revisa bancos de trabajo, armarios de herramientas y zonas de construcción del búnker."
+challengeGatherSteelHint,challenges,Challenge,,,Smelt iron in forge to make forged steel,Fondez du fer dans la forge pour fabriquer de l'acier forgé,Schmelze Eisen in der Schmiede zu Schmiedestahl,Funde hierro en la fragua para hacer acero forjado
 
 # --- Gather Mechanical Parts ---
-challengeGatherMechanicalParts,challenges,Challenge,,,"Gather Mechanical Parts"
-challengeGatherMechanicalPartsShort,challenges,Challenge,,,"Collect 50 mechanical parts"
-challengeGatherMechanicalPartsDesc,challenges,Challenge,,,"Find 50 mechanical parts. Wrench vehicles, air conditioners, and mechanical equipment throughout the facility."
-challengeGatherMechanicalPartsHint,challenges,Challenge,,,"Wrench vehicles and machinery"
+challengeGatherMechanicalParts,challenges,Challenge,,,Gather Mechanical Parts,Récupérer des Pièces Mécaniques,Mechanische Teile Sammeln,Recolectar Piezas Mecánicas
+challengeGatherMechanicalPartsShort,challenges,Challenge,,,Collect 50 mechanical parts,Collectez 50 pièces mécaniques,Sammle 50 mechanische Teile,Recolecta 50 piezas mecánicas
+challengeGatherMechanicalPartsDesc,challenges,Challenge,,,"Find 50 mechanical parts. Wrench vehicles, air conditioners, and mechanical equipment throughout the facility.","Trouvez 50 pièces mécaniques. Démontez véhicules, climatiseurs et équipements mécaniques dans l'installation.","Finde 50 mechanische Teile. Zerlege Fahrzeuge, Klimaanlagen und mechanische Geräte in der gesamten Anlage.","Encuentra 50 piezas mecánicas. Desarma vehículos, aires acondicionados y equipos mecánicos en la instalación."
+challengeGatherMechanicalPartsHint,challenges,Challenge,,,Wrench vehicles and machinery,Démontez véhicules et machines,Zerlege Fahrzeuge und Maschinen,Desarma vehículos y maquinaria
 
 # --- Gather Electrical Parts ---
-challengeGatherElectricalParts,challenges,Challenge,,,"Gather Electrical Parts"
-challengeGatherElectricalPartsShort,challenges,Challenge,,,"Collect 50 electrical parts"
-challengeGatherElectricalPartsDesc,challenges,Challenge,,,"The facility's wiring holds what you need. Pull it from computers, junction boxes, anything with a circuit."
-challengeGatherElectricalPartsHint,challenges,Challenge,,,"Wrench electronics and computers"
+challengeGatherElectricalParts,challenges,Challenge,,,Gather Electrical Parts,Récupérer des Pièces Électriques,Elektronische Teile Sammeln,Recolectar Piezas Eléctricas
+challengeGatherElectricalPartsShort,challenges,Challenge,,,Collect 50 electrical parts,Collectez 50 pièces électriques,Sammle 50 elektronische Teile,Recolecta 50 piezas eléctricas
+challengeGatherElectricalPartsDesc,challenges,Challenge,,,"The facility's wiring holds what you need. Pull it from computers, junction boxes, anything with a circuit.","Le câblage de l'installation contient ce dont vous avez besoin. Arrachez-le des ordinateurs, boîtes de jonction, tout ce qui a un circuit.","Die Verkabelung der Anlage enthält, was du brauchst. Reiße es aus Computern, Verteilerkästen — allem mit einem Schaltkreis.","El cableado de la instalación tiene lo que necesitas. Sácalo de ordenadores, cajas de conexiones, cualquier cosa con un circuito."
+challengeGatherElectricalPartsHint,challenges,Challenge,,,Wrench electronics and computers,Démontez appareils électroniques et ordinateurs,Zerlege Elektronik und Computer,Desarma equipos electrónicos y ordenadores
 
 # --- Gather Batteries ---
-challengeGatherBatteries,challenges,Challenge,,,"Gather Car Battery"
-challengeGatherBatteriesShort,challenges,Challenge,,,"Find 5 batteries"
-challengeGatherBatteriesDesc,challenges,Challenge,,,"Find 5 car batteries to power the transmitter. Search vehicles, storage rooms, and utility areas."
-challengeGatherBatteriesHint,challenges,Challenge,,,"Wrench vehicles or check storage"
+challengeGatherBatteries,challenges,Challenge,,,Gather Car Battery,Récupérer une Batterie,Autobatterie Beschaffen,Recolectar Batería de Auto
+challengeGatherBatteriesShort,challenges,Challenge,,,Find 5 batteries,Trouvez 5 batteries,Finde 5 Batterien,Encuentra 5 baterías
+challengeGatherBatteriesDesc,challenges,Challenge,,,"Find 5 car batteries to power the transmitter. Search vehicles, storage rooms, and utility areas.","Trouvez 5 batteries de voiture pour alimenter le transmetteur. Fouillez véhicules, entrepôts et zones techniques.","Finde 5 Autobatterien für den Sender. Durchsuche Fahrzeuge, Lagerräume und Technikbereiche.","Encuentra 5 baterías de auto para alimentar el transmisor. Busca en vehículos, almacenes y áreas de servicio."
+challengeGatherBatteriesHint,challenges,Challenge,,,Wrench vehicles or check storage,Démontez des véhicules ou fouillez les entrepôts,Zerlege Fahrzeuge oder durchsuche Lager,Desarma vehículos o revisa los almacenes
 
 # --- Gather Duct Tape ---
-challengeGatherDuctTape,challenges,Challenge,,,"Gather Duct Tape"
-challengeGatherDuctTapeShort,challenges,Challenge,,,"Collect 20 duct tape"
-challengeGatherDuctTapeDesc,challenges,Challenge,,,"Twenty rolls to hold it all together. This facility ran on the stuff."
-challengeGatherDuctTapeHint,challenges,Challenge,,,"Search containers and zombies"
+challengeGatherDuctTape,challenges,Challenge,,,Gather Duct Tape,Récupérer du Ruban Adhésif,Klebeband Sammeln,Recolectar Cinta Adhesiva
+challengeGatherDuctTapeShort,challenges,Challenge,,,Collect 20 duct tape,Collectez 20 rubans adhésifs,Sammle 20 Klebebänder,Recolecta 20 cintas adhesivas
+challengeGatherDuctTapeDesc,challenges,Challenge,,,Twenty rolls to hold it all together. This facility ran on the stuff.,Vingt rouleaux pour tout maintenir en place. Cette installation fonctionnait grâce à ça.,"Zwanzig Rollen, um alles zusammenzuhalten. Diese Anlage lief damit.",Veinte rollos para mantenerlo todo unido. Esta instalación funcionaba con esto.
+challengeGatherDuctTapeHint,challenges,Challenge,,,Search containers and zombies,Fouillez conteneurs et zombies,Durchsuche Behälter und Zombies,Busca en contenedores y zombis
 
 # --- Craft Transmitter ---
-challengeCraftTransmitter,challenges,Challenge,,,"Build the Transmitter"
-challengeCraftTransmitterShort,challenges,Challenge,,,"Craft 1 transmitter"
-challengeCraftTransmitterDesc,challenges,Challenge,,,"Assemble the emergency transmitter using the materials you've gathered. Craft at a workbench."
-challengeCraftTransmitterHint,challenges,Challenge,,,"Use workbench to craft transmitter"
+challengeCraftTransmitter,challenges,Challenge,,,Build the Transmitter,Construire le Transmetteur,Den Sender Bauen,Construir el Transmisor
+challengeCraftTransmitterShort,challenges,Challenge,,,Craft 1 transmitter,Fabriquez 1 transmetteur,Stelle 1 Sender her,Fabrica 1 transmisor
+challengeCraftTransmitterDesc,challenges,Challenge,,,Assemble the emergency transmitter using the materials you've gathered. Craft at a workbench.,Assemblez le transmetteur d'urgence avec les matériaux collectés. Fabriquez-le sur un établi.,Baue den Notsender aus den gesammelten Materialien zusammen. Stelle ihn an einer Werkbank her.,Ensambla el transmisor de emergencia con los materiales que has recolectado. Fabrícalo en un banco de trabajo.
+challengeCraftTransmitterHint,challenges,Challenge,,,Use workbench to craft transmitter,Utilisez l'établi pour fabriquer le transmetteur,Benutze die Werkbank zum Bau des Senders,Usa el banco de trabajo para fabricar el transmisor
 
 # --- Deploy Transmitter ---
-challengeDeployTransmitter,challenges,Challenge,,,"Deployment: Point of No Return"
-challengeDeployTransmitterShort,challenges,Challenge,,,"Activate the emergency broadcast"
-challengeDeployTransmitterDesc,challenges,Challenge,,,"Place and activate the emergency transmitter.\n\nYour distress beacon will pierce the irradiated atmosphere and reach Command.\n\nBlood moon horde: 10pm tonight\nAirdrop arrival: 4am tomorrow\n\nWARNING: The signal will reactivate dormant sections of the facility.\n\nCheck your map for Camp Frilsville location."
-challengeDeployTransmitterHint,challenges,Challenge,,,"Secure a defensive position before activation"
+challengeDeployTransmitter,challenges,Challenge,,,Deployment: Point of No Return,Déploiement : Point de Non-Retour,Einsatz: Kein Zurück Mehr,Despliegue: Sin Retorno
+challengeDeployTransmitterShort,challenges,Challenge,,,Activate the emergency broadcast,Activez la diffusion d'urgence,Aktiviere die Notsendung,Activa la emisión de emergencia
+challengeDeployTransmitterDesc,challenges,Challenge,,,Place and activate the emergency transmitter.\n\nYour distress beacon will pierce the irradiated atmosphere and reach Command.\n\nBlood moon horde: 10pm tonight\nAirdrop arrival: 4am tomorrow\n\nWARNING: The signal will reactivate dormant sections of the facility.\n\nCheck your map for Camp Frilsville location.,Camp Frilsville,Camp Frilsville,Campamento Frilsville
+challengeDeployTransmitterHint,challenges,Challenge,,,Secure a defensive position before activation,Sécurisez une position défensive avant l'activation,Sichere eine Verteidigungsposition vor der Aktivierung,Asegura una posición defensiva antes de la activación
 
 # --- Escape ---
-challengeEscapeArea7,challenges,Challenge,,,"Reach Camp Frilsville"
-challengeEscapeArea7Short,challenges,Challenge,,,"Reach safety"
-challengeEscapeArea7Desc,challenges,Challenge,,,"Make your way to Camp Frilsville by any means necessary. The gates will be unlocked because you activated the emergency signal. Find Hugh to complete your escape."
-challengeEscapeArea7Hint,challenges,Challenge,,,"Check your waypoints for Camp Frilsville"
+challengeEscapeArea7,challenges,Challenge,,,Reach Camp Frilsville,Rejoindre le Camp Frilsville,Camp Frilsville Erreichen,Llegar al Campamento Frilsville
+challengeEscapeArea7Short,challenges,Challenge,,,Reach safety,Rejoignez la sécurité,Erreiche Sicherheit,Alcanza la seguridad
+challengeEscapeArea7Desc,challenges,Challenge,,,Make your way to Camp Frilsville by any means necessary. The gates will be unlocked because you activated the emergency signal. Find Hugh to complete your escape.,Camp Frilsville,Camp Frilsville,Campamento Frilsville
+challengeEscapeArea7Hint,challenges,Challenge,,,Check your waypoints for Camp Frilsville,Consultez vos marqueurs pour le Camp Frilsville,Überprüfe deine Wegpunkte für Camp Frilsville,Consulta tus puntos de referencia para el Campamento Frilsville
 
-challenge_reward_500xp,challenges,Challenge,,,"500 XP + Survival Gear"
+challenge_reward_500xp,challenges,Challenge,,,500 XP + Survival Gear,500 XP + Équipement de Survie,500 XP + Überlebensausrüstung,500 XP + Equipo de Supervivencia
 
 # ============================================================
 # LOOT BAGS - ENTITY NAMES
 # ============================================================
 
-lootMedicalBag,Loot,,,,"Medical Supplies Bag"
-lootBikerBag,Loot,,,,"Biker's Loot Bag"
-lootCopsBag,Loot,,,,"Police Evidence Bag"
-lootTokensBag,Loot,,,,"VIP Loot Bag"
-lootHeavyBag,Loot,,,,"Heavy Equipment Bag"
-lootHazmatBag,Loot,,,,"Hazmat Supplies Bag"
-lootResearcherBag,Loot,,,,"Researcher's Remains"
-lootBookBag,Loot,,,,"Book Bag"
+lootMedicalBag,Loot,,,,Medical Supplies Bag,Sac de Fournitures Médicales,Medizinischer Vorratsbeutel,Bolsa de Suministros Médicos
+lootBikerBag,Loot,,,,Biker's Loot Bag,Sac de Butin du Motard,Biker-Beutebeutel,Bolsa de Botín del Motero
+lootCopsBag,Loot,,,,Police Evidence Bag,Sac de Preuves Policières,Polizei-Asservatenbeutel,Bolsa de Pruebas Policiales
+lootTokensBag,Loot,,,,VIP Loot Bag,Sac de Butin VIP,VIP-Beutebeutel,Bolsa de Botín VIP
+lootHeavyBag,Loot,,,,Heavy Equipment Bag,Sac d'Équipement Lourd,Schwere-Ausrüstungs-Beutel,Bolsa de Equipo Pesado
+lootHazmatBag,Loot,,,,Hazmat Supplies Bag,Sac de Fournitures Hazmat,Gefahrgut-Vorratsbeutel,Bolsa de Suministros Hazmat
+lootResearcherBag,Loot,,,,Researcher's Remains,Restes du Chercheur,Überreste des Forschers,Restos del Investigador
+lootBookBag,Loot,,,,Book Bag,Sac de Livres,Bücherbeutel,Bolsa de Libros
 
 # ============================================================
 # ENTITIES - SUPPLY CRATES
 # ============================================================
 
-sc_Area7_Tier1,EntityClass,,,,"Area 7 Supply Crate"
-sc_Area7_Tier2,EntityClass,,,,"Area 7 Supply Crate"
-sc_Area7_Tier3,EntityClass,,,,"Area 7 Supply Crate"
-sc_Area7_Tier4,EntityClass,,,,"Area 7 Supply Crate"
-sc_Area7_Tier5,EntityClass,,,,"Area 7 Supply Crate"
+sc_Area7_Tier1,EntityClass,,,,Area 7 Supply Crate,Caisse de Ravitaillement Zone 7,Versorgungskiste Bereich 7,Caja de Suministros Zona 7
+sc_Area7_Tier2,EntityClass,,,,Area 7 Supply Crate,Caisse de Ravitaillement Zone 7,Versorgungskiste Bereich 7,Caja de Suministros Zona 7
+sc_Area7_Tier3,EntityClass,,,,Area 7 Supply Crate,Caisse de Ravitaillement Zone 7,Versorgungskiste Bereich 7,Caja de Suministros Zona 7
+sc_Area7_Tier4,EntityClass,,,,Area 7 Supply Crate,Caisse de Ravitaillement Zone 7,Versorgungskiste Bereich 7,Caja de Suministros Zona 7
+sc_Area7_Tier5,EntityClass,,,,Area 7 Supply Crate,Caisse de Ravitaillement Zone 7,Versorgungskiste Bereich 7,Caja de Suministros Zona 7
 
 # ============================================================
 # LOADING TIPS
 # ============================================================
 
-loadingTipArea71_title,ui,tips,,,"Area 7: The Bunker"
-loadingTipArea71,ui,tips,,,"Area 7 is a classified military bunker sealed since the outbreak. Radiation has contaminated the surrounding area."
+loadingTipArea71_title,ui,tips,,,Area 7: The Bunker,Zone 7 : Le Bunker,Bereich 7: Der Bunker,Zona 7: El Búnker
+loadingTipArea71,ui,tips,,,Area 7 is a classified military bunker sealed since the outbreak. Radiation has contaminated the surrounding area.,La Zone 7 est un bunker militaire classifié scellé depuis l'épidémie. La radiation a contaminé les environs.,"Bereich 7 ist ein geheimer Militärbunker, versiegelt seit dem Ausbruch. Strahlung hat die Umgebung verseucht.",La Zona 7 es un búnker militar clasificado sellado desde el brote. La radiación ha contaminado el área circundante.
 
-loadingTipArea72_title,ui,tips,,,"Radiation: Area outside the base"
-loadingTipArea72,ui,tips,,,"The area surrounding the base is heavily irradiated. Entering it without protection is fatal."
+loadingTipArea72_title,ui,tips,,,Radiation: Area outside the base,Radiation : Zone hors de la base,Strahlung: Bereich außerhalb der Basis,Radiación: Zona fuera de la base
+loadingTipArea72,ui,tips,,,The area surrounding the base is heavily irradiated. Entering it without protection is fatal.,La zone entourant la base est fortement irradiée. Y entrer sans protection est fatal.,Die Umgebung der Basis ist stark verstrahlt. Ohne Schutz einzutreten ist tödlich.,La zona que rodea la base está altamente irradiada. Entrar sin protección es mortal.
 
-loadingTipArea73_title,ui,tips,,,"Resources: Scavenge Smart"
-loadingTipArea73,ui,tips,,,"The bunker contains everything you need to build a transmitter. Search offices for electrical parts, vehicles for mechanical parts."
+loadingTipArea73_title,ui,tips,,,Resources: Scavenge Smart,Ressources : Fouillez Malin,Ressourcen: Klug Plündern,Recursos: Busca con Astucia
+loadingTipArea73,ui,tips,,,"The bunker contains everything you need to build a transmitter. Search offices for electrical parts, vehicles for mechanical parts.","Le bunker contient tout ce qu'il faut pour construire un transmetteur. Fouillez les bureaux pour les pièces électriques, les véhicules pour les pièces mécaniques.","Der Bunker enthält alles, was du für den Sender brauchst. Durchsuche Büros nach Elektronik, Fahrzeuge nach Mechanik.","El búnker contiene todo lo necesario para construir un transmisor. Busca piezas eléctricas en oficinas, piezas mecánicas en vehículos."
 
-loadingTipArea74_title,ui,tips,,,"Zombies: Enhanced Drops"
-loadingTipArea74,ui,tips,,,"Bunker zombies have a 10% chance to drop loot bags containing valuable supplies and a 20% chance to drop themed bags with even better rewards."
+loadingTipArea74_title,ui,tips,,,Zombies: Enhanced Drops,Zombies : Butin Amélioré,Zombies: Verbesserte Beute,Zombis: Botín Mejorado
+loadingTipArea74,ui,tips,,,Bunker zombies have a 10% chance to drop loot bags containing valuable supplies and a 20% chance to drop themed bags with even better rewards.,Les zombies du bunker ont 10% de chance de lâcher des sacs de butin avec des fournitures précieuses et 20% de chance de lâcher des sacs thématiques avec de meilleures récompenses.,Bunker-Zombies haben eine 10%ige Chance auf Beutebeutel mit wertvollen Vorräten und eine 20%ige Chance auf Themenbeutel mit noch besseren Belohnungen.,Los zombis del búnker tienen un 10% de probabilidad de soltar bolsas de botín con suministros valiosos y un 20% de probabilidad de soltar bolsas temáticas con mejores recompensas.
 
-loadingTipArea75_title,ui,tips,,,"Transmitter: Your Lifeline"
-loadingTipArea75,ui,tips,,,"The emergency transmitter is your only way to signal for rescue. Gather materials: steel, mechanical parts, electrical parts, battery, duct tape."
+loadingTipArea75_title,ui,tips,,,Transmitter: Your Lifeline,Transmetteur : Votre Bouée de Sauvetage,Sender: Deine Rettungsleine,Transmisor: Tu Salvavidas
+loadingTipArea75,ui,tips,,,"The emergency transmitter is your only way to signal for rescue. Gather materials: steel, mechanical parts, electrical parts, battery, duct tape.","Le transmetteur d'urgence est votre seul moyen d'appeler les secours. Rassemblez : acier, pièces mécaniques, pièces électriques, batterie, ruban adhésif.","Der Notsender ist deine einzige Möglichkeit, Rettung zu rufen. Sammle: Stahl, mechanische Teile, Elektronik, Batterie, Klebeband.","El transmisor de emergencia es tu único medio de pedir rescate. Reúne: acero, piezas mecánicas, piezas eléctricas, batería, cinta adhesiva."
 
-loadingTipArea76_title,ui,tips,,,"Blood Moon: Signal Detected"
-loadingTipArea76,ui,tips,,,"Activating the transmitter will trigger a blood moon horde at 10pm. Be prepared to defend yourself, prepare your defences or hide. Your choice."
+loadingTipArea76_title,ui,tips,,,Blood Moon: Signal Detected,Lune de Sang : Signal Détecté,Blutmond: Signal Erkannt,Luna de Sangre: Señal Detectada
+loadingTipArea76,ui,tips,,,"Activating the transmitter will trigger a blood moon horde at 10pm. Be prepared to defend yourself, prepare your defences or hide. Your choice.","Activer le transmetteur déclenchera une horde de lune de sang à 22h. Préparez-vous à vous défendre, fortifiez-vous ou cachez-vous. À vous de choisir.","Die Aktivierung des Senders löst um 22 Uhr eine Blutmond-Horde aus. Bereite dich vor — verteidige dich, baue Verteidigungen oder verstecke dich. Deine Wahl.","Activar el transmisor desencadenará una horda de luna de sangre a las 22:00. Prepárate para defenderte, fortifica tu posición o escóndete. Tú decides."
 
-loadingTipArea77_title,ui,tips,,,"Supply Drop: Reinforcements"
-loadingTipArea77,ui,tips,,,"Command will send a supply airdrop at 4am the day after you activate the transmitter. It contains radiation gear and potentially a vehicle."
+loadingTipArea77_title,ui,tips,,,Supply Drop: Reinforcements,Largage : Renforts,Luftabwurf: Verstärkung,Suministro Aéreo: Refuerzos
+loadingTipArea77,ui,tips,,,Command will send a supply airdrop at 4am the day after you activate the transmitter. It contains radiation gear and potentially a vehicle.,Le Commandement enverra un largage aérien à 4h le lendemain de l'activation du transmetteur. Il contient un équipement anti-radiation et potentiellement un véhicule.,"Das Kommando sendet um 4 Uhr morgens einen Luftabwurf, nachdem du den Sender aktiviert hast. Er enthält Strahlenschutzausrüstung und möglicherweise ein Fahrzeug.",El Mando enviará un suministro aéreo a las 04:00 del día siguiente a la activación del transmisor. Contiene equipo anti-radiación y posiblemente un vehículo.
 
-loadingTipArea78_title,ui,tips,,,"Vehicle Lottery: Magazine Progression"
-loadingTipArea78,ui,tips,,,"Your chance of receiving a vehicle in the airdrop increases with vehicle skill magazines read. 40+ magazines unlocks gyrocopter eligibility! That's 10 less than is needed to craft one yourself"
+loadingTipArea78_title,ui,tips,,,Vehicle Lottery: Magazine Progression,Loterie Véhicule : Progression par Magazines,Fahrzeug-Lotterie: Magazin-Fortschritt,Lotería de Vehículos: Progresión por Revistas
+loadingTipArea78,ui,tips,,,Your chance of receiving a vehicle in the airdrop increases with vehicle skill magazines read. 40+ magazines unlocks gyrocopter eligibility! That's 10 less than is needed to craft one yourself,Vos chances de recevoir un véhicule dans le largage augmentent avec les magazines de compétence véhicule lus. 40+ magazines débloquent le gyrocoptère ! C'est 10 de moins que pour en fabriquer un soi-même,Deine Chance auf ein Fahrzeug im Luftabwurf steigt mit gelesenen Fahrzeug-Magazinen. 40+ Magazine schalten den Gyrokopter frei! Das sind 10 weniger als zum Selberbauen nötig,Tu probabilidad de recibir un vehículo en el suministro aéreo aumenta con las revistas de habilidad de vehículos leídas. ¡40+ revistas desbloquean el girocóptero! Son 10 menos de las necesarias para fabricar uno
 
-loadingTipArea79_title,ui,tips,,,"Camp Frilsville: Extraction Point"
-loadingTipArea79,ui,tips,,,"Camp Frilsville is the extraction point. Check your map waypoint after transmitter activation. Hugh will be there with your extraction paperwork."
+loadingTipArea79_title,ui,tips,,,Camp Frilsville: Extraction Point,Camp Frilsville : Point d'Extraction,Camp Frilsville: Extraktionspunkt,Campamento Frilsville: Punto de Extracción
+loadingTipArea79,ui,tips,,,Camp Frilsville is the extraction point. Check your map waypoint after transmitter activation. Hugh will be there with your extraction paperwork.,Camp Frilsville,Camp Frilsville,Campamento Frilsville
 
-loadingTipArea710_title,ui,tips,,,"Hugh: Your Contact"
-loadingTipArea710,ui,tips,,,"Hugh at Camp Frilsville is your extraction contact. Reach him to complete the challenge and escape Area 7."
+loadingTipArea710_title,ui,tips,,,Hugh: Your Contact,Hugh : Votre Contact,Hugh: Dein Kontakt,Hugh: Tu Contacto
+loadingTipArea710,ui,tips,,,Hugh at Camp Frilsville is your extraction contact. Reach him to complete the challenge and escape Area 7.,Camp Frilsville,Camp Frilsville,Campamento Frilsville
 
-loadingTipArea711_title,ui,tips,,,"Progression: Read Everything"
-loadingTipArea711,ui,tips,,,"Magazines are your key to better equipment. Read every book you find — vehicle mags determine your airdrop vehicle tier."
+loadingTipArea711_title,ui,tips,,,Progression: Read Everything,Progression : Lisez Tout,Fortschritt: Lies Alles,Progresión: Lee Todo
+loadingTipArea711,ui,tips,,,Magazines are your key to better equipment. Read every book you find — vehicle mags determine your airdrop vehicle tier.,Les magazines sont la clé d'un meilleur équipement. Lisez chaque livre trouvé — les magazines véhicule déterminent le niveau de votre véhicule largué.,Magazine sind der Schlüssel zu besserer Ausrüstung. Lies jedes Buch — Fahrzeug-Magazine bestimmen die Stufe deines Luftabwurf-Fahrzeugs.,Las revistas son la clave para mejor equipo. Lee cada libro que encuentres — las revistas de vehículos determinan el nivel de tu vehículo del suministro aéreo.
 
-loadingTipArea712_title,ui,tips,,,"Crafting: The Forge"
-loadingTipArea712,ui,tips,,,"You'll need a forge to smelt forged steel for the transmitter. Build one early — it's essential."
+loadingTipArea712_title,ui,tips,,,Crafting: The Forge,Fabrication : La Forge,Herstellung: Die Schmiede,Fabricación: La Fragua
+loadingTipArea712,ui,tips,,,You'll need a forge to smelt forged steel for the transmitter. Build one early — it's essential.,Vous aurez besoin d'une forge pour fondre l'acier forgé du transmetteur. Construisez-en une rapidement — c'est essentiel.,"Du brauchst eine Schmiede, um Schmiedestahl für den Sender zu schmelzen. Baue sie früh — sie ist unverzichtbar.",Necesitarás una fragua para fundir acero forjado para el transmisor. Construye una pronto — es esencial.
 
-loadingTipArea713_title,ui,tips,,,"Loot: Military Chest"
-loadingTipArea713,ui,tips,,,"The hardened military chest at the end of the bunker always contains a crucible. You'll need it to smelt Iron into Steel."
+loadingTipArea713_title,ui,tips,,,Loot: Military Chest,Butin : Coffre Militaire,Beute: Militärkiste,Botín: Cofre Militar
+loadingTipArea713,ui,tips,,,The hardened military chest at the end of the bunker always contains a crucible. You'll need it to smelt Iron into Steel.,Le coffre militaire blindé au fond du bunker contient toujours un creuset. Vous en aurez besoin pour fondre le fer en acier.,"Die gepanzerte Militärkiste am Ende des Bunkers enthält immer einen Tiegel. Du brauchst ihn, um Eisen zu Stahl zu schmelzen.",El cofre militar blindado al final del búnker siempre contiene un crisol. Lo necesitarás para fundir hierro en acero.
 
-loadingTipArea714_title,ui,tips,,,"The Goal: Survive and Escape"
-loadingTipArea714,ui,tips,,,"Reach Hugh at Camp Frilsville to complete your escape. Good luck, survivor."
+loadingTipArea714_title,ui,tips,,,The Goal: Survive and Escape,L'Objectif : Survivre et s'Évader,Das Ziel: Überleben und Fliehen,El Objetivo: Sobrevivir y Escapar
+loadingTipArea714,ui,tips,,,"Reach Hugh at Camp Frilsville to complete your escape. Good luck, survivor.",Camp Frilsville,Camp Frilsville,Campamento Frilsville
 
-loadingTipArea715_title,ui,tips,,,"Mission Debrief"
-loadingTipArea715,ui,tips,,,"Your mission stats are saved after each run. View your debrief at Mods/FrilArea7Challenge/stats/Area7_Debrief.html"
+loadingTipArea715_title,ui,tips,,,Mission Debrief,Rapport de Mission,Missionsbericht,Informe de Misión
+loadingTipArea715,ui,tips,,,Your mission stats are saved after each run. View your debrief at Mods/FrilArea7Challenge/stats/Area7_Debrief.html,Vos statistiques de mission sont sauvegardées après chaque partie. Consultez votre rapport dans Mods/FrilArea7Challenge/stats/Area7_Debrief.html,Deine Missionsstatistiken werden nach jedem Durchlauf gespeichert. Sieh deinen Bericht unter Mods/FrilArea7Challenge/stats/Area7_Debrief.html,Tus estadísticas de misión se guardan tras cada partida. Consulta tu informe en Mods/FrilArea7Challenge/stats/Area7_Debrief.html
 
 # ============================================================
 # UI & MENU
 # ============================================================
 
-respawnTitleMessage,UI,Respawn Window,x,,READY TO WAKE UP IN AREA 7?
-lblSpawn,UI,Spawn Menu,x,,Enter Area 7
-lblSpawnRandom,UI,Spawn Menu,x,,This is how you died...
-lblSpawnNearBedroll,UI,Spawn Menu,x,,Wake up near your bunk
-lblSpawnOnBedroll,UI,Spawn Menu,x,,Wake up in your bunk
-lblSpawnNearBackpack,UI,Spawn Menu,x,,Crawl back to your gear
+respawnTitleMessage,UI,Respawn Window,x,,READY TO WAKE UP IN AREA 7?,PRÊT À VOUS RÉVEILLER EN ZONE 7 ?,BEREIT IN BEREICH 7 AUFZUWACHEN?,¿LISTO PARA DESPERTAR EN LA ZONA 7?
+lblSpawn,UI,Spawn Menu,x,,Enter Area 7,Entrer en Zone 7,Bereich 7 Betreten,Entrar en Zona 7
+lblSpawnRandom,UI,Spawn Menu,x,,This is how you died...,Voilà comment vous êtes mort...,So bist du gestorben...,Así es como moriste...
+lblSpawnNearBedroll,UI,Spawn Menu,x,,Wake up near your bunk,Se réveiller près de votre couchette,In der Nähe deiner Pritsche aufwachen,Despertar cerca de tu litera
+lblSpawnOnBedroll,UI,Spawn Menu,x,,Wake up in your bunk,Se réveiller dans votre couchette,In deiner Pritsche aufwachen,Despertar en tu litera
+lblSpawnNearBackpack,UI,Spawn Menu,x,,Crawl back to your gear,Rampez jusqu'à votre équipement,Kriech zurück zu deiner Ausrüstung,Arrastrarse hasta tu equipo
 
 # ============================================================
 # GAME OPTIONS
 # ============================================================
 
-goAirDropFrequency,UI,Menu,x,,Air Drops ([ff0000]DISABLED[-])
-goAirDropFrequencyDesc,UI,Menu,x,,"Set to DISABLED. Vanilla airdrops cannot be reached in the Area 7 Challenge."
+goAirDropFrequency,UI,Menu,x,,Air Drops ([ff0000]DISABLED[-]),Largages Aériens ([ff0000]DÉSACTIVÉS[-]),Luftabwürfe ([ff0000]DEAKTIVIERT[-]),Suministros Aéreos ([ff0000]DESACTIVADOS[-])
+goAirDropFrequencyDesc,UI,Menu,x,,Set to DISABLED. Vanilla airdrops cannot be reached in the Area 7 Challenge.,Réglé sur DÉSACTIVÉ. Les largages classiques ne peuvent pas être atteints dans le Défi Zone 7.,Auf DEAKTIVIERT gesetzt. Vanilla-Luftabwürfe können in der Bereich-7-Herausforderung nicht erreicht werden.,Configurado como DESACTIVADO. Los suministros aéreos normales no se pueden alcanzar en el Desafío Zona 7.
 
-goBiomeProgression,UI,Menu,,,Biome Progression ([ff0000]OFF[-])
-goBiomeProgressionDesc,UI,Menu,,,"Set to ON. Required for Area 7 Challenge to work properly."
+goBiomeProgression,UI,Menu,,,Biome Progression ([ff0000]OFF[-]),Progression de Biome ([ff0000]DÉSACTIVÉE[-]),Biom-Fortschritt ([ff0000]AUS[-]),Progresión de Bioma ([ff0000]DESACTIVADA[-])
+goBiomeProgressionDesc,UI,Menu,,,Set to ON. Required for Area 7 Challenge to work properly.,Réglé sur ACTIVÉ. Requis pour le bon fonctionnement du Défi Zone 7.,Auf AN gesetzt. Erforderlich für das ordnungsgemäße Funktionieren der Bereich-7-Herausforderung.,Configurado como ACTIVADO. Necesario para que el Desafío Zona 7 funcione correctamente.
 
-goLootRespawnDays,UI,Menu,x,,Loot Respawn ([00ff00]5 Days[-])
-goLootRespawnDaysDesc,UI,Menu,x,,"The number of days for loot to respawn if there is no one around.\n\nSelect anything except [00ff00]Disabled[-]."
+goLootRespawnDays,UI,Menu,x,,Loot Respawn ([00ff00]5 Days[-]),Réapparition du Butin ([00ff00]5 Jours[-]),Beute-Respawn ([00ff00]5 Tage[-]),Reaparición de Botín ([00ff00]5 Días[-])
+goLootRespawnDaysDesc,UI,Menu,x,,The number of days for loot to respawn if there is no one around.\n\nSelect anything except [00ff00]Disabled[-].,Le nombre de jours avant la réapparition du butin si personne n'est à proximité.\n\nSélectionnez n'importe quoi sauf [00ff00]Désactivé[-].,"Die Anzahl der Tage bis zur Beute-Erneuerung, wenn niemand in der Nähe ist.\n\nWähle alles außer [00ff00]Deaktiviert[-].",El número de días para que el botín reaparezca si no hay nadie cerca.\n\nSelecciona cualquier valor excepto [00ff00]Desactivado[-].
 
-goGameWorld,UI,Menu,x,,Choose Area 7 (Biome)
-goGameWorldDesc,UI,Menu,x,,Choose Area 7 Challenge and the world you want to play on.
+goGameWorld,UI,Menu,x,,Choose Area 7 (Biome),Choisir Zone 7 (Biome),Bereich 7 Wählen (Biom),Elegir Zona 7 (Bioma)
+goGameWorldDesc,UI,Menu,x,,Choose Area 7 Challenge and the world you want to play on.,Choisissez le Défi Zone 7 et le monde sur lequel vous souhaitez jouer.,Wähle die Bereich-7-Herausforderung und die Welt aus.,Elige el Desafío Zona 7 y el mundo en el que quieres jugar.
 
 # ============================================================
 # VERSION INFO & POI NAMES
 # ============================================================
 
 
-Area7_Challenge,blocks,POI,,,"Area 7 Military Base"
-Fril_Area7_Challenge_Army_Base,blocks,POI,,,"Camp Frilsville"
+Area7_Challenge,blocks,POI,,,Area 7 Military Base,Base Militaire Zone 7,Militärbasis Bereich 7,Base Militar Zona 7
+Fril_Area7_Challenge_Army_Base,blocks,POI,,,Camp Frilsville,Camp Frilsville,Camp Frilsville,Campamento Frilsville
 
 # Area 7 Rules Message Window
-area7RulesWindowTitle,UI,,,,"AREA 7 - SURVIVAL PROTOCOL"
-area7RulesWindowMessage,UI,,,,"Welcome to Area 7.\n\nYou've made it through the gates and regained consciousness just as your radiation protection wears off. The surrounding area is [cd5c5c]lethally irradiated[-] and entering it without protection means [cd5c5c]DEATH[-]. The facility is your only safe zone.\n\nThis was a top-secret military research facility. God knows what they were researching or what samples are loose inside now.\n\nComplete challenges to unlock equipment. Deploy the emergency transmitter to call for extraction - this triggers a [cd5c5c]massive blood moon horde[-] and awakens some [cd5c5c]Zombies in the Bunker[-]. An airdrop arrives at [cd5c5c]first light[-] with your extraction vehicle and Radiation Respirator. You can always make a smoothie if you don't want to wait.\n\nYour vehicle depends on your qualifications. Read magazines and level Grease Monkey. You might get [cd5c5c]nothing but an IOU[-] - craft your own as backup.\n\nCamp Frilsville is out there. Deploy the transmitter and coordinates appear on your map. Hugh has your extraction paperwork. Find him at Camp Frilsville.\n\nYou're a survivor who got lucky. [cd5c5c]Make it count.[-]"
-area7RulesOfferTeaser,UI,,,,"You've reached Area 7, a top-secret facility now lost to the outbreak. Complete challenges, deploy the transmitter, survive the horde, and escape.\n\nAccept to read the full briefing."
+area7RulesWindowTitle,UI,,,,AREA 7 - SURVIVAL PROTOCOL,ZONE 7 - PROTOCOLE DE SURVIE,BEREICH 7 - ÜBERLEBENSPROTOKOLL,ZONA 7 - PROTOCOLO DE SUPERVIVENCIA
+area7RulesWindowMessage,UI,,,,Welcome to Area 7.\n\nYou've made it through the gates and regained consciousness just as your radiation protection wears off. The surrounding area is [cd5c5c]lethally irradiated[-] and entering it without protection means [cd5c5c]DEATH[-]. The facility is your only safe zone.\n\nThis was a top-secret military research facility. God knows what they were researching or what samples are loose inside now.\n\nComplete challenges to unlock equipment. Deploy the emergency transmitter to call for extraction - this triggers a [cd5c5c]massive blood moon horde[-] and awakens some [cd5c5c]Zombies in the Bunker[-]. An airdrop arrives at [cd5c5c]first light[-] with your extraction vehicle and Radiation Respirator. You can always make a smoothie if you don't want to wait.\n\nYour vehicle depends on your qualifications. Read magazines and level Grease Monkey. You might get [cd5c5c]nothing but an IOU[-] - craft your own as backup.\n\nCamp Frilsville is out there. Deploy the transmitter and coordinates appear on your map. Hugh has your extraction paperwork. Find him at Camp Frilsville.\n\nYou're a survivor who got lucky. [cd5c5c]Make it count.[-],Camp Frilsville,Camp Frilsville,Campamento Frilsville
+area7RulesOfferTeaser,UI,,,,"You've reached Area 7, a top-secret facility now lost to the outbreak. Complete challenges, deploy the transmitter, survive the horde, and escape.\n\nAccept to read the full briefing.","Vous avez atteint la Zone 7, une installation top-secrète désormais perdue depuis l'épidémie. Complétez les défis, déployez le transmetteur, survivez à la horde et évadez-vous.\n\nAcceptez pour lire le briefing complet.","Du hast Bereich 7 erreicht, eine geheime Anlage, die seit dem Ausbruch verloren ist. Schließe Herausforderungen ab, setze den Sender ein, überlebe die Horde und fliehe.\n\nAkzeptiere, um das vollständige Briefing zu lesen.","Has llegado a la Zona 7, una instalación ultrasecreta ahora perdida tras el brote. Completa desafíos, despliega el transmisor, sobrevive a la horda y escapa.\n\nAcepta para leer el informe completo."
 
-noteArea7Extraction,items,Item,,,"Extraction Order"
-noteArea7ExtractionDesc,items,Item,,,"Official extraction authorisation issued by Northern Command. Operation Exodus is underway."
+noteArea7Extraction,items,Item,,,Extraction Order,Ordre d'Extraction,Evakuierungsbefehl,Orden de Extracción
+noteArea7ExtractionDesc,items,Item,,,Official extraction authorisation issued by Northern Command. Operation Exodus is underway.,Autorisation officielle d'extraction émise par le Commandement Nord. L'Opération Exode est en cours.,Offizielle Evakuierungsgenehmigung des Nordkommandos. Operation Exodus ist angelaufen.,Autorización oficial de extracción emitida por el Mando Norte. La Operación Éxodo está en marcha.
 
-area7ExtractionWindowTitle,UI,,,,"OPERATION EXODUS - EXTRACTION CONFIRMED - CHALLENGE COMPLETED"
-area7ExtractionWindowMessage,UI,,,,"[cd5c5c]CLASSIFIED - EYES ONLY[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]CHALLENGE STATUS: COMPLETE[-]\nSURVIVOR EXTRACTED SUCCESSFULLY.\nAREA 7 PROTOCOL CONCLUDED.\n\nYou endured the irradiated zone, cleared the facility,\nand held the line on blood moon. Not many do.\n\n[7fff00]WELL DONE, SURVIVOR.[-]\n[cd5c5c]AREA 7 IS BEHIND YOU.[-]\n\n[ff8c00]Mission debrief saved to:[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]"
-area7ExtractionOfferTeaser,UI,,,,"Extraction authorised. Northern Command is en route. Read your orders."
-plantedAloe1,items,Item,,,Aloe Vera Seeds
-plantedBlueberry1,items,Item,,,Blueberry Seeds
-plantedChrysanthemum1,items,Item,,,Chrysanthemum Seeds
-plantedCoffee1,items,Item,,,Coffee Seeds
-plantedCorn1,items,Item,,,Corn Seeds
-plantedCotton1,items,Item,,,Cotton Seeds
-plantedGoldenrod1,items,Item,,,Goldenrod Seeds
-plantedGraceCorn1,items,Item,,,Super Corn Seeds
-plantedHop1,items,Item,,,Hop Seeds
-plantedMushroom1,items,Item,,,Mushroom Spores
-plantedPotato1,items,Item,,,Potato Seeds
-plantedPumpkin1,items,Item,,,Pumpkin Seeds
-plantedYucca1,items,Item,,,Yucca Seeds
+area7ExtractionWindowTitle,UI,,,,OPERATION EXODUS - EXTRACTION CONFIRMED - CHALLENGE COMPLETED,OPÉRATION EXODE - EXTRACTION CONFIRMÉE - DÉFI ACCOMPLI,OPERATION EXODUS - EVAKUIERUNG BESTÄTIGT - HERAUSFORDERUNG ABGESCHLOSSEN,OPERACIÓN ÉXODO - EXTRACCIÓN CONFIRMADA - DESAFÍO COMPLETADO
+area7ExtractionWindowMessage,UI,,,,"[cd5c5c]CLASSIFIED - EYES ONLY[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]CHALLENGE STATUS: COMPLETE[-]\nSURVIVOR EXTRACTED SUCCESSFULLY.\nAREA 7 PROTOCOL CONCLUDED.\n\nYou endured the irradiated zone, cleared the facility,\nand held the line on blood moon. Not many do.\n\n[7fff00]WELL DONE, SURVIVOR.[-]\n[cd5c5c]AREA 7 IS BEHIND YOU.[-]\n\n[ff8c00]Mission debrief saved to:[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]","[cd5c5c]CLASSIFIÉ - CONFIDENTIEL[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]STATUT DU DÉFI : ACCOMPLI[-]\nSURVIVANT EXTRAIT AVEC SUCCÈS.\nPROTOCOLE ZONE 7 TERMINÉ.\n\nVous avez enduré la zone irradiée, nettoyé l'installation,\net tenu la ligne lors de la lune de sang. Peu y parviennent.\n\n[7fff00]BIEN JOUÉ, SURVIVANT.[-]\n[cd5c5c]LA ZONE 7 EST DERRIÈRE VOUS.[-]\n\n[ff8c00]Rapport de mission sauvegardé dans :[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]","[cd5c5c]GEHEIM - NUR FÜR BERECHTIGTE[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]HERAUSFORDERUNGSSTATUS: ABGESCHLOSSEN[-]\nÜBERLEBENDER ERFOLGREICH EVAKUIERT.\nBEREICH-7-PROTOKOLL BEENDET.\n\nDu hast die verstrahlte Zone überstanden, die Anlage gesäubert\nund beim Blutmond die Stellung gehalten. Das schaffen wenige.\n\n[7fff00]GUT GEMACHT, ÜBERLEBENDER.[-]\n[cd5c5c]BEREICH 7 LIEGT HINTER DIR.[-]\n\n[ff8c00]Missionsbericht gespeichert unter:[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]","[cd5c5c]CLASIFICADO - SOLO PARA OJOS AUTORIZADOS[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]ESTADO DEL DESAFÍO: COMPLETADO[-]\nSUPERVIVIENTE EXTRAÍDO CON ÉXITO.\nPROTOCOLO ZONA 7 CONCLUIDO.\n\nSoportaste la zona irradiada, limpiaste la instalación\ny mantuviste la línea en la luna de sangre. Pocos lo logran.\n\n[7fff00]BIEN HECHO, SUPERVIVIENTE.[-]\n[cd5c5c]LA ZONA 7 QUEDÓ ATRÁS.[-]\n\n[ff8c00]Informe de misión guardado en:[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]"
+area7ExtractionOfferTeaser,UI,,,,Extraction authorised. Northern Command is en route. Read your orders.,Extraction autorisée. Le Commandement Nord est en route. Lisez vos ordres.,Evakuierung genehmigt. Nordkommando ist unterwegs. Lies deine Befehle.,Extracción autorizada. El Mando Norte está en camino. Lee tus órdenes.
+plantedAloe1,items,Item,,,Aloe Vera Seeds,Graines d'Aloe Vera,Aloe-Vera-Samen,Semillas de Aloe Vera
+plantedBlueberry1,items,Item,,,Blueberry Seeds,Graines de Myrtille,Blaubeersamen,Semillas de Arándano
+plantedChrysanthemum1,items,Item,,,Chrysanthemum Seeds,Graines de Chrysanthème,Chrysanthemensamen,Semillas de Crisantemo
+plantedCoffee1,items,Item,,,Coffee Seeds,Graines de Café,Kaffeesamen,Semillas de Café
+plantedCorn1,items,Item,,,Corn Seeds,Graines de Maïs,Maissamen,Semillas de Maíz
+plantedCotton1,items,Item,,,Cotton Seeds,Graines de Coton,Baumwollsamen,Semillas de Algodón
+plantedGoldenrod1,items,Item,,,Goldenrod Seeds,Graines de Verge d'Or,Goldrutensamen,Semillas de Vara de Oro
+plantedGraceCorn1,items,Item,,,Super Corn Seeds,Graines de Super Maïs,Supermais-Samen,Semillas de Súper Maíz
+plantedHop1,items,Item,,,Hop Seeds,Graines de Houblon,Hopfensamen,Semillas de Lúpulo
+plantedMushroom1,items,Item,,,Mushroom Spores,Spores de Champignon,Pilzsporen,Esporas de Hongo
+plantedPotato1,items,Item,,,Potato Seeds,Graines de Pomme de Terre,Kartoffelsamen,Semillas de Patata
+plantedPumpkin1,items,Item,,,Pumpkin Seeds,Graines de Citrouille,Kürbissamen,Semillas de Calabaza
+plantedYucca1,items,Item,,,Yucca Seeds,Graines de Yucca,Yuccasamen,Semillas de Yuca
 
 
-posterProstateDesc,blocks,blocks,,,"Hospital poster \n\nCheck your Prostate."
-posterProstate,blocks,blocks,,,Prostate Poster
-posterARUKDesc,blocks,blocks,,,"Hospital poster \n\nARUK."
-posterProstate,blocks,blocks,,,ARUK Poster
-posterProstateDesc,blocks,blocks,,,"Hospital poster \n\nARUK1."
-posterProstate,blocks,blocks,,,ARUK1 Poster
+posterProstateDesc,blocks,blocks,,,Hospital poster \n\nCheck your Prostate.,Affiche d'hôpital \n\nFaites vérifier votre Prostate.,Krankenhausplakat \n\nLassen Sie Ihre Prostata untersuchen.,Póster de hospital \n\nRevisa tu Próstata.
+posterProstate,blocks,blocks,,,Prostate Poster,Affiche Prostate,Prostata-Plakat,Póster de Próstata
+posterARUKDesc,blocks,blocks,,,Hospital poster \n\nARUK.,Affiche d'hôpital \n\nARUK.,Krankenhausplakat \n\nARUK.,Póster de hospital \n\nARUK.
+posterProstate,blocks,blocks,,,ARUK Poster,Affiche ARUK,ARUK-Plakat,Póster ARUK
+posterProstateDesc,blocks,blocks,,,Hospital poster \n\nARUK1.,Affiche d'hôpital \n\nFaites vérifier votre Prostate.,Krankenhausplakat \n\nLassen Sie Ihre Prostata untersuchen.,Póster de hospital \n\nRevisa tu Próstata.
+posterProstate,blocks,blocks,,,ARUK1 Poster,Affiche ARUK1,ARUK1-Plakat,Póster ARUK1

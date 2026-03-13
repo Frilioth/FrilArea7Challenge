@@ -2,11 +2,13 @@
 <!--
 	Area 7 Challenge - UI Modifications
 	Author: Frilioth
-	Version: 2.0.0
+	Version: 2.2.2
 	
 	MODIFICATIONS:
 	- Enlarge ShowMessageWindow (windowTip) for better readability
 	- Increase font size for message text
+	- Zombie HP bar always visible
+	- Push windowEntering (area/storm notifications) down so it doesn't overlap health bar
 -->
 <configs>	
 	<!-- Overall window height - makes the entire message window 663 pixels tall -->
@@ -33,9 +35,11 @@
 	<!-- Continue button position - placed at bottom of window (negative value positions from bottom) -->
 	<set xpath="//window[@name='windowTip']/rect[@name='content']/rect[@name='btnContinue']/@pos">0,-663</set>
 	
-    <!-- Zombie HP bar -->
+    <!-- Zombie HP bar always visible -->
     <set xpath="/windows/window[@name='windowTargetBar']/@visibility">always</set>
 
+	<!-- Push area/storm notifications down so they don't overlap the health bar -->
+	<set xpath="//window[@name='windowEntering']/rect/@pos">-170,-140</set>
 
 	
 </configs>

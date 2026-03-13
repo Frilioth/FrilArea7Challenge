@@ -3,15 +3,16 @@
 <!--
     FrilArea7Challenge - Buffs
     Author: Frilioth
-    Version: 2.2.0
+    Version: 2.2.2
 
 -->
 
 <configs>
   <!-- Remove the Duke's note notification buff -->
   <remove xpath="/buffs/buff[@name='buffDukeNote']"/>
-
-  <set xpath="/buffs/buff[@name='buffForest_Hazard']/@hidden">true</set>
+  
+  <!-- Remove Newbie Coat — XP death penalty protection (levels 1-5) -->
+  <remove xpath="/buffs/buff[@name='buffNewbieCoat']"/>
 
   <append xpath="/buffs">
 
