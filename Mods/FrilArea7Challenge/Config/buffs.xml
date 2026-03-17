@@ -3,7 +3,7 @@
 <!--
     FrilArea7Challenge - Buffs
     Author: Frilioth
-    Version: 2.2.2
+    Version: 2.2.3
 
 -->
 
@@ -104,7 +104,6 @@
 </buff>
 
 <buff name="buffArea7PostDeathRadiation" hidden="true">
-    <damage_type value="radiation"/>
     <stack_type value="ignore"/>
     <duration value="9999"/>
     <update_rate value="1"/>
