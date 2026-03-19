@@ -1,167 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-	Navezgane Hospital Challenge — Challenges
+
+<!--  
+	Area 7 Challenge - Custom Challenge System
 	Author: Frilioth
-	Version: 1.2.1
+	Version: 2.2.6
 	
-	STRUCTURE:
-	- 1 category: Hospital Challenge
-	- 4 groups chained via hidden_by: Assess → Parts → Repair → Escape
-	- Challenges use vanilla format: title_key, short_description_key, description_key
+	CHALLENGE PROGRESSION:
+	1. Basics - Kill zombies and get geared up
+	2. Generator - Gather materials for emergency transmitter
+	3. Deploy - Craft and activate transmitter (triggers blood moon horde + airdrop)
+	4. Escape - Reach Army Base and meet Trader Joel
 	
-	NOTE: Phase 3 (Repair) is a PLACEHOLDER until block upgrade system is built.
+	NOTES:
+	- Transmitter deployment (deployTransmitter) triggers frilArea7SignalSent gameevent
+	- Airdrop contains random vehicle or parts (or IOU note) - escape is possible on foot
+	- All challenges use custom icons defined in UIAtlases
 -->
+
 <configs>
 
-	<!-- ============================================================ -->
-	<!-- REMOVE ALL VANILLA CHALLENGES                                 -->
-	<!-- ============================================================ -->
+<set xpath="/challenges">
 	
-	<remove xpath="/challenges/challenge"/>
-	<remove xpath="/challenges/challenge_group"/>
-	<remove xpath="/challenges/challenge_category"/>
+	<challenge_category name="Area7" title="Area 7 Escape" icon="ui_game_symbol_challenge_category1"/>
 
-	<!-- ============================================================ -->
-	<!-- CATEGORY                                                       -->
-	<!-- ============================================================ -->
+	<!-- ========================================
+	     CHALLENGE GROUPS
+	     ======================================== -->
 	
-	<append xpath="/challenges">
-		<challenge_category name="HospitalChallenge" title_key="hospitalCategoryName" icon="ui_game_symbol_medical"/>
-	</append>
+	<!-- Group 1: Basics - Kill zombies, get geared up -->
+	<challenge_group category="Area7" name="Basics" title_key="challengeGroupBasicsArea7"
+	                 reward_text_key="challengeGroupBasicsReward" reward_event="challenge_reward_500" link_challenges="true"/>
+	
+	<!-- Group 2: Generator - Find parts for emergency transmitter -->
+	<challenge_group category="Area7" name="Generator" title_key="challengeGroupGenerator"
+	                 reward_text_key="challengeGroupGeneratorReward" reward_event="challenge_reward_generator" link_challenges="true" hidden_by="Basics"/>
+	
+	<!-- Group 3: Deploy - Build and deploy the emergency transmitter -->
+	<challenge_group category="Area7" name="Deploy" title_key="challengeGroupDeploy"
+	                 reward_text_key="challengeGroupDeployReward" reward_event="challenge_reward_deploy" link_challenges="true" hidden_by="Generator"/>
+	
+	<!-- Group 4: Escape - Reach the Army Base -->
+	<challenge_group category="Area7" name="Escape" title_key="challengeGroupEscape"
+                 reward_text_key="challengeGroupEscapeReward" reward_event="challenge_complete_escape" link_challenges="true"/>
 
-	<!-- ============================================================ -->
-	<!-- GROUPS — chained via hidden_by                                 -->
-	<!-- ============================================================ -->
+	<!-- ========================================
+	     GROUP 1: BASICS
+	     ======================================== -->
 	
-	<append xpath="/challenges">
-		<challenge_group category="HospitalChallenge" name="hospitalGroupAssess" title_key="hospitalGroupAssessName"
-			reward_text_key="hospitalGroupAssessReward" reward_event="hospital_reward_assess"/>
-		
-		<challenge_group category="HospitalChallenge" name="hospitalGroupParts" title_key="hospitalGroupPartsName"
-			reward_text_key="hospitalGroupPartsReward" hidden_by="hospitalGroupAssess"/>
-		
-		<challenge_group category="HospitalChallenge" name="hospitalGroupRepair" title_key="hospitalGroupRepairName"
-			reward_text_key="hospitalGroupRepairReward" hidden_by="hospitalGroupParts"/>
-		
-		<challenge_group category="HospitalChallenge" name="hospitalGroupEscape" title_key="hospitalGroupEscapeName"
-			reward_text_key="hospitalGroupEscapeReward" hidden_by="hospitalGroupRepair"/>
-	</append>
+	<challenge name="killZombiesArea7" title_key="challengeKillZombiesArea7" icon="ui_game_symbol_challenge_adv_survival_kill_zombies" group="Basics"
+	           short_description_key="challengeKillZombiesArea7Short" description_key="challengeKillZombiesArea7Desc"
+	           reward_text_key="challenge_reward_500xp" reward_event="area7_step_one">
+		<objective type="KillByTag" entity_tags="zombie" target_name_key="xuiZombies" count="10"/>
+	</challenge>
 
-	<!-- ============================================================ -->
-	<!-- PHASE 1: ASSESS THE SITUATION                                 -->
-	<!-- ============================================================ -->
-	
-	<append xpath="/challenges">
-		<challenge name="hospitalKillZombies" group="hospitalGroupAssess"
-			icon="ui_game_symbol_challenge_adv_survival_kill_zombies"
-			title_key="hospitalKillZombies"
-			short_description_key="hospitalKillZombiesShort"
-			description_key="hospitalKillZombiesDesc">
-			<objective type="KillByTag" entity_tags="zombie" target_name_key="xuiZombies" count="10"/>
-			<reward type="Experience" value="500"/>
-		</challenge>
-	</append>
-	
-	<!-- ============================================================ -->
-	<!-- PHASE 2: GATHER PARTS                                         -->
-	<!-- 8 parallel objectives — player finds in any order             -->
-	<!-- ============================================================ -->
-	
-	<append xpath="/challenges">
-		<challenge name="hospitalGetRadiator" group="hospitalGroupParts"
-			icon="ui_game_symbol_radiator"
-			title_key="hospitalGetRadiator"
-			short_description_key="hospitalGetRadiatorShort"
-			description_key="hospitalGetRadiatorDesc">
-			<objective type="Gather" item="resourceRadiator" count="1"/>
-		</challenge>
-		
-		<challenge name="hospitalGetWater" group="hospitalGroupParts"
-			icon="ui_game_symbol_water"
-			title_key="hospitalGetWater"
-			short_description_key="hospitalGetWaterShort"
-			description_key="hospitalGetWaterDesc">
-			<objective type="Gather" item="drinkJarRiverWater" count="1"/>
-		</challenge>
-		
-		<challenge name="hospitalGetEngine" group="hospitalGroupParts"
-			icon="ui_game_symbol_engine"
-			title_key="hospitalGetEngine"
-			short_description_key="hospitalGetEngineShort"
-			description_key="hospitalGetEngineDesc">
-			<objective type="Gather" item="hospitalGyroEngine" count="1"/>
-		</challenge>
-		
-		<challenge name="hospitalGetBattery" group="hospitalGroupParts"
-			icon="ui_game_symbol_battery"
-			title_key="hospitalGetBattery"
-			short_description_key="hospitalGetBatteryShort"
-			description_key="hospitalGetBatteryDesc">
-			<objective type="Gather" item="hospitalGyroBattery" count="1"/>
-		</challenge>
-		
-		<challenge name="hospitalGetSparkPlugs" group="hospitalGroupParts"
-			icon="ui_game_symbol_spark_plugs"
-			title_key="hospitalGetSparkPlugs"
-			short_description_key="hospitalGetSparkPlugsShort"
-			description_key="hospitalGetSparkPlugsDesc">
-			<objective type="Gather" item="hospitalGyroSparkPlugs" count="1"/>
-		</challenge>
-		
-		<challenge name="hospitalGetControlCables" group="hospitalGroupParts"
-			icon="ui_game_symbol_cables"
-			title_key="hospitalGetControlCables"
-			short_description_key="hospitalGetControlCablesShort"
-			description_key="hospitalGetControlCablesDesc">
-			<objective type="Gather" item="hospitalGyroControlCables" count="1"/>
-		</challenge>
-		
-		<challenge name="hospitalGetTailAssembly" group="hospitalGroupParts"
-			icon="ui_game_symbol_tail"
-			title_key="hospitalGetTailAssembly"
-			short_description_key="hospitalGetTailAssemblyShort"
-			description_key="hospitalGetTailAssemblyDesc">
-			<objective type="Gather" item="hospitalGyroTailAssembly" count="1"/>
-		</challenge>
-		
-		<challenge name="hospitalGetBlades" group="hospitalGroupParts"
-			icon="ui_game_symbol_rotor_blades"
-			title_key="hospitalGetBlades"
-			short_description_key="hospitalGetBladesShort"
-			description_key="hospitalGetBladesDesc">
-			<objective type="Gather" item="hospitalGyroBlades" count="1"/>
-		</challenge>
-		
-	</append>
+	<!-- ========================================
+	     GROUP 2: GENERATOR (Emergency Transmitter)
+	     ======================================== -->
 
-	<!-- ============================================================ -->
-	<!-- PHASE 3: REPAIR THE GYRO                                      -->
-	<!-- PLACEHOLDER — will be replaced with block upgrade tracking     -->
-	<!-- ============================================================ -->
-	
-	<append xpath="/challenges">
-		<challenge name="hospitalRepairGyro" group="hospitalGroupRepair"
-			icon="ui_game_symbol_fix"
-			title_key="hospitalRepairGyro"
-			short_description_key="hospitalRepairGyroShort"
-			description_key="hospitalRepairGyroDesc">
-			<reward type="Experience" value="1000"/>
-		</challenge>
-	</append>
+	<!-- Step 1: Gather Steel -->
+	<challenge name="gatherSteel" title_key="challengeGatherSteel" icon="ui_game_symbol_challenge_harvesting_wrench_vending_machine" group="Generator"
+	           hint="challengeGatherSteelHint"
+	           short_description_key="challengeGatherSteelShort" description_key="challengeGatherSteelDesc">
+		<objective type="Gather" item="resourceForgedSteel" count="125"/>
+	</challenge>
 
-	<!-- ============================================================ -->
-	<!-- PHASE 4: ESCAPE                                               -->
-	<!-- ============================================================ -->
+	<!-- Step 2: Gather Mechanical Parts -->
+	<challenge name="gatherMechanicalParts" title_key="challengeGatherMechanicalParts" icon="ui_game_symbol_challenge_harvesting_mechanical_parts" group="Generator"
+	           hint="challengeGatherMechanicalPartsHint"
+	           short_description_key="challengeGatherMechanicalPartsShort" description_key="challengeGatherMechanicalPartsDesc">
+		<objective type="Gather" item="resourceMechanicalParts" count="50"/>
+	</challenge>
+
+	<!-- Step 3: Gather Electrical Parts -->
+	<challenge name="gatherElectricalParts" title_key="challengeGatherElectricalParts" icon="ui_game_symbol_challenge_harvesting_electrical_parts" group="Generator"
+	           hint="challengeGatherElectricalPartsHint"
+	           short_description_key="challengeGatherElectricalPartsShort" description_key="challengeGatherElectricalPartsDesc">
+		<objective type="Gather" item="resourceElectricParts" count="50"/>
+	</challenge>
+
+	<!-- Step 4: Gather Batteries -->
+	<challenge name="gatherBatteries" title_key="challengeGatherBatteries" icon="ui_game_symbol_battery" group="Generator"
+	           hint="challengeGatherBatteriesHint"
+	           short_description_key="challengeGatherBatteriesShort" description_key="challengeGatherBatteriesDesc">
+		<objective type="Gather" item="carBattery" count="5"/>
+	</challenge>
+
+	<!-- Step 5: Gather Duct Tape -->
+	<challenge name="gatherDuctTape" title_key="challengeGatherDuctTape" icon="ui_game_symbol_duct_tape" group="Generator"
+	           hint="challengeGatherDuctTapeHint"
+	           short_description_key="challengeGatherDuctTapeShort" description_key="challengeGatherDuctTapeDesc">
+		<objective type="Gather" item="resourceDuctTape" count="20"/>
+	</challenge>
 	
-	<append xpath="/challenges">
-		<challenge name="hospitalEscape" group="hospitalGroupEscape"
-			icon="ui_game_symbol_cure"
-			title_key="hospitalEscape"
-			short_description_key="hospitalEscapeShort"
-			description_key="hospitalEscapeDesc">
-			<reward type="Experience" value="100"/>
-		</challenge>
-	</append>
+	<!-- ========================================
+	     GROUP 3: DEPLOY (Craft and Deploy Transmitter)
+	     ======================================== -->	
+
+	<!-- Step 1: Craft Transmitter -->
+	<challenge name="craftTransmitter" title_key="challengeCraftTransmitter" icon="ui_game_symbol_transmitter" group="Deploy"
+	           hint="challengeCraftTransmitterHint"
+	           short_description_key="challengeCraftTransmitterShort" description_key="challengeCraftTransmitterDesc">
+		<objective type="Craft" item="satelliteUnitLargeArea7" count="1"/>
+	</challenge>
+
+	<!-- Step 2: Deploy Transmitter - THIS TRIGGERS THE EVENT -->
+	<challenge name="deployTransmitter" title_key="challengeDeployTransmitter" icon="ui_game_symbol_skull" group="Deploy"
+	           hint="challengeDeployTransmitterHint"
+	           short_description_key="challengeDeployTransmitterShort" description_key="challengeDeployTransmitterDesc"
+	           reward_event="frilArea7SignalSent">
+		<objective type="BlockPlace" block="satelliteUnitLargeArea7" count="1"/>
+	</challenge>
 	
+	<!-- ========================================
+	     GROUP 4: ESCAPE (Reach the Army Base)
+	     ======================================== -->
+	
+	<challenge name="escapeArea7" title_key="challengeEscapeArea7" icon="ui_game_symbol_challenge_basics_redeem_rewards" group="Escape"
+	           hint="challengeEscapeArea7Hint"
+	           short_description_key="challengeEscapeArea7Short" description_key="challengeEscapeArea7Desc">
+		<objective type="UseItem" count="1" item_names="noteArea7Extraction"/>
+	</challenge>
+
+</set>
 
 </configs>
