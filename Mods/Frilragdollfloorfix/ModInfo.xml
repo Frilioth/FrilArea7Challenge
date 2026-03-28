@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ModInfo>
+    <Name value="FrilRagdollFloorFix" />
+    <DisplayName value="Fril Ragdoll Floor Fix" />
+    <Version value="1.0.0" />
+    <Description value="Prevents zombies and entities clipping through floor geometry during ragdoll. Applies a corrective position fix when the pelvis Rigidbody sinks below the floor surface." />
+    <Author value="Frilioth" />
+    <Website value="" />
+</ModInfo>
