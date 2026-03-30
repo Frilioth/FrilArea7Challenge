@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    FrilArea7Challenge - Gamestage Modifications
+    Author: Frilioth
+    Version: 2.2.5
+
+    MODIFICATIONS:
+    - Radiated zombies: pushed from GS1 to GS50 (individual spawners)
+    - Charged zombies: pushed from GS1 to GS200 (individual spawners)
+    - Infernal zombies: pushed from GS1 to GS200 (individual spawners)
+    - Group horde spawners also pushed (RadiatedHorde=GS50, Charged/InfernalHorde=GS200)
+-->
+
+<configs>
+
+	<!-- ==========================================
+	     RADIATED ZOMBIES: Push to GS50
+	     ========================================== -->
+	<set xpath="//spawner[@name='zombieArleneRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieBikerRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieBoeRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieBowlerRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieBurntRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieBusinessManRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieChuckRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieDarleneRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieFatCopRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieFatHawaiianRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieFemaleFatRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieFrostclawRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieInmateRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieJanitorRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieJoeRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieLabRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieLumberjackRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieMaleHazmatRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieMarleneRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieMoeRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieMutatedRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieNurseRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombiePartyGirlRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombiePlagueSpitterRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieRancherRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieScreamerRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieSkateboarderRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieSoldierRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieSpiderRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieSteveRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieTomClarkRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieUtilityWorkerRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieWightRadiated']/gamestage/@stage">50</set>
+	<set xpath="//spawner[@name='zombieYoRadiated']/gamestage/@stage">50</set>
+
+	<!-- Radiated group horde spawner -->
+	<set xpath="//spawner[@name='ZombieAllFeralRadiatedHorde']/gamestage/@stage">50</set>
+
+	<!-- ==========================================
+	     CHARGED ZOMBIES: Push to GS200
+	     ========================================== -->
+	<set xpath="//spawner[@name='zombieArleneCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieBoeCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieBurntCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieBusinessManCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieChuckCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieDarleneCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieFrostclawCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieInmateCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieJanitorCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieJoeCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieLabCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieMaleHazmatCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieMarleneCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieMutatedCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieNurseCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombiePartyGirlCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombiePlagueSpitterCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieRancherCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieScreamerCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieSkateboarderCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieSpiderCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieSteveCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieTomClarkCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieUtilityWorkerCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieWightCharged']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieYoCharged']/gamestage/@stage">200</set>
+
+	<!-- Charged group horde spawner -->
+	<set xpath="//spawner[@name='ZombieAllChargedHorde']/gamestage/@stage">200</set>
+
+	<!-- ==========================================
+	     INFERNAL ZOMBIES: Push to GS200
+	     ========================================== -->
+	<set xpath="//spawner[@name='zombieBikerInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieBoeInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieBowlerInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieBurntInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieBusinessManInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieChuckInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieDarleneInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieFatCopInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieFatHawaiianInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieFemaleFatInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieFrostclawInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieInmateInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieJanitorInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieLumberjackInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieMaleHazmatInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieMoeInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieMutatedInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombiePlagueSpitterInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieRancherInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieSkateboarderInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieSoldierInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieSpiderInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieUtilityWorkerInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieWightInfernal']/gamestage/@stage">200</set>
+	<set xpath="//spawner[@name='zombieYoInfernal']/gamestage/@stage">200</set>
+
+	<!-- Infernal group horde spawner -->
+	<set xpath="//spawner[@name='ZombieAllInfernalHorde']/gamestage/@stage">200</set>
+
+</configs>

@@ -8,6 +8,10 @@
                 You wake up inside a top-secret military research facility surrounded by lethal radiation. Your only goal: clear the facility, build an emergency transmitter, survive a blood moon horde, and escape to Camp Frilsville before the facility kills you.
 
                 Death is permanent. If you die, your run is over.
+				
+				BLOOD MOONS: 
+				
+				Vanilla blood moons still occur on your normal cycle. The transmitter triggers an extra one — not a replacement.
 
                 FEATURES:
 
@@ -32,7 +36,7 @@
                 Twitch: twitch.tv/frilioth
             </Description>
 
-            <Version>2.2.7</Version>
+            <Version>2.2.9</Version>
             <EAC>Disabled</EAC>
             <Discord></Discord>
             <Donate></Donate>
