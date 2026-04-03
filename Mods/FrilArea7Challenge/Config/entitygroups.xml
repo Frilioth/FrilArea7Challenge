@@ -3,13 +3,18 @@
 <!--
     FrilArea7Challenge - Entity Groups
     Author: Frilioth
-    Version: 2.2.9
+    Version: 2.2.11
 
     Zeroes out Radiated/Charged/Infernal probabilities in vanilla sleeper groups
     below the required gamestage thresholds:
       - Radiated: GS100 minimum
       - Charged/Infernal: GS250 minimum
+      - Ferals, FatCop, Mutated: GS75 minimum
     (SVS-scripted spawns are unaffected as they call specific classes directly)
+
+    Also zeroes out Radiated/Charged/Infernal from all biome ambient spawn groups
+    so they never appear as wilderness wanderers regardless of biome or gamestage.
+    These variants still appear correctly in POI sleeper volumes via the gates below.
 -->
 
 <configs>
@@ -38,59 +43,59 @@
      GAMESTAGE GATES — zero out Radiated/Charged/Infernal in sleeper groups
      below minimum thresholds (GS100 for Radiated, GS250 for Charged/Infernal)
 ===================================================================== -->
-	<!-- GS50: zombieBusinessManFeralGroupGS50 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieBusinessManFeralGroupGS50']">
-		zombieBusinessManFeral, .4
+	<!-- GS50: zombieBusinessManGroupGS50 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieBusinessManGroupGS50']">
+		zombieBusinessManFeral, 0
 		zombieBusinessManRadiated, 0
-		zombieJanitorFeral, .10
+		zombieJanitorFeral, 0
 		zombieJanitorRadiated, 0
 	</set>
 
-	<!-- GS50: zombieFatHawaiianFeralGroupGS50 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieFatHawaiianFeralGroupGS50']">
-		zombieFatHawaiianFeral, .4
+	<!-- GS50: zombieFatHawaiianGroupGS50 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieFatHawaiianGroupGS50']">
+		zombieFatHawaiianFeral, 0
 		zombieFatHawaiianRadiated, 0
-		zombieBowlerFeral, .10
+		zombieBowlerFeral, 0
 		zombieBowlerRadiated, 0
 	</set>
 
-	<!-- GS50: zombieInmateFeralGroupGS50 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieInmateFeralGroupGS50']">
-		zombieInmateFeral, .4
+	<!-- GS50: zombieInmateGroupGS50 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieInmateGroupGS50']">
+		zombieInmateFeral, 0
 		zombieInmateRadiated, 0
-		zombieBikerFeral, .10
+		zombieBikerFeral, 0
 		zombieBikerRadiated, 0
 	</set>
 
-	<!-- GS50: zombieLabFeralGroupGS50 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieLabFeralGroupGS50']">
-		zombieLabFeral, .4
+	<!-- GS50: zombieLabGroupGS50 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieLabGroupGS50']">
+		zombieLabFeral, 0
 		zombieLabRadiated, 0
-		zombieJanitorFeral, .10
+		zombieJanitorFeral, 0
 		zombieJanitorRadiated, 0
 	</set>
 
-	<!-- GS50: zombieNurseFeralGroupGS50 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieNurseFeralGroupGS50']">
-		zombieNurseFeral, .4
+	<!-- GS50: zombieNurseGroupGS50 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieNurseGroupGS50']">
+		zombieNurseFeral, 0
 		zombieNurseRadiated, 0
-		zombieLabFeral, .10
+		zombieLabFeral, 0
 		zombieLabRadiated, 0
 	</set>
 
-	<!-- GS50: zombieSoldierFeralGroupGS50 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieSoldierFeralGroupGS50']">
-		zombieSoldierFeral, .4
+	<!-- GS50: zombieSoldierGroupGS50 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS50']">
+		zombieSoldierFeral, 0
 		zombieSoldierRadiated, 0
-		zombieMaleHazmatFeral, .10
+		zombieMaleHazmatFeral, 0
 		zombieMaleHazmatRadiated, 0
 	</set>
 
-	<!-- GS50: zombieUtilityWorkerFeralGroupGS50 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieUtilityWorkerFeralGroupGS50']">
-		zombieUtilityWorkerFeral, .4
+	<!-- GS50: zombieUtilityWorkerGroupGS50 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieUtilityWorkerGroupGS50']">
+		zombieUtilityWorkerFeral, 0
 		zombieUtilityWorkerRadiated, 0
-		zombieJanitorFeral, .10
+		zombieJanitorFeral, 0
 		zombieJanitorRadiated, 0
 	</set>
 
@@ -99,13 +104,13 @@
 		zombieMaleHazmat
 		zombieFemaleFat
 		zombieMarleneRadiated, 0
-		zombieSteveFeral, .52
-		zombieJoeFeral, .58
-		zombiePartyGirlFeral, .53
-		zombieYoFeral, .48
+		zombieSteveFeral, 0
+		zombieJoeFeral, 0
+		zombiePartyGirlFeral, 0
+		zombieYoFeral, 0
 		zombieLumberjack
 		zombieSoldier
-		zombieMaleHazmatFeral, .45
+		zombieMaleHazmatFeral, 0
 		zombieBoeRadiated, 0
 	</set>
 
@@ -419,8 +424,8 @@
 		zombieBusinessManFeral
 	</set>
 
-	<!-- GS200: zombieBusinessManFeralGroupGS200 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieBusinessManFeralGroupGS200']">
+	<!-- GS200: zombieBusinessManGroupGS200 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieBusinessManGroupGS200']">
 		zombieBusinessManFeral, .45
 		zombieBusinessManRadiated, .25
 		zombieBusinessManCharged, 0
@@ -429,8 +434,8 @@
 		zombieJanitorCharged, 0
 	</set>
 
-	<!-- GS200: zombieFatHawaiianFeralGroupGS200 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieFatHawaiianFeralGroupGS200']">
+	<!-- GS200: zombieFatHawaiianGroupGS200 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieFatHawaiianGroupGS200']">
 		zombieFatHawaiianFeral, .45
 		zombieFatHawaiianRadiated, .25
 		zombieFatHawaiianInfernal, 0
@@ -439,8 +444,8 @@
 		zombieBowlerInfernal, 0
 	</set>
 
-	<!-- GS200: zombieInmateFeralGroupGS200 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieInmateFeralGroupGS200']">
+	<!-- GS200: zombieInmateGroupGS200 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieInmateGroupGS200']">
 		zombieInmateFeral, .45
 		zombieInmateRadiated, .15
 		zombieInmateCharged, 0
@@ -448,8 +453,8 @@
 		zombieBikerRadiated, .25
 	</set>
 
-	<!-- GS200: zombieLabFeralGroupGS200 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieLabFeralGroupGS200']">
+	<!-- GS200: zombieLabGroupGS200 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieLabGroupGS200']">
 		zombieLabFeral, .45
 		zombieLabRadiated, .25
 		zombieLabCharged, 0
@@ -458,8 +463,8 @@
 		zombieJanitorCharged, 0
 	</set>
 
-	<!-- GS200: zombieNurseFeralGroupGS200 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieNurseFeralGroupGS200']">
+	<!-- GS200: zombieNurseGroupGS200 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieNurseGroupGS200']">
 		zombieNurseFeral, .45
 		zombieNurseRadiated, .25
 		zombieNurseCharged, 0
@@ -468,8 +473,8 @@
 		zombieLabCharged, 0
 	</set>
 
-	<!-- GS200: zombieSoldierFeralGroupGS200 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieSoldierFeralGroupGS200']">
+	<!-- GS200: zombieSoldierGroupGS200 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieSoldierGroupGS200']">
 		zombieSoldierFeral, .45
 		zombieSoldierRadiated, .25
 		zombieMaleHazmatFeral, .1
@@ -477,8 +482,8 @@
 		zombieMaleHazmatCharged, 0
 	</set>
 
-	<!-- GS200: zombieUtilityWorkerFeralGroupGS200 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieUtilityWorkerFeralGroupGS200']">
+	<!-- GS200: zombieUtilityWorkerGroupGS200 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieUtilityWorkerGroupGS200']">
 		zombieUtilityWorkerFeral, .45
 		zombieUtilityWorkerRadiated, .25
 		zombieUtilityWorkerCharged, 0
@@ -758,6 +763,132 @@
 		zombieMarlene
 		zombieFemaleFatFeral
 		zombieRancherFeral, .05
+	</set>
+
+
+	<!-- GS70: sleeperHordeStageGS70 -->
+	<set xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS70']">
+		zombieBoeFeral, 0
+		zombieFatCop, 0
+		zombieDarlene
+		zombieYo
+		zombieBusinessMan
+		zombieMaleHazmat, .62
+		zombiePartyGirl
+		zombieSoldier, .47
+		zombieSpider, .41
+		zombieArlene
+	</set>
+
+<!-- =====================================================================
+     BIOME AMBIENT GATING - zero out Radiated/Charged/Infernal from all
+     biome ambient spawn groups so they never appear as wilderness wanderers.
+     These variants still appear correctly in POI sleeper volumes above.
+===================================================================== -->
+
+	<!-- Wasteland day ambient -->
+	<set xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
+		zombieMutated
+		zombieFatCop, .4
+		zombieMaleHazmat, .4
+		zombieMutatedFeral, .05
+		zombieMutatedRadiated, 0
+		zombieMutatedInfernal, 0
+		zombieMutatedCharged, 0
+		zombieWightFeral, .05
+	</set>
+
+	<!-- Wasteland night ambient -->
+	<set xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
+		zombieMutatedFeral, 4
+		zombieFatCopFeral, 3
+		zombieSoldierFeral, 3
+		zombieWightFeral, 2
+		zombieSpiderFeral, 2
+		zombieMutatedRadiated, 0
+		zombieMutatedInfernal, 0
+		zombieMutatedCharged, 0
+		zombieFemaleFatFeral
+		zombieBurntFeral
+		zombieMaleHazmatFeral
+		zombieFatHawaiianFeral
+		zombieBowlerFeral, .5
+		zombieBoeFeral, .5
+		zombieJoeFeral, .5
+		zombieSteveFeral, .5
+		zombieTomClarkFeral, .5
+		zombieMoeFeral, .5
+		zombieYoFeral, .5
+		zombieBusinessManFeral, .5
+		zombieArleneFeral, .5
+		zombieDarleneFeral, .5
+		zombieMarleneFeral, .5
+		zombieNurseFeral, .5
+		zombieSteveCrawlerFeral, .5
+	</set>
+
+	<!-- Wasteland downtown ambient -->
+	<set xpath="/entitygroups/entitygroup[@name='ZombiesWastelandDowntown']">
+		zombieMutated, 4
+		zombieMutatedFeral, 3
+		zombieFatCop, 3
+		zombieSpider, 2
+		zombieBurnt, 2
+		zombieBurntFeral, 2
+		zombieMaleHazmat, 2
+		zombieWightFeral, 2
+		zombieMutatedRadiated, 0
+		zombieMutatedInfernal, 0
+		zombieMutatedCharged, 0
+		zombieSpiderFeral
+		zombieMaleHazmatFeral
+		zombieBoe
+		zombieJoe
+		zombieSteve
+		zombieTomClark
+		zombieMoe
+		zombieYo
+		zombieBusinessMan
+		zombieBusinessManFeral
+		zombieArlene
+		zombieDarlene
+		zombieMarlene
+		zombieNurse
+		zombiePartyGirl
+		zombieFatHawaiian
+		zombieSoldier
+		zombieBoeFeral, .5
+		zombieJoeFeral, .5
+		zombieSteveFeral, .5
+		zombieTomClarkFeral, .5
+		zombieMoeFeral, .5
+		zombieYoFeral, .5
+		zombieArleneFeral, .5
+		zombieDarleneFeral, .5
+		zombieMarleneFeral, .5
+		zombieNurseFeral, .5
+		zombiePartyGirlFeral, .5
+		zombieFatHawaiianFeral, .5
+		zombieSteveCrawlerFeral, .5
+		zombieFatCopFeral, .5
+		zombieSoldierFeral, .5
+		animalZombieDog, .8
+		animalWolf, .8
+		zombieBowler, .1
+		zombieBowlerFeral, .1
+		animalDireWolf, .1
+		zombieDemolition, .05
+	</set>
+
+	<!-- Snow night ambient -->
+	<set xpath="/entitygroups/entitygroup[@name='ZombiesSnowNight']">
+		zombieChuck
+		zombieChuckFeral, .1
+		zombieChuckRadiated, 0
+		zombieChuckInfernal, 0
+		zombieChuckCharged, 0
+		zombieLumberjack, .45
+		zombieLumberjackFeral, .05
 	</set>
 
 </configs>
