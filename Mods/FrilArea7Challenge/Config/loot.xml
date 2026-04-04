@@ -3,7 +3,7 @@
 <!--
 	Area 7 Challenge - Loot Modifications
 	Author: Frilioth
-	Version: 2.2.11
+	Version: 2.2.12
 	
 -->
 	
@@ -238,6 +238,16 @@
 
 		<lootcontainer id="Area7Biker" name="Area7Biker" count="2,4" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
 			<item group="groupGarage01"/>
+		</lootcontainer>
+
+		<lootcontainer id="Area7Lumberjack" name="Area7Lumberjack" count="2,4" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item name="resourceSnowBall" count="1,2" prob="1"/>
+			<item group="groupGarage01"/>
+		</lootcontainer>
+
+		<lootcontainer id="Area7Frostclaw" name="Area7Frostclaw" count="2,4" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">
+			<item name="resourceSnowBall" count="1,2" prob="1"/>
+			<item group="frilArea7BooksAll"/>
 		</lootcontainer>
 
 		<lootcontainer id="Area7Cops" name="Area7Cops" count="2,4" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="qualBaseTemplate">

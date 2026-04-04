@@ -3,7 +3,7 @@
 <!--
     FrilArea7Challenge - Entity Classes
     Author: Frilioth
-    Version: 2.2.11
+    Version: 2.2.12
 
 -->
 
@@ -179,6 +179,20 @@
 	<property name="SoundSpawn" value="zpack_spawn"/>
 </entity_class>
 
+<entity_class name="EntityLootContainerArea7Lumberjack" extends="EntityLootContainerRegular">
+	<property name="LootListOnDeath" value="Area7Lumberjack" />
+	<property name="OverrideName" value="EntityLootContainerArea7Lumberjack" />
+	<property name="SizeScale" value="0.9"/>
+	<property name="SoundSpawn" value="zpack_spawn"/>
+</entity_class>
+
+<entity_class name="EntityLootContainerArea7Frostclaw" extends="EntityLootContainerRegular">
+	<property name="LootListOnDeath" value="Area7Frostclaw" />
+	<property name="OverrideName" value="EntityLootContainerArea7Frostclaw" />
+	<property name="SizeScale" value="0.9"/>
+	<property name="SoundSpawn" value="zpack_spawn"/>
+</entity_class>
+
 <entity_class name="EntityLootContainerArea7Books" extends="EntityLootContainerRegular">
 	<property name="LootListOnDeath" value="Area7Books" />
 	<property name="OverrideName" value="lootBookBag" />
@@ -219,8 +233,8 @@
 		<property name="Area7LootDropProb" value="0.2"/>
 	</append>
 	<append xpath="//entity_class[@name='zombieLumberjack']">
-		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Biker"/>
-		<property name="Area7LootDropProb" value="0.2"/>
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Lumberjack"/>
+		<property name="Area7LootDropProb" value="1.0"/>
 	</append>
 
 	<!-- COPS BAG -->
@@ -319,8 +333,8 @@
 		<property name="Area7LootDropProb" value="0.2"/>
 	</append>
 	<append xpath="//entity_class[@name='zombieFrostclaw']">
-		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>
-		<property name="Area7LootDropProb" value="0.2"/>
+		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Frostclaw"/>
+		<property name="Area7LootDropProb" value="1.0"/>
 	</append>
 	<append xpath="//entity_class[@name='zombieWightFeral']">
 		<property name="Area7LootDropEntityClass" value="EntityLootContainerArea7Books"/>

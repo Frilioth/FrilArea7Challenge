@@ -211,6 +211,8 @@ lootHeavyBag,Loot,,,,Heavy Equipment Bag,Sac d'Équipement Lourd,Schwere-Ausrüs
 lootHazmatBag,Loot,,,,Hazmat Supplies Bag,Sac de Fournitures Hazmat,Gefahrgut-Vorratsbeutel,Bolsa de Suministros Hazmat
 lootResearcherBag,Loot,,,,Researcher's Remains,Restes du Chercheur,Überreste des Forschers,Restos del Investigador
 lootBookBag,Loot,,,,Book Bag,Sac de Livres,Bücherbeutel,Bolsa de Libros
+EntityLootContainerArea7Frostclaw,Loot,,,,Chuck's Loot Bag,Sac de Butin de Chuck,Chuck-Beutebeutel,Bolsa de Botín de Chuck
+EntityLootContainerArea7Lumberjack,Loot,,,,Lumberjack's Loot Bag,Sac de Butin du Bûcheron,Holzfäller-Beutebeutel,Bolsa de Botín del Leñador
 
 # ============================================================
 # ENTITIES - SUPPLY CRATES
