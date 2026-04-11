@@ -1,0 +1,25 @@
+<configs>
+	<append xpath="/lootcontainers">
+		<lootcontainer name="UH60" count="0" size="14,10" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate"></lootcontainer>
+	</append>
+		<conditional>
+			<if cond="mod_loaded('zSMXui')">
+				<set xpath="/lootcontainers/lootcontainer[@size='14,10']/@size">5,28</set>
+			</if>
+		</conditional>
+	<insertBefore xpath="/lootcontainers/lootgroup[@name='groupScrapCommon']">
+		<lootgroup name="UH60group">
+			<item name="vehicleUH60chassis"/>
+			<item name="vehicleUH60accessories"/>
+			<item name="vehicleWheels"/>
+			<item name="smallEngine"/>
+			<item name="carBattery"/>
+		</lootgroup>
+		<lootgroup name="groupQuestUH60Parts" count="all">
+			<item name="questRewardUH60PartsBundle"/>
+		</lootgroup>
+	</insertBefore>
+	<append xpath="/lootcontainers/lootgroup[@name='vehiclePartsTiered']">
+		<item group="UH60group" loot_prob_template="ProbT3"/>
+	</append>
+</configs>

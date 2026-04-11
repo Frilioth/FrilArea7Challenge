@@ -39,5 +39,20 @@
 				<property name="message" value="area7ExtractionWindowMessage"/>
 			</action>
 		</quest>
+
+		<quest id="quest_Area7MissionComplete">
+			<property name="name_key" value="area7MissionCompleteTitle"/>
+			<property name="subtitle_key" value="area7MissionCompleteTitle"/>
+			<property name="description_key" value="area7MissionCompleteOfferTeaser"/>
+			<property name="offer_key" value="area7MissionCompleteOfferTeaser"/>
+			<property name="icon" value="ui_game_symbol_map_city"/>
+			<property name="category_key" value="challenge"/>
+			<property name="completiontype" value="AutoComplete"/>
+
+			<action type="ShowMessageWindow">
+				<property name="title" value="area7MissionCompleteTitle"/>
+				<property name="message" value="area7MissionCompleteMessage"/>
+			</action>
+		</quest>
 	</append>
 </configs>

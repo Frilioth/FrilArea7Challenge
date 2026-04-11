@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <Name value="FrilArea7Extraction" />
+  <DisplayName value="Area 7 Extraction Sequence" />
+  <Version value="1.0.0" />
+  <Author value="Frilioth" />
+  <Description value="UH-60 extraction sequence for Area 7. Requires FrilArea7Challenge and BDubs Vehicles." />
+  <Website value="" />
+</xml>

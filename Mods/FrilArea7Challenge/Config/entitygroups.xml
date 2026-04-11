@@ -51,32 +51,32 @@
 		zombieJanitorRadiated, 0
 	</set>
 
-	<!-- GS50: zombieFatHawaiianGroupGS50 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieFatHawaiianGroupGS50']">
+	<!-- GS50: zombieFatHawaiianFeralGroupGS50 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieFatHawaiianFeralGroupGS50']">
 		zombieFatHawaiianFeral, 0
 		zombieFatHawaiianRadiated, 0
 		zombieBowlerFeral, 0
 		zombieBowlerRadiated, 0
 	</set>
 
-	<!-- GS50: zombieInmateGroupGS50 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieInmateGroupGS50']">
+	<!-- GS50: zombieInmateFeralGroupGS50 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieInmateFeralGroupGS50']">
 		zombieInmateFeral, 0
 		zombieInmateRadiated, 0
 		zombieBikerFeral, 0
 		zombieBikerRadiated, 0
 	</set>
 
-	<!-- GS50: zombieLabGroupGS50 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieLabGroupGS50']">
+	<!-- GS50: zombieLabFeralGroupGS50 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieLabFeralGroupGS50']">
 		zombieLabFeral, 0
 		zombieLabRadiated, 0
 		zombieJanitorFeral, 0
 		zombieJanitorRadiated, 0
 	</set>
 
-	<!-- GS50: zombieNurseGroupGS50 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieNurseGroupGS50']">
+	<!-- GS50: zombieNurseFeralGroupGS50 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieNurseFeralGroupGS50']">
 		zombieNurseFeral, 0
 		zombieNurseRadiated, 0
 		zombieLabFeral, 0
@@ -434,8 +434,8 @@
 		zombieJanitorCharged, 0
 	</set>
 
-	<!-- GS200: zombieFatHawaiianGroupGS200 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieFatHawaiianGroupGS200']">
+	<!-- GS200: zombieFatHawaiianFeralGroupGS200 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieFatHawaiianFeralGroupGS200']">
 		zombieFatHawaiianFeral, .45
 		zombieFatHawaiianRadiated, .25
 		zombieFatHawaiianInfernal, 0
@@ -444,8 +444,8 @@
 		zombieBowlerInfernal, 0
 	</set>
 
-	<!-- GS200: zombieInmateGroupGS200 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieInmateGroupGS200']">
+	<!-- GS200: zombieInmateFeralGroupGS200 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieInmateFeralGroupGS200']">
 		zombieInmateFeral, .45
 		zombieInmateRadiated, .15
 		zombieInmateCharged, 0
@@ -453,8 +453,8 @@
 		zombieBikerRadiated, .25
 	</set>
 
-	<!-- GS200: zombieLabGroupGS200 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieLabGroupGS200']">
+	<!-- GS200: zombieLabFeralGroupGS200 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieLabFeralGroupGS200']">
 		zombieLabFeral, .45
 		zombieLabRadiated, .25
 		zombieLabCharged, 0
@@ -463,8 +463,8 @@
 		zombieJanitorCharged, 0
 	</set>
 
-	<!-- GS200: zombieNurseGroupGS200 -->
-	<set xpath="/entitygroups/entitygroup[@name='zombieNurseGroupGS200']">
+	<!-- GS200: zombieNurseFeralGroupGS200 -->
+	<set xpath="/entitygroups/entitygroup[@name='zombieNurseFeralGroupGS200']">
 		zombieNurseFeral, .45
 		zombieNurseRadiated, .25
 		zombieNurseCharged, 0
