@@ -3,7 +3,7 @@
 <!--
 	Area 7 Challenge - Progression Modifications
 	Author: Frilioth
-	Version: 2.2.12
+	Version: 2.2.13
 	
 	MODIFICATIONS:
 	- Cap crafting skill magazines at level 50 (down from 75/100)
@@ -69,6 +69,8 @@
 	<!-- Move car battery from T4 to T1 display -->
 	<set xpath="//crafting_skill[@name='craftingElectrician']/display_entry[@name_key='electricianT1']/unlock_entry/@item">generatorbank,electricwirerelay,switch,tripwirepost,ceilingLight01_player,industrialLight01_player,industrialLight02_player,ceilingLight07_player,carBattery</set>
 	<set xpath="//crafting_skill[@name='craftingElectrician']/display_entry[@name_key='electricianT1']/@unlock_level">5</set>
+	<!-- Fix: generatorbank RecipeTagUnlocked was still at 25,100 — display_entry showed 5 but actual unlock was gated at 25 -->
+	<set xpath="//crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@tags='generatorbank,electricwirerelay,switch,tripwirepost,ceilingLight01_player,industrialLight01_player,industrialLight02_player,ceilingLight07_player']/@level">5,50</set>
 	<!-- Remove T4 display entry for car battery -->
 	<remove xpath="//crafting_skill[@name='craftingElectrician']/display_entry[@name_key='electricianT4']"/>
 	
