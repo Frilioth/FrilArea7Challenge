@@ -13,3 +13,4 @@
 # show the completer's name, the rest keep their default name.
 
 Frilioth=Soldier
+PerfectTrip=Boe
