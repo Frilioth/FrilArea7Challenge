@@ -47,9 +47,10 @@
             <EAC>Disabled</EAC>
             <Discord></Discord>
             <Donate></Donate>
-            <DownloadMode>Clone</DownloadMode>
+            <DownloadMode>Release</DownloadMode>
             <Downloads>
-                <Download>https://github.com/Frilioth/FrilArea7Challenge</Download>
+                <Download>https://github.com/Frilioth/FrilArea7Challenge/releases</Download>
+                <AltDownload/>
             </Downloads>
 
         </Server>
