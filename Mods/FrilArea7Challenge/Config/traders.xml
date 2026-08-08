@@ -2,7 +2,7 @@
 <!--
     Area 7 Challenge - Traders
     Author: Frilioth
-    Version: 2.2.12
+    Version: 3.0.1
 
     Overrides Trader Hugh (trader_info id="7") to sell only the Extraction Order.
     noteArea7Extraction is defined in 0_Area7Items which loads before this parses,

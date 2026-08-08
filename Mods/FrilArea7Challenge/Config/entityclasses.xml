@@ -3,7 +3,7 @@
 <!--
     FrilArea7Challenge - Entity Classes
     Author: Frilioth
-    Version: 2.2.12
+    Version: 3.0.1
 
 -->
 
@@ -25,12 +25,13 @@
 			<property name="ParticleOnDeath" value="supply_crate_gib_Prefab"/>
 			<property name="SoundParachuteOpen" value="SupplyDrops/Parachute_Opens"/>
 			<property name="SoundLanding" value="SupplyDrops/Supply_Crate_Land"/>
-			<property name="LootListAlive" value="210"/>
+			<property name="LootList" value="210"/>
+			<property name="Faction" value="none"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="MaxHealth" value="200"/>
+			<property name="HasRagdoll" value="false"/>
 			<property name="NavObject" value="supply_drop"/>
 			<property name="DisplayType" value="supplyDrop"/>
-			<property name="Activated" value="UseRequireHoldAction"/>
-			<property name="ActivateText" value="lblContextActionOpen"/>
-			<property name="ActivateHoldTime" value="1"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="500"/>
 			</effect_group>
@@ -48,12 +49,13 @@
 			<property name="ParticleOnDeath" value="supply_crate_gib_Prefab"/>
 			<property name="SoundParachuteOpen" value="SupplyDrops/Parachute_Opens"/>
 			<property name="SoundLanding" value="SupplyDrops/Supply_Crate_Land"/>
-			<property name="LootListAlive" value="211"/>
+			<property name="LootList" value="211"/>
+			<property name="Faction" value="none"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="MaxHealth" value="200"/>
+			<property name="HasRagdoll" value="false"/>
 			<property name="NavObject" value="supply_drop"/>
 			<property name="DisplayType" value="supplyDrop"/>
-			<property name="Activated" value="UseRequireHoldAction"/>
-			<property name="ActivateText" value="lblContextActionOpen"/>
-			<property name="ActivateHoldTime" value="1"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="500"/>
 			</effect_group>
@@ -71,12 +73,13 @@
 			<property name="ParticleOnDeath" value="supply_crate_gib_Prefab"/>
 			<property name="SoundParachuteOpen" value="SupplyDrops/Parachute_Opens"/>
 			<property name="SoundLanding" value="SupplyDrops/Supply_Crate_Land"/>
-			<property name="LootListAlive" value="212"/>
+			<property name="LootList" value="212"/>
+			<property name="Faction" value="none"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="MaxHealth" value="200"/>
+			<property name="HasRagdoll" value="false"/>
 			<property name="NavObject" value="supply_drop"/>
 			<property name="DisplayType" value="supplyDrop"/>
-			<property name="Activated" value="UseRequireHoldAction"/>
-			<property name="ActivateText" value="lblContextActionOpen"/>
-			<property name="ActivateHoldTime" value="1"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="500"/>
 			</effect_group>
@@ -94,12 +97,13 @@
 			<property name="ParticleOnDeath" value="supply_crate_gib_Prefab"/>
 			<property name="SoundParachuteOpen" value="SupplyDrops/Parachute_Opens"/>
 			<property name="SoundLanding" value="SupplyDrops/Supply_Crate_Land"/>
-			<property name="LootListAlive" value="213"/>
+			<property name="LootList" value="213"/>
+			<property name="Faction" value="none"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="MaxHealth" value="200"/>
+			<property name="HasRagdoll" value="false"/>
 			<property name="NavObject" value="supply_drop"/>
 			<property name="DisplayType" value="supplyDrop"/>
-			<property name="Activated" value="UseRequireHoldAction"/>
-			<property name="ActivateText" value="lblContextActionOpen"/>
-			<property name="ActivateHoldTime" value="1"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="500"/>
 			</effect_group>
@@ -117,84 +121,89 @@
 			<property name="ParticleOnDeath" value="supply_crate_gib_Prefab"/>
 			<property name="SoundParachuteOpen" value="SupplyDrops/Parachute_Opens"/>
 			<property name="SoundLanding" value="SupplyDrops/Supply_Crate_Land"/>
-			<property name="LootListAlive" value="214"/>
+			<property name="LootList" value="214"/>
+			<property name="Faction" value="none"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="MaxHealth" value="200"/>
+			<property name="HasRagdoll" value="false"/>
 			<property name="NavObject" value="supply_drop"/>
 			<property name="DisplayType" value="supplyDrop"/>
-			<property name="Activated" value="UseRequireHoldAction"/>
-			<property name="ActivateText" value="lblContextActionOpen"/>
-			<property name="ActivateHoldTime" value="1"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="500"/>
 			</effect_group>
 			<property name="TimeStayAfterDeath" value="120"/>
 		</entity_class>
 
-		<!-- Other loot container entities -->
+		<!-- Other loot container entities.
+		     3.0: the loot-container property is LootList. LootListOnDeath no longer exists
+		     (0 uses in vanilla 3.0), so these bags were silently inheriting zPackReg from
+		     EntityLootContainerRegular - i.e. generic vanilla backpack loot instead of the
+		     Area7* lists below. -->
 		<entity_class name="EntityLootContainerArea7Medical" extends="EntityLootContainerRegular">
-	<property name="LootListOnDeath" value="Area7Medical" />
+	<property name="LootList" value="Area7Medical" />
 	<property name="OverrideName" value="lootMedicalBag" />
 	<property name="SizeScale" value="0.9"/>
 	<property name="SoundSpawn" value="zpack_spawn"/>
 </entity_class>
 
 <entity_class name="EntityLootContainerArea7Biker" extends="EntityLootContainerRegular">
-	<property name="LootListOnDeath" value="Area7Biker" />
+	<property name="LootList" value="Area7Biker" />
 	<property name="OverrideName" value="lootBikerBag" />
 	<property name="SizeScale" value="0.9"/>
 	<property name="SoundSpawn" value="zpack_spawn"/>
 </entity_class>
 
 <entity_class name="EntityLootContainerArea7Cops" extends="EntityLootContainerRegular">
-	<property name="LootListOnDeath" value="Area7Cops" />
+	<property name="LootList" value="Area7Cops" />
 	<property name="OverrideName" value="lootCopsBag" />
 	<property name="SizeScale" value="0.9"/>
 	<property name="SoundSpawn" value="zpack_spawn"/>
 </entity_class>
 
 <entity_class name="EntityLootContainerArea7Tokens" extends="EntityLootContainerRegular">
-	<property name="LootListOnDeath" value="Area7Tokens" />
+	<property name="LootList" value="Area7Tokens" />
 	<property name="OverrideName" value="lootTokensBag" />
 	<property name="SizeScale" value="0.9"/>
 	<property name="SoundSpawn" value="zpack_spawn"/>
 </entity_class>
 
 <entity_class name="EntityLootContainerArea7Heavy" extends="EntityLootContainerRegular">
-	<property name="LootListOnDeath" value="Area7Heavy" />
+	<property name="LootList" value="Area7Heavy" />
 	<property name="OverrideName" value="lootHeavyBag" />
 	<property name="SizeScale" value="0.9"/>
 	<property name="SoundSpawn" value="zpack_spawn"/>
 </entity_class>
 
 <entity_class name="EntityLootContainerArea7Bubbles" extends="EntityLootContainerRegular">
-	<property name="LootListOnDeath" value="Area7Bubbles" />
+	<property name="LootList" value="Area7Bubbles" />
 	<property name="OverrideName" value="lootHazmatBag" />
 	<property name="SizeScale" value="0.9"/>
 	<property name="SoundSpawn" value="zpack_spawn"/>
 </entity_class>
 
 <entity_class name="EntityLootContainerArea7Creepy" extends="EntityLootContainerRegular">
-	<property name="LootListOnDeath" value="Area7Creepy" />
+	<property name="LootList" value="Area7Creepy" />
 	<property name="OverrideName" value="lootResearcherBag" />
 	<property name="SizeScale" value="0.9"/>
 	<property name="SoundSpawn" value="zpack_spawn"/>
 </entity_class>
 
 <entity_class name="EntityLootContainerArea7Lumberjack" extends="EntityLootContainerRegular">
-	<property name="LootListOnDeath" value="Area7Lumberjack" />
-	<property name="OverrideName" value="EntityLootContainerArea7Lumberjack" />
+	<property name="LootList" value="Area7Lumberjack" />
+	<property name="OverrideName" value="lootLumberjackBag" />
 	<property name="SizeScale" value="0.9"/>
 	<property name="SoundSpawn" value="zpack_spawn"/>
 </entity_class>
 
 <entity_class name="EntityLootContainerArea7Frostclaw" extends="EntityLootContainerRegular">
-	<property name="LootListOnDeath" value="Area7Frostclaw" />
-	<property name="OverrideName" value="EntityLootContainerArea7Frostclaw" />
+	<property name="LootList" value="Area7Frostclaw" />
+	<property name="OverrideName" value="lootFrostclawBag" />
 	<property name="SizeScale" value="0.9"/>
 	<property name="SoundSpawn" value="zpack_spawn"/>
 </entity_class>
 
 <entity_class name="EntityLootContainerArea7Books" extends="EntityLootContainerRegular">
-	<property name="LootListOnDeath" value="Area7Books" />
+	<property name="LootList" value="Area7Books" />
 	<property name="OverrideName" value="lootBookBag" />
 	<property name="Mesh" value="@:Entities/LootContainers/backpack_vehicleDroppedPrefab.prefab"/>
 	<property name="SizeScale" value="0.75"/>
@@ -202,8 +211,13 @@
 </entity_class>
 	</append>
 
-	<set xpath="//entity_class[contains(@name, 'player')]/property[contains(@name, 'ItemsOnEnterGame')]/@value">noteArea7Rules,meleeWpnBladeT1HuntingKnife,medicalFirstAidBandage,drinkJarBoiledWater,foodCanChili</set>
-	<remove xpath="//entity_class[contains(@name, 'player')]/property[@name='ItemsOnEnterGame.GameModeSurvival']"/>
+	<!-- v3.0.1: ItemsOnEnterGame is now a class with a GameModeSurvival child.
+	     Strip the vanilla Duke intro note (noteDuke01) from the player starting items;
+	     the Area 7 kit itself is delivered by the game_first_spawn game event. -->
+	<set xpath="//entity_class[@name='playerMale']/property[@class='ItemsOnEnterGame']/property[@name='GameModeSurvival']/@value">drinkJarBoiledWater=2,foodCanChili,medicalFirstAidBandage,meleeToolTorch</set>
+	<!-- No playerFemale line needed: vanilla playerFemale extends playerMale and does NOT
+	     define its own ItemsOnEnterGame, so it inherits the line above. The old playerFemale
+	     <set> matched nothing and only produced a "did not apply" warning in the log. -->
 
 	<set xpath="//entity_class[@name='zombieTemplateMale']/property[@name='LootDropProb']/@value">0.1</set>
 	<set xpath="//entity_class[contains(@name, 'zombie')]/property[@name='LootDropProb']/@value">0.1</set>

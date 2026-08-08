@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<Name value="FrilArea7MenuMusic"/>
+	<DisplayName value="Area 7 Menu Music"/>
+	<Version value="1.0.3"/>
+	<Author value="Frilioth"/>
+	<Description value="Plays the Area 7 track once on the main menu"/>
+	<Website value="frilcraft.uk"/>
+</xml>

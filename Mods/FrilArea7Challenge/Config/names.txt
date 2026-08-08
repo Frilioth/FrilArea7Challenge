@@ -14,3 +14,17 @@
 
 Frilioth=Soldier
 PerfectTrip=Boe
+Tycapanic=Darlene
+Tycapanic=Arlene
+Kualija=Lab Worker
+Mink80=Big Mama
+Holls=Party Girl
+Devilskut=Yo
+bdubyah=Spider
+Hells=Janitor
+China=Nurse
+Red=Nurse
+Crilaslays=Businessman
+Flame=Hazmat
+DeaLatis=Hazmat
+KatsPurr=Marlene

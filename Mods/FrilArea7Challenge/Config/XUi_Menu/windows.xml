@@ -1,31 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!--
-	Area 7 Challenge
-	Author: Frilioth
-	Version: 2.2.12
--->
-
 <configs>
-	<!-- Area 7 custom menu background -->
-	<set xpath="/windows/window[@name='menuBackground']/texture[@name='bgTexture']/@texture">@modfolder:UIAtlases/ItemIconAtlas/background.jpg</set>
 
-	<!-- Hide the 7 Days to Die logo on the main menu -->
-	<remove xpath="/windows/window[@name='mainMenuLogo']/texture[@name='gameLogo']"/>
+   <!-- ==========================================================
+        AREA 7 MENU BRANDING
+        1. Swap the game logo for the Area 7 logo (both placements).
+        2. Hide the top-right news / DLC promo tiles.
+        ========================================================== -->
 
-	<!-- NEW GAME MENU - Hide irrelevant options -->
-	<remove xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/rect/grid/gameoption[@name='XPMultiplier']" />
-	<remove xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/rect/grid/gameoption[@name='DayNightLength']" />
-	<remove xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/rect/grid/gameoption[@name='AirDropMarker']" />
-	<remove xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/rect/grid/gameoption[@name='BlockDamagePlayer']" />
-	<remove xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/rect/grid/gameoption[@name='BlockDamageAI']" />
-	<remove xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/rect/grid/gameoption[@name='BlockDamageAIBM']" />
-	<remove xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/rect/grid/gameoption[@name='LootAbundance']" />
-	<remove xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/rect/grid/gameoption[@name='MaxChunkAge']" />
-	<remove xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/rect/grid/gameoption[@name='DeathPenalty']" />
-	<remove xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/rect/grid/gameoption[@name='DropOnDeath']" />
-	<remove xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/rect/grid/gameoption[@name='DropOnQuit']" />
-	<remove xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/rect/grid/gameoption[@name='EnemySpawnMode']" />
-	<remove xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/rect/grid/gameoption[@name='BuildCreate']" />
-	<remove xpath="/windows/window[@name='newContinueGame']/rect/rect/rect/rect/grid/gameoption[@name='QuestProgressionDailyLimit']" />
+   <!-- 1. LOGO SWAP
+        The vanilla logo is <texture name="gameLogo"> pointing at
+        @:Textures/UI/news_logo.png, in the mainMenu and newsScreen windows.
+        The A7 logo is 850x1400 (ratio 0.607, same as vanilla's 0.608), so only
+        the texture attribute changes; height/pivot/aspect_ratio/position inherit.
+   -->
+   <set xpath="//window[@name='mainMenu']/texture[@name='gameLogo']/@texture">@modfolder(FrilArea7Logo):Resources/area7_logo.png</set>
+   <set xpath="//window[@name='newsScreen']//texture[@name='gameLogo']/@texture">@modfolder(FrilArea7Logo):Resources/area7_logo.png</set>
+
+   <!-- 2. HIDE THE PROMO TILES
+        The two boxes top-right of the main menu (the DLC "featured" tile and the
+        "game" update-news tile) live in the mainMenuNews window as two rects.
+        Each already has a visible binding on news_count; we override that to a
+        hard false so neither ever shows. We only touch the rects' visibility, not
+        the window or its controller, so gamepad navigation and layout are safe.
+   -->
+   <set xpath="//window[@name='mainMenuNews']/rect[@name='game']/@visible">false</set>
+   <set xpath="//window[@name='mainMenuNews']/rect[@name='featured']/@visible">false</set>
+
+   <!-- 3. MENU BACKGROUND VIDEO SWAP
+        The animated menu background is a <video name="videoTexture"> inside the
+        menuBackground window, vanilla uri="/Video/MenuBackground". We repoint it
+        at the Area 7 clip. No file extension: the engine appends .mp4 (Windows)
+        or .webm itself, and runs the path through the mod-path patcher, so a
+        plain @modfolder path resolves to a real file on disk.
+        File lives at FrilArea7Logo/Video/area7_menu_bg.mp4.
+        loop and videoaspect are left as vanilla (loop=true, FitInside).
+   -->
+   <set xpath="//window[@name='menuBackground']/video[@name='videoTexture']/@uri">@modfolder(FrilArea7Logo):Video/area7_menu_bg</set>
+
 </configs>

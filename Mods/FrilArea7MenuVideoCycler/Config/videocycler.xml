@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Area 7 Menu Video Cycler config.
+    interval  = seconds each feed plays before switching.
+    <clip>    = one camera feed. uri is a mod path WITHOUT extension
+                (engine appends .mp4 on Windows). Files live wherever
+                the uri points - below they're in FrilArea7Logo/Video/.
+    Add or remove <clip> lines freely and restart - no rebuild needed.
+    A missing file just logs and the cycle carries on to the next.
+-->
+<videocycler interval="10">
+    <clip uri="@modfolder(FrilArea7Logo):Video/area7_menu_bg"/>
+    <clip uri="@modfolder(FrilArea7Logo):Video/area7_menu_cam2"/>
+    <clip uri="@modfolder(FrilArea7Logo):Video/area7_menu_cam3"/>
+    <clip uri="@modfolder(FrilArea7Logo):Video/area7_menu_cam4"/>
+    <clip uri="@modfolder(FrilArea7Logo):Video/area7_menu_cam5"/>
+    <clip uri="@modfolder(FrilArea7Logo):Video/area7_menu_cam6"/>
+    <clip uri="@modfolder(FrilArea7Logo):Video/area7_menu_cam7"/>
+</videocycler>

@@ -1,0 +1,41 @@
+<configs>
+
+   <!--
+      Registers the Area 7 song ("Area 7 Ain't Home") so the challenge DLL can trigger it
+      when the Extraction Order is read.
+
+      v3.0.26 FIX: v3.0.25 registered the node but playback logged
+        "AudioManager LoadAudio failed to load audio source object for Sounds/AudioSource_VO"
+      because a bare "Sounds/AudioSource_VO" is the wrong reference format for this version.
+      The correct form is a PREFAB path with the @: prefix. We use the UI audio source, which
+      is 2D (no distance falloff) so the song plays at full volume in the player's ears -
+      exactly what a victory track wants. This @: prefab syntax is confirmed from a working
+      custom bundled-sound mod.
+
+      ClipName path: #@modfolder:<bundle>?<clipAssetName>
+        Resources/area7extractsong.unity3d = this mod's OWN dedicated bundle for the extraction
+                                             song (built with a DISTINCT internal bundle name,
+                                             separate from the menu-music mod's area7music.unity3d)
+        area7song                          = the exact clip asset name INSIDE the bundle
+
+      WHY A SEPARATE BUNDLE (fixed 8 Aug): the menu-music mod (FrilArea7MenuMusic) and this
+      extraction cue were both loading a bundle whose INTERNAL identity was "area7music". Unity
+      keys bundles by internal name + contents, not file path, so with both mods installed the
+      second load failed with "another AssetBundle with the same files is already loaded" and the
+      song went silent. Giving the extraction its own separately-named bundle keeps the two mods
+      fully independent - either can be installed without the other.
+   -->
+
+   <append xpath="/Sounds">
+      <SoundDataNode name="Area7ExtractionSong">
+         <AudioSource name="@:Sounds/Prefabs/AudioSource_UI.prefab"/>
+         <AudioClip ClipName="#@modfolder:Resources/area7extractsong.unity3d?area7song"/>
+         <LocalCrouchVolumeScale value="1"/>
+         <CrouchNoiseScale value="1"/>
+         <NoiseScale value="0"/>
+         <MaxVoices value="1"/>
+         <MaxRepeatRate value="1"/>
+      </SoundDataNode>
+   </append>
+
+</configs>

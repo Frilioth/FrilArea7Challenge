@@ -1,0 +1,15 @@
+Put your asset bundle here:
+
+    area7music.unity3d
+
+This is the SAME bundle you built for the in-game extraction song, with the
+clip named "area7song" inside it. You can copy it straight from
+FrilArea7Challenge/Resources/area7music.unity3d.
+
+The DLL loads it via:
+    #@modfolder(FrilArea7MenuMusic):Resources/area7music.unity3d?area7song
+
+So the bundle file must be named exactly:  area7music.unity3d
+and the clip asset name inside it exactly: area7song
+
+Delete this txt once the bundle is in place.

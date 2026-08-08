@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xml>
 	<Name value="FrilArea7Challenge"/>
 	<DisplayName value="Area 7 Challenge"/>
-	<Version value="2.2.16"/>
-	<Description value="Area 7 escape challenge with Transmitter activation, vehicle airdrop and UH-60 Extraction"/>
+	<Version value="3.0.31"/>
 	<Author value="Frilioth"/>
-	<Website value=""/>
+	<Description value="Area 7 Challenge Mod"/>
+	<Website value="frilcraft.uk"/>
 </xml>

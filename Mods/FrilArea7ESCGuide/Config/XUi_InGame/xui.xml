@@ -1,0 +1,21 @@
+<FrilArea7ESCGuide>
+
+   <!--
+      Hook the guide window onto the ESC menu.
+
+      Technique credit: AuroraGiggleFairy (AGF), whose AGF-ESCWindow mod demonstrated
+      appending a custom window into the vanilla "serverinfowindow" group. That group is
+      already wired to the in-game ESC menu's Server Info slot, so a window placed inside
+      it inherits a working ESC hook with no DLL and no new controller registration.
+
+      This is a fresh Area 7 build using that technique - it is not AGF's window with the
+      text changed. Their layout, styling, options column and dual-mode tabs are their work
+      and are not reproduced here.
+   -->
+   <append xpath="/xui">
+      <window_group name="serverinfowindow">
+         <window name="windowESC"/>
+      </window_group>
+   </append>
+
+</FrilArea7ESCGuide>

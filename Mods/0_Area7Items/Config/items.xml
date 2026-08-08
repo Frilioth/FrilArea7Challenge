@@ -2,7 +2,7 @@
 <!--
     0_Area7Items - Item Definitions
     Author: Frilioth
-    Version: 2.2.6
+    Version: 3.0.1
 
     This mod loads BEFORE FrilArea7Challenge (alphabetical order) so that
     all Area 7 custom items exist by the time traders.xml is parsed.

@@ -1,0 +1,12 @@
+﻿<!--
+	Area 7 Challenge - UI Modifications
+	Author: Frilioth
+	Version: 3.0.32
+
+	The windowTargetBar append (health bar over the aimed-at zombie) was removed
+	in v3.0.32 - that display is now handled by a Sandbox option, so the mod no
+	longer needs to force it on.
+-->
+
+<configs>
+</configs>

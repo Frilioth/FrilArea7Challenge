@@ -3,7 +3,7 @@
 <!--
     FrilArea7Challenge - Buffs
     Author: Frilioth
-    Version: 2.2.12
+    Version: 3.0.1
 
 -->
 
@@ -18,14 +18,37 @@
 
 
     <!-- Supply drop timer, tuned for 60 minute days -->
-    <buff name="frilTimer">
+    <buff name="frilTimer" hidden="true">  <!-- internal timer marker, never shown -->
       <stack_type value="ignore"/>
       <duration value="3600"/>
       <effect_group/>
     </buff>
 
+    <!-- Extraction protection. The extraction mod adds this at Step 1, the moment the
+         escapeArea7 challenge redeems, and it is what "Protect the player" was always
+         meant to do - the old code referenced buffArea7Victory, which was never defined
+         here, so AddBuff was a silent no-op and there was no protection at all.
+
+         GeneralDamageResist is the fraction of incoming damage resisted, read in
+         EntityAlive.DamageEntity as FastMin(1.0, GetValue(GeneralDamageResist)) - so the
+         engine caps it at 1.0 and a value of 1 is exactly full immunity, no more.
+
+         There is deliberately NO explicit removal in code: every point the sequence can
+         end is one where the player may still be airborne. The duration expires on its
+         own instead. It is long enough to cover an unbounded boarding wait plus the two
+         minute outbound leg, and by the time it is running the run is already recorded
+         as complete, so lingering protection cannot affect anything that matters.
+         Buffs are serialised with the player, so it also survives a relog. -->
+    <buff name="buffArea7ExtractionShield" hidden="true">  <!-- full damage immunity during extraction, never shown -->
+      <duration value="600"/>
+      <stack_type value="replace"/>
+      <effect_group>
+        <passive_effect name="GeneralDamageResist" operation="base_set" value="1"/>
+      </effect_group>
+    </buff>
+
     <!-- Victory buff - triggers completion quest when Escape challenge is redeemed -->
-    <buff name="frilArea7Victory">
+    <buff name="frilArea7Victory" hidden="true">  <!-- fires the completion sound, never shown -->
       <duration value="10"/>
       <stack_type value="ignore"/>
       <effect_group>
@@ -70,7 +93,7 @@
       </effect_group>
     </buff>
 	
-	<buff name="buffArea7RadPermit" icon="ui_game_symbol_wasteland_hazard" icon_color="120,180,255" icon_blink="false">
+	<buff name="buffArea7RadPermit" name_key="buffArea7RadPermit" description_key="buffArea7RadPermitDesc" icon="ui_game_symbol_wasteland_hazard" icon_color="120,180,255" icon_blink="false">
 	<stack_type value="replace"/>
 	<duration value="0"/>
 	<update_rate value="1"/>
@@ -95,7 +118,7 @@
 	</effect_group>
 </buff>
 
-<buff name="buffArea7RadPermitArmor" icon="ui_game_symbol_wasteland_hazard" icon_color="120,180,255" icon_blink="false">
+<buff name="buffArea7RadPermitArmor" name_key="buffArea7RadPermitArmor" description_key="buffArea7RadPermitArmorDesc" icon="ui_game_symbol_wasteland_hazard" icon_color="120,180,255" icon_blink="false">
   <duration value="999999"/>
   <stack_type value="ignore"/>
   <effect_group>

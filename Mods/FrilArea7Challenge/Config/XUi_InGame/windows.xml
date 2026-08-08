@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Area 7 Challenge - UI Modifications (updated for v3.0.1)
+	Author: Frilioth
+
+	- Enlarge the message/tip window (windowTip) and its text for readability.
+	- v3.0.1: windowTip still exists but its header is now a <rect> (was <panel>),
+	  and vanilla font is already 30, so values are re-tuned here (bigger, not smaller).
+-->
+<configs>
+	<!-- Taller window, kept at 603 wide so the sliced background still fits -->
+	<set xpath="//window[@name='windowTip']/@height">620</set>
+	<set xpath="//window[@name='windowTip']/@pos">-300,310</set>
+
+	<!-- Grow the content area to match -->
+	<set xpath="//window[@name='windowTip']/rect[@name='content']/@height">570</set>
+
+	<!-- Bigger text area + larger font (vanilla is 30) -->
+	<set xpath="//window[@name='windowTip']/rect[@name='content']/label[@name='descriptionText']/@height">515</set>
+	<set xpath="//window[@name='windowTip']/rect[@name='content']/label[@name='descriptionText']/@font_size">34</set>
+
+	<!-- Keep the Continue button pinned near the bottom of the taller window -->
+	<set xpath="//window[@name='windowTip']/rect[@name='content']/rect[@name='btnContinue']/@pos">0,-528</set>
+
+	<!--
+		windowTip has its OWN header label ({tiptitle}), separate from the quest offer
+		window - which is why sizing that one didn't touch this one. Same shrink-to-fit
+		style, so set the size explicitly here too. Keep this matched to the
+		windowQuestOffer font_size below so both popups' titles look the same.
+	-->
+	<setattribute xpath="//window[@name='windowTip']/rect[@name='header']/label[@text='{tiptitle}']" name="font_size">27</setattribute>
+
+	<!-- Push area/storm notifications down so they don't overlap the health bar -->
+	<set xpath="//window[@name='windowEntering']/rect/@pos">-170,-140</set>
+
+	<!--
+		Remove the "-0 TIER POINTS" label from the quest OFFER window header. Area 7's quests
+		carry no tier points, so vanilla prints "-0 TIER POINTS" over the title. This only
+		touches windowQuestOffer's header label; the quest title itself is untouched.
+		(The same label also exists in windowQuestObjectives - left alone for now.)
+	-->
+	<remove xpath="//window[@name='windowQuestOffer']/rect[@name='header']/label[@text='{tieradd}']" />
+
+	<!--
+		The title label was pinned to width 450 to leave room for that tier-points text.
+		With it gone, give the title the rest of the header (window is 603 wide).
+		NOTE: this label's style shrinks text to fit, and it only steps between whole
+		text sizes - so nudging the width does nothing until it crosses a threshold and
+		then jumps. Width is therefore set generously (no shrink) and the size is set
+		explicitly below, which is the real dial. Tune font_size, not width.
+	-->
+	<set xpath="//window[@name='windowQuestOffer']/rect[@name='header']/label[@text='{questname}']/@width">560</set>
+	<setattribute xpath="//window[@name='windowQuestOffer']/rect[@name='header']/label[@text='{questname}']" name="font_size">27</setattribute>
+</configs>

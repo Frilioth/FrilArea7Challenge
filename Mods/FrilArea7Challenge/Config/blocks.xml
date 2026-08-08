@@ -3,7 +3,7 @@
 <!--
     FrilArea7Challenge - Blocks
     Author: Frilioth
-    Version: 2.2.12
+    Version: 3.0.1
 
 -->
 
@@ -127,8 +127,11 @@
      Allows plants to grow underground/indoors
      ======================================== -->
 <append xpath="//block[@name='cropsGrowingMaster']">
-	<property name="PlantGrowing.LightLevelGrow" value="0"/>
-	<property name="PlantGrowing.LightLevelStay" value="0"/>
+	<!-- v3.0.1: PlantGrowing is now a nested class; dotted property names are banned. -->
+	<property class="PlantGrowing">
+		<property name="LightLevelGrow" value="0"/>
+		<property name="LightLevelStay" value="0"/>
+	</property>
 </append>
 	
 

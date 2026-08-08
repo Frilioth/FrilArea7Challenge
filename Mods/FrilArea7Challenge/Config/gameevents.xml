@@ -3,7 +3,7 @@
 <!--
     FrilArea7Challenge - Game Events
     Author: Frilioth
-    Version: 2.2.12
+    Version: 3.0.1
 
 -->
 
@@ -23,6 +23,16 @@
             <property name="slot_numbers" value="0,1,2,3,4" />
         </action>
     </set>
+
+    <!-- v3.0.1: suppress the two vanilla new-player intros (Duke note + White River Citizen) -->
+    <!-- NOTE: the Duke intro-note buff removal that used to sit here has been deleted.
+         The <set> above REPLACES the whole vanilla game_first_spawn sequence, so that
+         AddBuff action no longer exists by the time a <remove> would run - it matched
+         nothing. The White River Citizen remove below targets a DIFFERENT sequence
+         (challenge_group_reward_basics), is NOT redundant, and is deliberately kept. -->
+    <!-- White River Citizen quest, handed out by the basics challenge-group reward -->
+    <remove xpath="/gameevents/action_sequence[@name='challenge_group_reward_basics']/action[@class='AddQuest'][property[@name='quest'][@value='quest_whiteRiverCitizen1']]"/>
+
 
     <append xpath="/gameevents/action_sequence[@name='challenge_reward_500']">
         <action class="AddSkillPoints">

@@ -1,0 +1,17 @@
+<FrilArea7ESCGuide>
+   <append xpath="/styles/global">
+
+      <!-- Area 7 palette. Military amber + hazard yellow on dark grey, no purple. -->
+      <style_entry name="a7HeaderBgColor"        value="48,48,48"/>
+      <style_entry name="a7PageBgColor"          value="40,40,40"/>
+      <style_entry name="a7PanelBorderColor"     value="0,0,0"/>
+      <style_entry name="a7HeaderTitleColor"     value="237,225,0"/>   <!-- hazard yellow -->
+      <style_entry name="a7HeaderMottoColor"     value="194,103,0"/>   <!-- amber -->
+      <style_entry name="a7TabBgColor"           value="28,28,28"/>
+      <style_entry name="a7TabBorderColor"       value="0,0,0"/>
+      <style_entry name="a7TabSelectedColor"     value="120,64,0"/>    <!-- selected tab: deep amber -->
+      <style_entry name="a7PageTitleColor"       value="237,225,0"/>
+      <style_entry name="a7PageBodyColor"        value="230,230,230"/>
+
+   </append>
+</FrilArea7ESCGuide>

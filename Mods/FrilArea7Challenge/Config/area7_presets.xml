@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	FrilArea7Challenge - Sandbox Option Presets
+	Author: Frilioth
+	Version: 3.0.1
+
+	Puts Area 7's suggested settings in their OWN group in the Sandbox Options preset
+	dropdown, alongside Difficulty / Official / User, instead of landing under "User".
+
+	The group name comes from the "category" attribute on <area7_presets> below.
+	Every <preset> in here appears inside that group.
+
+	IMPORTANT: the game shows the group by looking up the localisation key
+	  sandboxPresetGroup<category>
+	so category="Area7" needs a "sandboxPresetGroupArea7" row in Localization.csv.
+	Without it the dropdown shows the raw key instead of a friendly name.
+	Keep the category a single word (no spaces) so the key stays tidy.
+
+	HOW TO FILL IN A PRESET
+	  1. In game: New Game -> Sandbox Options, set everything the way you want it.
+	  2. Use the copy button next to the sandbox code box (left-hand panel) to copy the code.
+	  3. Paste it into the code="" attribute of a preset below, replacing the placeholder.
+	  4. Save this file and restart the game. No recompile needed.
+
+	A preset whose code is still the placeholder is SKIPPED, so a half-finished entry
+	will not show up broken in the menu.
+
+	ATTRIBUTES
+	  name             required. Internal id. No spaces.
+	  code             required. The sandbox code copied from the options screen.
+	  description      required (or description_key for a Localization.csv key).
+	  localized_name   optional. What players actually see. Falls back to name.
+	  icon             optional. NOT a ui_game_symbol_* sprite - a bare sprite name renders
+	                   nothing. Two forms work:
+
+	                     1. A vanilla resources path, e.g.
+	                          icon="Data/Sandbox/icons/user_custom"
+	                        (the artwork the game uses for user presets)
+
+	                     2. YOUR OWN IMAGE from this mod folder, e.g.
+	                          icon="@modfolder(FrilArea7Challenge):Resources/area7_preset.png"
+	                        Put the PNG in the mod's Resources folder next to the .unity3d
+	                        bundles. The menu draws this with an XUi <texture> element, which runs the
+	                        path through the standard mod-path resolver and then loads it off
+	                        disk - so an ordinary PNG in the mod works, no asset bundle needed.
+	                        It is drawn at 180x180 and keeps its aspect ratio, so a square
+	                        image is the safest choice.
+	  difficulty_rating optional. Number shown as the preset's difficulty.
+	  default          optional. "true" marks it as the default selection.
+
+	DIFFICULTY LADDER
+	  These presets are difficulty tiers, NOT per-world settings - the world is chosen
+	  separately (Choose Area 7 (Biome)), so one ladder covers every biome.
+
+	  difficulty_rating puts a skull and "xN" next to the preset in the menu. It is only
+	  shown for non-user, non-custom presets, which ours are, so it will display.
+	  Keep the numbers ascending or the ladder reads oddly.
+
+	  Each tier needs its OWN code: set that tier up in Sandbox Options, copy the code,
+	  paste it here. Tiers still holding the placeholder are skipped, so you can add them
+	  one at a time and the finished ones still work.
+-->
+
+<area7_presets category="Area7">
+
+	<preset name="Area7Recruit"
+	        localized_name="Recruit"
+	        description="Everything walks. Damage dialled right down. For learning the layout of Area 7 without dying to it."
+	        difficulty_rating="1"
+	        icon="@modfolder(FrilArea7Challenge):Resources/area7_preset_recruit.png"
+	        code="AAPABADGFCGGCGECBDCAUAAMLBRDBFGBGGANBBJABKABLABNABPABOABVACIBCJBCDACEACAACFACHCCXBEABEXGFKAEPAEQAEUAEVAERAFLDFOD" />
+
+	<preset name="Area7Grunt"
+	        localized_name="Grunt"
+	        description="Gentle but honest. Zombies jog at night, damage slightly below standard."
+	        difficulty_rating="2"
+	        icon="@modfolder(FrilArea7Challenge):Resources/area7_preset_grunt.png"
+	        code="AAPABADBRDBFGANBBJABKBBLBBNABPABOABVACIBCDACEACAACFBCHCCXBEABEXGFKAEPAEQAEUAEVAERAFLFFOF" />
+
+	<preset name="Area7Soldier"
+	        localized_name="Soldier"
+	        description="Area 7 as intended. The recommended way to run the challenge."
+	        difficulty_rating="3"
+	        default="true"
+	        icon="@modfolder(FrilArea7Challenge):Resources/area7_preset_soldier.png"
+	        code="AAPABADANBBJBBKCBLCBNABVACDACAACXBEXGFKAEPAEQAEUAEVAERA" />
+
+	<preset name="Area7Veteran"
+	        localized_name="Veteran"
+	        description="Faster infected, harder hits, thinner margins. You will need the respirator and a plan."
+	        difficulty_rating="4"
+	        icon="@modfolder(FrilArea7Challenge):Resources/area7_preset_veteran.png"
+	        code="AAPABADAMEANBBICCDACAACXBEBDEXGFKAEPAEQAEUAEVAERAFLIFMGFNGFOI" />
+
+	<preset name="Area7Nightmare"
+	        localized_name="Nightmare"
+	        description="Everything sprints. Storms rolling in. Extraction is a rumour."
+	        difficulty_rating="5"
+	        icon="@modfolder(FrilArea7Challenge):Resources/area7_preset_nightmare.png"
+	        code="AAPABADAMBANBBIEBJEBKEBLEBNFBPFCIDCJDCDACAACFDCGACKDCXBEBCEXGFKAEPAEQAEUAEVAERAFLJFMDFNDFOJ" />
+
+</area7_presets>
