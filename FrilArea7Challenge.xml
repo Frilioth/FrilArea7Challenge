@@ -3,26 +3,31 @@
     <ServerGroup Name="Area 7 Challenge" Logo="" Description="Survive a military research facility surrounded by lethal radiation. Build a transmitter, survive the horde, and escape.">
         <Server Name="Area 7 Challenge" Logo="">
             <Description>
-                Area 7 Challenge — A self-contained survival challenge mod for 7 Days to Die (V2.6)
+                Area 7 Challenge — A self-contained survival challenge mod for 7 Days to Die (V3.1.0)
 
                 You wake up inside a top-secret military research facility surrounded by lethal radiation. Your only goal: clear the facility, build an emergency transmitter, survive a blood moon horde, and escape to Camp Frilsville before the facility kills you.
 
                 Death is permanent. If you die, your run is over.
-				
-				BLOOD MOONS: 
-				
-				Vanilla blood moons still occur on your normal cycle. The transmitter triggers an extra one — not a replacement.
+
+                BLOOD MOONS:
+
+                Vanilla blood moons still occur on your normal cycle. The transmitter triggers an extra one — not a replacement.
 
                 FEATURES:
 
                 4-phase challenge tracked through the in-game challenge journal.
                 Custom POI — a fully built military research facility with sleeper volumes, loot, and progression.
+                Five locked difficulty tiers on the New Game screen (Recruit, Grunt, Soldier, Veteran, Nightmare).
+                Helicopter extraction — a UH-60 flies in when you escape, with an original theme song.
                 Tiered airdrop system — your vehicle reward depends on how many magazines you've read.
                 8 themed zombie loot bag types (Medical, Heavy, Hazmat, Books, Police, Researcher, Biker, VIP).
+                Named community zombies scattered through the infected.
                 Custom crafting — Emergency Transmitter, simplified Car Battery, craftable Acid, Engine recipe.
                 Permadeath system — lethal radiation zone prevents re-entry after death.
                 Blood moon horde — triggered when you deploy the transmitter.
                 Mission debrief — detailed HTML stats page generated after every run.
+                Full menu branding — Area 7 logo, rotating security-camera background video, and original menu music.
+                In-game ESC guide panel explaining the challenge and how to escape.
 
                 RECOMMENDED SETTINGS:
 
@@ -31,8 +36,8 @@
                 Biome Progression: Off
 
                 EAC must be disabled.
-				
-				Credits: UH-60 vehicle mod by bdubyah. Used with permission. https://www.nexusmods.com/7daystodie/mods/755
+
+                Credits: UH-60 vehicle mod by bdubyah. Used with permission. https://www.nexusmods.com/7daystodie/mods/755
 
                 Created by Frilioth
                 Twitch: twitch.tv/frilioth
