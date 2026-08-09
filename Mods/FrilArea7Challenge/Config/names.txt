@@ -28,3 +28,4 @@ Crilaslays=Businessman
 Flame=Hazmat
 DeaLatis=Hazmat
 KatsPurr=Marlene
+Sphereii=Utility Worker
