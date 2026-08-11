@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<Name value="Frils-HUD"/>
+	<DisplayName value="Frils-HUD" />
+	<Version value="1.1.0"/>
+	<Description value="Full-width Food and Water bars, taller stat boxes, the XP bar and level moved to the left stack, elevation and core temperature along the bottom, a bigger compass with day name, and the top-right location readout removed."/>
+	<Author value="Frilioth"/>
+	<Website value="frilcraft.uk"/>
+</xml>

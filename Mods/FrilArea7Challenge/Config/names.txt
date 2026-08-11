@@ -1,31 +1,48 @@
-# Area 7 Challenge — Named Zombies
+# Area 7 Challenge - Named Zombies
 # Format: PlayerName=ZombieType
-# 
+#
 # Players who complete the challenge can have a zombie named after them.
-# The zombie type must match the localized name shown on the health bar.
 #
-# Examples of zombie types:
-# Soldier, Janitor, Nurse, Lab Worker, Hazmat, Utility Worker,
-# Spider, Arlene, Moe, Joe, Yo, Boe, Businessman, Party Girl,
-# Lumberjack, Mutated, Burnt, Cop, Crawler, Demolition, Thug
+# USE THE ENTITY CLASS NAME (zombieSoldier), not the display name (Soldier).
+# The display name is TRANSLATED, so an English entry never matches for a German,
+# French or Spanish player. Proof: Tycapanic's German debrief lists Soldat,
+# Krankenschwester, Hausmeister, Laborant, Wartungstechniker. Only proper names
+# survive translation (Darlene, Arlene, Joe, Moe, Yo, Boe, Marlene, Steve, Chuck,
+# Tom Clark, Big Mama, Bowler, Tourist), and even those take a translated modifier:
+# "Feral Steve" is "Wilder Steve". Class names are language-independent.
 #
-# Not all zombies of that type will be renamed — roughly 1 in 3 will
-# show the completer's name, the rest keep their default name.
+# Display names still work as a fallback (v3.0.42+) but only for English clients.
+# Class names are case-sensitive and must match vanilla exactly. Several are NOT
+# what you would guess: Lab Worker is zombieLab, Big Mama is zombieFemaleFat,
+# Hazmat is zombieMaleHazmat, Businessman is zombieBusinessMan (capital M).
+# The Key column of vanilla Data/Config/Localization.csv is the class name.
+#
+# Not all zombies of that type are renamed. The miss rate is 2/(names+2), so one
+# name on a type shows on roughly 1 in 3, two names on 1 in 2, and so on. The pick
+# is deterministic per zombie, so a given one always resolves the same way.
+#
+# Some common class names:
+#   zombieSoldier  zombieJanitor  zombieNurse   zombieLab       zombieMaleHazmat
+#   zombieUtilityWorker  zombieSpider  zombieArlene  zombieDarlene  zombieMarlene
+#   zombieMoe  zombieJoe  zombieYo  zombieBoe  zombieBusinessMan  zombiePartyGirl
+#   zombieFemaleFat  zombieMutated  zombieBurnt  zombieSteve  zombieTomClark
 
-Frilioth=Soldier
-PerfectTrip=Boe
-Tycapanic=Darlene
-Tycapanic=Arlene
-Kualija=Lab Worker
-Mink80=Big Mama
-Holls=Party Girl
-Devilskut=Yo
-bdubyah=Spider
-Hells=Janitor
-China=Nurse
-Red=Nurse
-Crilaslays=Businessman
-Flame=Hazmat
-DeaLatis=Hazmat
-KatsPurr=Marlene
-Sphereii=Utility Worker
+Frilioth=zombieSoldier
+
+PerfectTrip=zombieBoe
+Tycapanic=zombieDarlene
+Tycapanic=zombieArlene
+Kualija=zombieLab
+Mink80=zombieFemaleFat
+Holls=zombiePartyGirl
+Devilskut=zombieYo
+Bdubyah=zombieSpider
+Hells=zombieJanitor
+China=zombieNurse
+Red=zombieNurse
+Crilaslays=zombieBusinessMan
+Flame=zombieMaleHazmat
+DeaLatis=zombieMaleHazmat
+KatsPurr=zombieMarlene
+Sphereii=zombieUtilityWorker
+Cran5000=zombieMutatedFeral

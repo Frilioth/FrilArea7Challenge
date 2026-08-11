@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<ModInfo>
-    <Name value="FrilRagdollFloorFix" />
-    <DisplayName value="Fril Ragdoll Floor Fix" />
-    <Version value="1.6.1" />
-    <Description value="Prevents zombies and entities clipping through floor geometry during ragdoll. Applies a corrective position fix when the pelvis Rigidbody sinks below the floor surface." />
-    <Author value="Frilioth" />
-    <Website value="" />
-</ModInfo>
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<Name value="FrilRagdollFloorFix" />
+	<DisplayName value="Fril Ragdoll Floor Fix" />
+	<Version value="1.8.4" />
+	<Author value="Frilioth" />
+	<Description value="Stops zombies getting up one block below the floor after a knockdown." />
+	<Website value="frilcraft.uk" />
+</xml>

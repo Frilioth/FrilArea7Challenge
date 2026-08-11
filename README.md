@@ -1,6 +1,6 @@
 # Area 7 Challenge
 
-A self-contained survival challenge mod for **7 Days to Die (V3.1.0)**.
+A self-contained survival challenge mod for **7 Days to Die (V3.1.1)**.
 
 You wake up inside a top-secret military research facility surrounded by lethal radiation. Your only goal: clear the facility, build an emergency transmitter, survive a blood moon horde, and escape to Camp Frilsville before the facility kills you.
 
@@ -52,6 +52,7 @@ You wake up inside a top-secret military research facility surrounded by lethal 
 | zzzz_FrilBlocks | Custom block definitions |
 | Fril_Pickup_Workstations_and_Collectors | Allows picking up placed workstations |
 | FrilRotateLoadingscreens | Rotating loading screen images |
+| Frils_HUD_(V3.1) | Repositioned stat bars and improved compass |
 | Frilragdollfloorfix | Ragdoll floor-clipping fix |
 | UH-60 | Helicopter, by **bdubyah**, bundled with permission |
 | 0_TFP_Harmony | Required Harmony framework |
