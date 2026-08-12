@@ -1,6 +1,8 @@
 # Area 7 Challenge
 
-A self-contained survival challenge mod for **7 Days to Die (V3.1.1)**.
+A self-contained survival challenge mod for **7 Days to Die V3.1.0**.
+
+**Mod version 3.1.1**
 
 You wake up inside a top-secret military research facility surrounded by lethal radiation. Your only goal: clear the facility, build an emergency transmitter, survive a blood moon horde, and escape to Camp Frilsville before the facility kills you.
 
@@ -10,7 +12,7 @@ You wake up inside a top-secret military research facility surrounded by lethal 
 
 - **4-phase challenge** tracked through the in-game challenge journal
 - **Custom POI** — a fully built military research facility with sleeper volumes, loot, and progression
-- **Five difficulty tiers** — locked presets on the New Game screen: Recruit, Grunt, Soldier (default), Veteran, Nightmare
+- **Five difficulty tiers** — locked presets on the New Game screen: Recruit, Grunt, Soldier (default), Veteran, Nightmare. **Your choice is fixed for the life of the save**, see below
 - **Helicopter extraction** — a UH-60 flies in when you escape, backed by an original theme song
 - **Tiered airdrop system** — your vehicle reward depends on how many magazines you've read
 - **Themed zombie loot bags** — 8 types (Medical, Heavy, Hazmat, Books, Police, Researcher, Biker, VIP)
@@ -18,9 +20,15 @@ You wake up inside a top-secret military research facility surrounded by lethal 
 - **Custom crafting** — Emergency Transmitter, simplified Car Battery, craftable Acid, Engine recipe
 - **Permadeath system** — lethal radiation zone prevents re-entry after death
 - **Blood moon horde** — triggered when you deploy the transmitter (an extra one; vanilla blood moons still run on their normal cycle)
-- **Mission debrief** — detailed HTML stats page generated after every run with kill breakdown, weapon usage, loot bag distribution, timeline, and game settings
+- **Mission debrief** — detailed HTML stats page generated after every run with kill breakdown, weapon usage, loot bag distribution, timeline, and the difficulty you played on
 - **Full menu branding** — Area 7 logo, rotating security-camera background video, and original menu music
 - **In-game ESC guide** — a panel explaining the challenge and how to escape
+
+## Difficulty is locked once a run starts
+
+Pick your difficulty when you create the game. From version 3.1.1 the sandbox settings are **greyed out on the Continue Game screen**, so a run keeps the difficulty it started on and the debrief reports what you actually played.
+
+This is deliberate, not a bug. It also means the other sandbox options are fixed for the life of that save, so **set everything the way you want it before you start**, including the recommended settings below. Starting a new game is unaffected.
 
 ## Installation
 
@@ -29,6 +37,7 @@ You wake up inside a top-secret military research facility surrounded by lethal 
 3. Copy the contents into your 7 Days to Die `Mods` folder (merging with any existing Mods folder)
 4. Launch the game with **EAC disabled** (Play without Easy Anti-Cheat)
 5. Start a new game, pick the **Area 7** group, choose a biome world and a difficulty tier
+6. Set any sandbox options you want **now**, they cannot be changed once the run has started
 
 ## Recommended Settings
 
@@ -52,8 +61,8 @@ You wake up inside a top-secret military research facility surrounded by lethal 
 | zzzz_FrilBlocks | Custom block definitions |
 | Fril_Pickup_Workstations_and_Collectors | Allows picking up placed workstations |
 | FrilRotateLoadingscreens | Rotating loading screen images |
-| Frils_HUD_(V3.1) | Repositioned stat bars and improved compass |
-| Frilragdollfloorfix | Ragdoll floor-clipping fix |
+| Frils-HUD | Full-width food and water bars, XP and level moved to the left stack, elevation and core temperature, improved compass |
+| Frilragdollfloorfix | Stops zombies getting up one block below the floor after a knockdown |
 | UH-60 | Helicopter, by **bdubyah**, bundled with permission |
 | 0_TFP_Harmony | Required Harmony framework |
 

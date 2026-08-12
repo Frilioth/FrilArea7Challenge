@@ -18,6 +18,10 @@
                 4-phase challenge tracked through the in-game challenge journal.
                 Custom POI — a fully built military research facility with sleeper volumes, loot, and progression.
                 Five locked difficulty tiers on the New Game screen (Recruit, Grunt, Soldier, Veteran, Nightmare).
+
+                DIFFICULTY IS LOCKED ONCE A RUN STARTS:
+
+                From 3.1.1 the sandbox settings are greyed out on the Continue Game screen, so a run keeps the difficulty it started on. This is deliberate. Set your sandbox options before you start, they cannot be changed later. Starting a new game is unaffected.
                 Helicopter extraction — a UH-60 flies in when you escape, with an original theme song.
                 Tiered airdrop system — your vehicle reward depends on how many magazines you've read.
                 8 themed zombie loot bag types (Medical, Heavy, Hazmat, Books, Police, Researcher, Biker, VIP).

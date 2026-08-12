@@ -2,11 +2,18 @@
 <!--
     FrilArea7Challenge - Item Modifications
     Author: Frilioth
-    Version: 3.0.1
+    Version: 3.0.48
 
 -->
 
 <configs>
+
+  <!-- v3.0.48: honey priced for the drinks vending machine.
+       Trader item entries have no price attribute; the price is EconomicValue times the
+       trader's markup, and the vending machines run override_buy_markup="3".
+       100 x 3 = 300 dukes in the machine. Note this is the baseline: Better Barter
+       discounts trader prices, so a perked player pays less. -->
+  <set xpath="/items/item[@name='foodHoney']/property[@name='EconomicValue']/@value">100</set>
 
   <!-- Stop vanilla cough suppressant icon from appearing -->
   <remove xpath="/items/item[@name='foodAtomicSmoothie']/effect_group[@name='Hazard Reducer']/triggered_effect[@action='AddBuff' and @buff='buffWasteland_Hazard_Over']"/>

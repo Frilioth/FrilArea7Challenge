@@ -66,10 +66,10 @@
 
 	<preset name="Area7Recruit"
 	        localized_name="Recruit"
-	        description="Everything walks. Damage dialled right down. For learning the layout of Area 7 without dying to it."
+	        description="Everything walks. Damage dialled right down. Loot everywhere and lots of it. For learning the layout of Area 7 without dying to it."
 	        difficulty_rating="1"
 	        icon="@modfolder(FrilArea7Challenge):Resources/area7_preset_recruit.png"
-	        code="AAPABADGFCGGCGECBDCAUAAMLBRDBFGBGGANBBJABKABLABNABPABOABVACIBCJBCDACEACAACFACHCCXBEABEXGFKAEPAEQAEUAEVAERAFLDFOD" />
+	        code="AAPABADGFCGGCGECBDCAUAAMLBRDBFGBGGANBBJABKABLABNABPABOABVACIBCJBCDACEACAACFACHCCXBDMJDAJDBJDCJDDJDEJDFJDGJDHJDIJDJJDKJEHJEABEXGFKAEPAEQAEUAEVAERAFLDFOD" />
 
 	<preset name="Area7Grunt"
 	        localized_name="Grunt"
@@ -84,7 +84,7 @@
 	        difficulty_rating="3"
 	        default="true"
 	        icon="@modfolder(FrilArea7Challenge):Resources/area7_preset_soldier.png"
-	        code="AAPABADANBBJBBKCBLCBNABVACDACAACXBEXGFKAEPAEQAEUAEVAERA" />
+	        code="AAPABADANBBJCBKCBLCBNABVACDACAACXBEXGFKAEPAEQAEUAEVAERA" />
 
 	<preset name="Area7Veteran"
 	        localized_name="Veteran"
@@ -99,5 +99,13 @@
 	        difficulty_rating="5"
 	        icon="@modfolder(FrilArea7Challenge):Resources/area7_preset_nightmare.png"
 	        code="AAPABADAMBANBBIEBJEBKEBLEBNFBPFCIDCJDCDACAACFDCGACKDCXBEBCEXGFKAEPAEQAEUAEVAERAFLJFMDFNDFOJ" />
+			
+	<preset name="Area7InsaneNightmare"
+	        localized_name="Insane Nightmare"
+	        description="Everything sprints. Everything hits harder. More zombies and more frequent spawns. Don't expect to complete the challenge on this level."
+	        difficulty_rating="6"
+	        icon="@modfolder(FrilArea7Challenge):Resources/area7_preset_insane_nightmare.png"
+	        code="AAPABADAMBBUFBSEGCFGAEBFLBGLANBBIEBJEBKEBLEBNFBPFCIDCJDCDACAACFDCGACKDCXBEBCEXGFKAEPAEQAEUAEVAERAFLJFMDFNDFOJ" />
+		
 
 </area7_presets>

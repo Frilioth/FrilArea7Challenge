@@ -2,7 +2,7 @@
 <!--
     Area 7 Challenge - Traders
     Author: Frilioth
-    Version: 3.0.1
+    Version: 3.0.48
 
     Overrides Trader Hugh (trader_info id="7") to sell only the Extraction Order.
     noteArea7Extraction is defined in 0_Area7Items which loads before this parses,
@@ -10,10 +10,31 @@
 
     Hugh costs 1 duke (EconomicValue=1 on the item, override_buy_markup=1 here).
     reset_interval="999" so his stock effectively never refreshes.
+
+    v3.0.48: honey added to the DRINKS vending machine (trader_info id 4).
+    Vending machines are NOT loot containers, they are traders: the blocks carry
+    Class="VendingMachine" and TraderID="4", so their stock comes from here rather
+    than loot.xml. Drinks are id 4, snacks are id 10.
 -->
 <configs>
     <!-- Remove Hugh's entire trader_info and replace with our custom version -->
     <remove xpath="/traders/trader_info[@id='7']"/>
+
+    <!-- Honey in the drinks machine, on the same footing as every other drink.
+         trader_info id 4 pulls "drinkVending", which is a trader_item_group holding a
+         single entry: the groupDrinks list. Adding honey to groupDrinks itself makes it
+         one of eight equally weighted drinks, so it is restocked exactly like the rest
+         (the machine rolls 4-8 items from that group on each daily reset) rather than
+         being guaranteed stock.
+         Appending to drinkVending instead would have given honey a 1-in-2 weight against
+         the whole drinks list, which is far too generous.
+         Side effect worth knowing: groupDrinks is also referenced by groupFoodAll and by
+         one regular trader stock list, so honey becomes buyable there too. Harmless here,
+         since the only trader in Area 7 is Hugh and he is overridden to sell nothing but
+         the Extraction Order. -->
+    <append xpath="/traders/trader_item_groups/trader_item_group[@name='groupDrinks']">
+        <item name="foodHoney" count="1,2"/>
+    </append>
 
     <append xpath="/traders">
         <trader_info id="7" reset_interval="999" open_time="0:00" close_time="23:59" override_buy_markup="0">

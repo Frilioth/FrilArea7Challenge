@@ -11,111 +11,131 @@ frilArmyBaseGateUnlockedDesc,blocks,Block,,,Camp Frilsville security gate - UNLO
 # ITEMS - NOTES & DOCUMENTS
 # ============================================================
 
-noteArea7Rules,items,Item,,,Area 7 Survival Guide,Guide de Survie Zone 7,Überlebenshandbuch Bereich 7,Guía de Supervivencia Zona 7
-noteArea7RulesDesc,items,Item,,,You wake at Area 7's gates. Your Fallout Flush is nearly spent - radiation surrounds the facility.,"Vous vous réveillez aux portes de la Zone 7. Votre Neutralisant de Radiation est presque épuisé - la radiation entoure l'installation.
+noteArea7Rules,items,Item,,,Area 7 Survival Guide,Guide de Survie Area 7,Überlebenshandbuch Area 7,Guía de Supervivencia Zona 7
+noteArea7RulesDesc,items,Item,,,You wake at Area 7's gates. Your Fallout Flush is nearly spent - radiation surrounds the facility.,"Vous vous réveillez aux portes de la Area 7. Votre Neutralisant de Radiation est presque épuisé - la radiation entoure l'installation.
 
-Construisez un Transmetteur d'Urgence. Demandez un largage aérien. Fuyez vers le Camp Frilsville - Hugh vous attend.","Du erwachst vor den Toren von Bereich 7. Dein Strahlenschutz ist fast aufgebraucht - Strahlung umgibt die Anlage.
+Construisez un Transmetteur d'Urgence. Demandez un largage aérien. Fuyez vers le Camp Frilsville - Hugh vous attend.","Du erwachst vor den Toren von Area 7. Dein Strahlenschutz ist fast aufgebraucht - Strahlung umgibt die Anlage.
 
 Baue einen Notsender. Fordere einen Luftabwurf an. Fliehe zum Camp Frilsville - Hugh wartet.","Despiertas en las puertas de la Zona 7. Tu protección radiológica está casi agotada - la radiación rodea la instalación.
 
 Construye un Transmisor de Emergencia. Solicita un suministro aéreo. Escapa al Campamento Frilsville - Hugh te espera."
 
-Build an Emergency Transmitter. Request an airdrop. Escape to Camp Frilsville - Hugh is waiting."
+"Build an Emergency Transmitter. Request an airdrop. Escape to Camp Frilsville - Hugh is waiting."""
 
 noteArea7IOU1,items,Item,,,MILITARY SUPPLY REQUEST FORM,FORMULAIRE DE DEMANDE DE RAVITAILLEMENT,MILITÄRISCHES VERSORGUNGSANFORDERUNGSFORMULAR,FORMULARIO DE SOLICITUD DE SUMINISTROS MILITARES
-noteArea7IOU1Desc,items,Item,,,REQUESTED: Bicycle - DENIED,"DEMANDÉ : Vélo - REFUSÉ
+noteArea7IOU1Desc,items,Item,,,"REQUESTED: Bicycle - DENIED
+
+Pedal vehicles insufficient for hazard zone evacuation.
+
+Supply shortage. Ground evacuation authorised. Proceed to Camp Frilsville on foot.","DEMANDÉ : Vélo - REFUSÉ
 
 Véhicules à pédales insuffisants pour évacuation de zone dangereuse.
 
-Pénurie de ravitaillement. Évacuation terrestre autorisée.","ANGEFORDERT: Fahrrad - ABGELEHNT
+Pénurie de ravitaillement. Évacuation terrestre autorisée. Rejoignez Camp Frilsville à pied.","ANGEFORDERT: Fahrrad - ABGELEHNT
 
 Tretfahrzeuge unzureichend für Evakuierung aus Gefahrenzone.
 
-Versorgungsengpass. Bodenräumung genehmigt.","SOLICITADO: Bicicleta - DENEGADO
+Versorgungsengpass. Bodenräumung genehmigt. Erreiche Camp Frilsville zu Fuß.","SOLICITADO: Bicicleta - DENEGADO
 
 Vehículos a pedal insuficientes para evacuación de zona peligrosa.
 
-Escasez de suministros. Evacuación terrestre autorizada."
+Escasez de suministros. Evacuación terrestre autorizada. Diríjase a Campamento Frilsville a pie."
 
 Pedal-powered vehicles insufficient for hazard zone evacuation.
 
-Supply shortage. Ground evac authorized."
+"Supply shortage. Ground evac authorized."""
 
 noteArea7IOU2,items,Item,,,MILITARY SUPPLY REQUEST FORM,FORMULAIRE DE DEMANDE DE RAVITAILLEMENT,MILITÄRISCHES VERSORGUNGSANFORDERUNGSFORMULAR,FORMULARIO DE SOLICITUD DE SUMINISTROS MILITARES
-noteArea7IOU2Desc,items,Item,,,REQUESTED: Minibike - DENIED,"DEMANDÉ : Mini-moto - REFUSÉ
+noteArea7IOU2Desc,items,Item,,,"REQUESTED: Minibike - DENIED
+
+Fuel reserves depleted. Motorised vehicles unavailable.
+
+Supply shortage. Ground evacuation authorised. Proceed to Camp Frilsville on foot.","DEMANDÉ : Mini-moto - REFUSÉ
 
 Réserves de carburant épuisées. Véhicules motorisés indisponibles.
 
-Pénurie de ravitaillement. Évacuation terrestre autorisée.","ANGEFORDERT: Minibike - ABGELEHNT
+Pénurie de ravitaillement. Évacuation terrestre autorisée. Rejoignez Camp Frilsville à pied.","ANGEFORDERT: Minibike - ABGELEHNT
 
 Treibstoffreserven erschöpft. Motorfahrzeuge nicht verfügbar.
 
-Versorgungsengpass. Bodenräumung genehmigt.","SOLICITADO: Minimoto - DENEGADO
+Versorgungsengpass. Bodenräumung genehmigt. Erreiche Camp Frilsville zu Fuß.","SOLICITADO: Minimoto - DENEGADO
 
 Reservas de combustible agotadas. Vehículos motorizados no disponibles.
 
-Escasez de suministros. Evacuación terrestre autorizada."
+Escasez de suministros. Evacuación terrestre autorizada. Diríjase a Campamento Frilsville a pie."
 
 Fuel reserves depleted. Motor vehicles unavailable.
 
-Supply shortage. Ground evac authorized."
+"Supply shortage. Ground evac authorized."""
 
 noteArea7IOU3,items,Item,,,MILITARY SUPPLY REQUEST FORM,FORMULAIRE DE DEMANDE DE RAVITAILLEMENT,MILITÄRISCHES VERSORGUNGSANFORDERUNGSFORMULAR,FORMULARIO DE SOLICITUD DE SUMINISTROS MILITARES
-noteArea7IOU3Desc,items,Item,,,REQUESTED: Motorcycle - DENIED,"DEMANDÉ : Moto - REFUSÉ
-
-Toutes les motos attribuées au personnel Priorité Alpha.
-
-Pénurie de ravitaillement. Évacuation terrestre autorisée.","ANGEFORDERT: Motorrad - ABGELEHNT
-
-Alle Motorräder dem Personal der Prioritätsstufe Alpha zugewiesen.
-
-Versorgungsengpass. Bodenräumung genehmigt.","SOLICITADO: Motocicleta - DENEGADO
-
-Todas las motocicletas asignadas al personal de Prioridad Alfa.
-
-Escasez de suministros. Evacuación terrestre autorizada."
+noteArea7IOU3Desc,items,Item,,,"REQUESTED: Motorcycle - DENIED
 
 All motorcycles allocated to Priority Alpha personnel.
 
-Supply shortage. Ground evac authorized."
+Supply shortage. Ground evacuation authorised. Proceed to Camp Frilsville on foot.","DEMANDÉ : Moto - REFUSÉ
+
+Toutes les motos attribuées au personnel Priorité Alpha.
+
+Pénurie de ravitaillement. Évacuation terrestre autorisée. Rejoignez Camp Frilsville à pied.","ANGEFORDERT: Motorrad - ABGELEHNT
+
+Alle Motorräder dem Personal der Prioritätsstufe Alpha zugewiesen.
+
+Versorgungsengpass. Bodenräumung genehmigt. Erreiche Camp Frilsville zu Fuß.","SOLICITADO: Motocicleta - DENEGADO
+
+Todas las motocicletas asignadas al personal de Prioridad Alfa.
+
+Escasez de suministros. Evacuación terrestre autorizada. Diríjase a Campamento Frilsville a pie."
+
+All motorcycles allocated to Priority Alpha personnel.
+
+"Supply shortage. Ground evac authorized."""
 
 noteArea7IOU,items,Item,,,MILITARY SUPPLY REQUEST FORM,FORMULAIRE DE DEMANDE DE RAVITAILLEMENT,MILITÄRISCHES VERSORGUNGSANFORDERUNGSFORMULAR,FORMULARIO DE SOLICITUD DE SUMINISTROS MILITARES
-noteArea7IOUDesc,items,Item,,,REQUESTED: 4x4 Vehicle - DENIED,"DEMANDÉ : Véhicule 4x4 - REFUSÉ
+noteArea7IOUDesc,items,Item,,,"REQUESTED: 4x4 Vehicle - DENIED
+
+Heavy transport reserved for critical freight operations.
+
+Supply shortage. Ground evacuation authorised. Proceed to Camp Frilsville on foot.","DEMANDÉ : Véhicule 4x4 - REFUSÉ
 
 Transport lourd réservé aux opérations de fret critique.
 
-Pénurie de ravitaillement. Évacuation terrestre autorisée.","ANGEFORDERT: 4x4-Fahrzeug - ABGELEHNT
+Pénurie de ravitaillement. Évacuation terrestre autorisée. Rejoignez Camp Frilsville à pied.","ANGEFORDERT: 4x4-Fahrzeug - ABGELEHNT
 
 Schwertransport für kritische Frachtoperationen reserviert.
 
-Versorgungsengpass. Bodenräumung genehmigt.","SOLICITADO: Vehículo 4x4 - DENEGADO
+Versorgungsengpass. Bodenräumung genehmigt. Erreiche Camp Frilsville zu Fuß.","SOLICITADO: Vehículo 4x4 - DENEGADO
 
 Transporte pesado reservado para operaciones de carga crítica.
 
-Escasez de suministros. Evacuación terrestre autorizada."
+Escasez de suministros. Evacuación terrestre autorizada. Diríjase a Campamento Frilsville a pie."
 
 Heavy transport reserved for critical cargo operations.
 
-Supply shortage. Ground evac authorized."
+"Supply shortage. Ground evac authorized."""
 
 noteArea7IOU5,items,Item,,,MILITARY SUPPLY REQUEST FORM,FORMULAIRE DE DEMANDE DE RAVITAILLEMENT,MILITÄRISCHES VERSORGUNGSANFORDERUNGSFORMULAR,FORMULARIO DE SOLICITUD DE SUMINISTROS MILITARES
-noteArea7IOU5Desc,items,Item,,,REQUESTED: Gyrocopter - DENIED,"DEMANDÉ : Gyrocoptère - REFUSÉ
-
-Espace aérien compromis par des interférences atmosphériques.
-
-Pénurie de ravitaillement. Évacuation terrestre autorisée.","ANGEFORDERT: Gyrokopter - ABGELEHNT
-
-Luftraum durch atmosphärische Störungen beeinträchtigt.
-
-Versorgungsengpass. Bodenräumung genehmigt.","SOLICITADO: Girocóptero - DENEGADO
-
-Espacio aéreo comprometido por interferencias atmosféricas.
-
-Escasez de suministros. Evacuación terrestre autorizada."
+noteArea7IOU5Desc,items,Item,,,"REQUESTED: Gyrocopter - DENIED
 
 Airspace compromised by atmospheric interference.
 
-Supply shortage. Ground evac authorized."
+Supply shortage. Ground evacuation authorised. Proceed to Camp Frilsville on foot.","DEMANDÉ : Gyrocoptère - REFUSÉ
+
+Espace aérien compromis par des interférences atmosphériques.
+
+Pénurie de ravitaillement. Évacuation terrestre autorisée. Rejoignez Camp Frilsville à pied.","ANGEFORDERT: Gyrokopter - ABGELEHNT
+
+Luftraum durch atmosphärische Störungen beeinträchtigt.
+
+Versorgungsengpass. Bodenräumung genehmigt. Erreiche Camp Frilsville zu Fuß.","SOLICITADO: Girocóptero - DENEGADO
+
+Espacio aéreo comprometido por interferencias atmosféricas.
+
+Escasez de suministros. Evacuación terrestre autorizada. Diríjase a Campamento Frilsville a pie."
+
+Airspace compromised by atmospheric interference.
+
+"Supply shortage. Ground evac authorized."""
 
 # ============================================================
 # ITEMS - TRANSMITTER
@@ -188,13 +208,13 @@ challengeCraftTransmitterHint,challenges,Challenge,,,Use workbench to craft tran
 # --- Deploy Transmitter ---
 challengeDeployTransmitter,challenges,Challenge,,,Deployment: Point of No Return,Déploiement : Point de Non-Retour,Einsatz: Kein Zurück Mehr,Despliegue: Sin Retorno
 challengeDeployTransmitterShort,challenges,Challenge,,,Activate the emergency broadcast,Activez la diffusion d'urgence,Aktiviere die Notsendung,Activa la emisión de emergencia
-challengeDeployTransmitterDesc,challenges,Challenge,,,Place and activate the emergency transmitter.\n\nYour distress beacon will pierce the irradiated atmosphere and reach Command.\n\nBlood moon horde: 10pm tonight\nAirdrop arrival: 4am tomorrow\n\nWARNING: The signal will reactivate dormant sections of the facility.\n\nCheck your map for Camp Frilsville location.,Camp Frilsville,Camp Frilsville,Campamento Frilsville
+challengeDeployTransmitterDesc,challenges,Challenge,,,Place and activate the emergency transmitter.\n\nYour distress beacon will pierce the irradiated atmosphere and reach Command.\n\nBlood moon horde: 10pm tonight\nAirdrop arrival: 4am tomorrow\n\nWARNING: The signal will reactivate dormant sections of the facility.\n\nCheck your map for Camp Frilsville location.,Place et active l'émetteur de secours.\\n\\nTon signal de détresse percera l'atmosphère irradiée et atteindra le Commandement.\\n\\nHorde de lune de sang : 22h ce soir\\nArrivée du largage : 4h demain\\n\\nAVERTISSEMENT : le signal réactivera des sections dormantes de l'installation.\\n\\nConsulte ta carte pour la position de Camp Frilsville.,Platziere und aktiviere den Notsender.\\n\\nDein Notsignal durchdringt die verstrahlte Atmosphäre und erreicht das Kommando.\\n\\nBlutmond-Horde: heute Nacht um 22 Uhr\\nAnkunft des Abwurfs: morgen um 4 Uhr\\n\\nWARNUNG: Das Signal reaktiviert stillgelegte Bereiche der Anlage.\\n\\nPrüfe deine Karte für die Position von Camp Frilsville.,Coloca y activa el transmisor de emergencia.\\n\\nTu señal de socorro atravesará la atmósfera irradiada y llegará al Mando.\\n\\nHorda de luna de sangre: esta noche a las 22:00\\nLlegada del suministro: mañana a las 4:00\\n\\nADVERTENCIA: la señal reactivará secciones inactivas de la instalación.\\n\\nConsulta tu mapa para la posición de Campamento Frilsville.
 challengeDeployTransmitterHint,challenges,Challenge,,,Secure a defensive position before activation,Sécurisez une position défensive avant l'activation,Sichere eine Verteidigungsposition vor der Aktivierung,Asegura una posición defensiva antes de la activación
 
 # --- Escape ---
 challengeEscapeArea7,challenges,Challenge,,,Reach Camp Frilsville,Rejoindre le Camp Frilsville,Camp Frilsville Erreichen,Llegar al Campamento Frilsville
 challengeEscapeArea7Short,challenges,Challenge,,,Reach safety,Rejoignez la sécurité,Erreiche Sicherheit,Alcanza la seguridad
-challengeEscapeArea7Desc,challenges,Challenge,,,Make your way to Camp Frilsville by any means necessary. The gates will be unlocked because you activated the emergency signal. Find Hugh to complete your escape.,Camp Frilsville,Camp Frilsville,Campamento Frilsville
+challengeEscapeArea7Desc,challenges,Challenge,,,Make your way to Camp Frilsville by any means necessary. The gates will be unlocked because you activated the emergency signal. Find Hugh to complete your escape.,Rejoins Camp Frilsville par tous les moyens nécessaires. Les portes seront déverrouillées parce que tu as activé le signal de détresse. Trouve Hugh pour terminer ton évasion.,"Schlage dich mit allen Mitteln nach Camp Frilsville durch. Die Tore sind entriegelt, weil du das Notsignal aktiviert hast. Finde Hugh, um deine Flucht abzuschließen.",Dirígete a Campamento Frilsville por cualquier medio necesario. Las puertas estarán abiertas porque activaste la señal de socorro. Encuentra a Hugh para completar tu huida.
 challengeEscapeArea7Hint,challenges,Challenge,,,Check your waypoints for Camp Frilsville,Consultez vos marqueurs pour le Camp Frilsville,Überprüfe deine Wegpunkte für Camp Frilsville,Consulta tus puntos de referencia para el Campamento Frilsville
 
 challenge_reward_500xp,challenges,Challenge,,,500 XP + Survival Gear,500 XP + Équipement de Survie,500 XP + Überlebensausrüstung,500 XP + Equipo de Supervivencia
@@ -216,18 +236,18 @@ lootBookBag,Loot,,,,Book Bag,Sac de Livres,Bücherbeutel,Bolsa de Libros
 # ENTITIES - SUPPLY CRATES
 # ============================================================
 
-sc_Area7_Tier1,EntityClass,,,,Area 7 Supply Crate,Caisse de Ravitaillement Zone 7,Versorgungskiste Bereich 7,Caja de Suministros Zona 7
-sc_Area7_Tier2,EntityClass,,,,Area 7 Supply Crate,Caisse de Ravitaillement Zone 7,Versorgungskiste Bereich 7,Caja de Suministros Zona 7
-sc_Area7_Tier3,EntityClass,,,,Area 7 Supply Crate,Caisse de Ravitaillement Zone 7,Versorgungskiste Bereich 7,Caja de Suministros Zona 7
-sc_Area7_Tier4,EntityClass,,,,Area 7 Supply Crate,Caisse de Ravitaillement Zone 7,Versorgungskiste Bereich 7,Caja de Suministros Zona 7
-sc_Area7_Tier5,EntityClass,,,,Area 7 Supply Crate,Caisse de Ravitaillement Zone 7,Versorgungskiste Bereich 7,Caja de Suministros Zona 7
+sc_Area7_Tier1,EntityClass,,,,Area 7 Supply Crate,Caisse de Ravitaillement Area 7,Versorgungskiste Area 7,Caja de Suministros Zona 7
+sc_Area7_Tier2,EntityClass,,,,Area 7 Supply Crate,Caisse de Ravitaillement Area 7,Versorgungskiste Area 7,Caja de Suministros Zona 7
+sc_Area7_Tier3,EntityClass,,,,Area 7 Supply Crate,Caisse de Ravitaillement Area 7,Versorgungskiste Area 7,Caja de Suministros Zona 7
+sc_Area7_Tier4,EntityClass,,,,Area 7 Supply Crate,Caisse de Ravitaillement Area 7,Versorgungskiste Area 7,Caja de Suministros Zona 7
+sc_Area7_Tier5,EntityClass,,,,Area 7 Supply Crate,Caisse de Ravitaillement Area 7,Versorgungskiste Area 7,Caja de Suministros Zona 7
 
 # ============================================================
 # LOADING TIPS
 # ============================================================
 
-loadingTipArea71_title,ui,tips,,,Area 7: The Bunker,Zone 7 : Le Bunker,Bereich 7: Der Bunker,Zona 7: El Búnker
-loadingTipArea71,ui,tips,,,Area 7 is a classified military bunker sealed since the outbreak. Radiation has contaminated the surrounding area.,La Zone 7 est un bunker militaire classifié scellé depuis l'épidémie. La radiation a contaminé les environs.,"Bereich 7 ist ein geheimer Militärbunker, versiegelt seit dem Ausbruch. Strahlung hat die Umgebung verseucht.",La Zona 7 es un búnker militar clasificado sellado desde el brote. La radiación ha contaminado el área circundante.
+loadingTipArea71_title,ui,tips,,,Area 7: The Bunker,Area 7 : Le Bunker,Area 7: Der Bunker,Zona 7: El Búnker
+loadingTipArea71,ui,tips,,,Area 7 is a classified military bunker sealed since the outbreak. Radiation has contaminated the surrounding area.,La Area 7 est un bunker militaire classifié scellé depuis l'épidémie. La radiation a contaminé les environs.,"Area 7 ist ein geheimer Militärbunker, versiegelt seit dem Ausbruch. Strahlung hat die Umgebung verseucht.",La Zona 7 es un búnker militar clasificado sellado desde el brote. La radiación ha contaminado el área circundante.
 
 loadingTipArea72_title,ui,tips,,,Radiation: Area outside the base,Radiation : Zone hors de la base,Strahlung: Bereich außerhalb der Basis,Radiación: Zona fuera de la base
 loadingTipArea72,ui,tips,,,The area surrounding the base is heavily irradiated. Entering it without protection is fatal.,La zone entourant la base est fortement irradiée. Y entrer sans protection est fatal.,Die Umgebung der Basis ist stark verstrahlt. Ohne Schutz einzutreten ist tödlich.,La zona que rodea la base está altamente irradiada. Entrar sin protección es mortal.
@@ -251,10 +271,10 @@ loadingTipArea78_title,ui,tips,,,Vehicle Lottery: Magazine Progression,Loterie V
 loadingTipArea78,ui,tips,,,Your chance of receiving a vehicle in the airdrop increases with vehicle skill magazines read. 40+ magazines unlocks gyrocopter eligibility! That's 10 less than is needed to craft one yourself,Vos chances de recevoir un véhicule dans le largage augmentent avec les magazines de compétence véhicule lus. 40+ magazines débloquent le gyrocoptère ! C'est 10 de moins que pour en fabriquer un soi-même,Deine Chance auf ein Fahrzeug im Luftabwurf steigt mit gelesenen Fahrzeug-Magazinen. 40+ Magazine schalten den Gyrokopter frei! Das sind 10 weniger als zum Selberbauen nötig,Tu probabilidad de recibir un vehículo en el suministro aéreo aumenta con las revistas de habilidad de vehículos leídas. ¡40+ revistas desbloquean el girocóptero! Son 10 menos de las necesarias para fabricar uno
 
 loadingTipArea79_title,ui,tips,,,Camp Frilsville: Extraction Point,Camp Frilsville : Point d'Extraction,Camp Frilsville: Extraktionspunkt,Campamento Frilsville: Punto de Extracción
-loadingTipArea79,ui,tips,,,Camp Frilsville is the extraction point. Check your map waypoint after transmitter activation. Hugh will be there with your extraction paperwork.,Camp Frilsville,Camp Frilsville,Campamento Frilsville
+loadingTipArea79,ui,tips,,,Camp Frilsville is the extraction point. Check your map waypoint after transmitter activation. Hugh will be there with your extraction paperwork.,Camp Frilsville est le point d'extraction. Consulte le point de repère sur ta carte après l'activation de l'émetteur. Hugh t'y attendra avec tes papiers d'extraction.,Camp Frilsville ist der Evakuierungspunkt. Prüfe nach der Aktivierung des Senders den Wegpunkt auf deiner Karte. Hugh wartet dort mit deinen Evakuierungspapieren.,Campamento Frilsville es el punto de extracción. Consulta el marcador en tu mapa tras activar el transmisor. Hugh estará allí con tus papeles de extracción.
 
 loadingTipArea710_title,ui,tips,,,Hugh: Your Contact,Hugh : Votre Contact,Hugh: Dein Kontakt,Hugh: Tu Contacto
-loadingTipArea710,ui,tips,,,Hugh at Camp Frilsville is your extraction contact. Reach him to complete the challenge and escape Area 7.,Camp Frilsville,Camp Frilsville,Campamento Frilsville
+loadingTipArea710,ui,tips,,,Hugh at Camp Frilsville is your extraction contact. Reach him to complete the challenge and escape Area 7.,"Hugh, à Camp Frilsville, est ton contact d'extraction. Rejoins-le pour terminer le défi et t'échapper d'Area 7.","Hugh in Camp Frilsville ist dein Evakuierungskontakt. Erreiche ihn, um die Herausforderung abzuschließen und aus Area 7 zu entkommen.","Hugh, en Campamento Frilsville, es tu contacto de extracción. Llega hasta él para completar el desafío y escapar de Area 7."
 
 loadingTipArea711_title,ui,tips,,,Progression: Read Everything,Progression : Lisez Tout,Fortschritt: Lies Alles,Progresión: Lee Todo
 loadingTipArea711,ui,tips,,,Magazines are your key to better equipment. Read every book you find — vehicle mags determine your airdrop vehicle tier.,Les magazines sont la clé d'un meilleur équipement. Lisez chaque livre trouvé — les magazines véhicule déterminent le niveau de votre véhicule largué.,Magazine sind der Schlüssel zu besserer Ausrüstung. Lies jedes Buch — Fahrzeug-Magazine bestimmen die Stufe deines Luftabwurf-Fahrzeugs.,Las revistas son la clave para mejor equipo. Lee cada libro que encuentres — las revistas de vehículos determinan el nivel de tu vehículo del suministro aéreo.
@@ -266,7 +286,7 @@ loadingTipArea713_title,ui,tips,,,Loot: Military Chest,Butin : Coffre Militaire,
 loadingTipArea713,ui,tips,,,The hardened military chest at the end of the bunker always contains a crucible. You'll need it to smelt Iron into Steel.,Le coffre militaire blindé au fond du bunker contient toujours un creuset. Vous en aurez besoin pour fondre le fer en acier.,"Die gepanzerte Militärkiste am Ende des Bunkers enthält immer einen Tiegel. Du brauchst ihn, um Eisen zu Stahl zu schmelzen.",El cofre militar blindado al final del búnker siempre contiene un crisol. Lo necesitarás para fundir hierro en acero.
 
 loadingTipArea714_title,ui,tips,,,The Goal: Survive and Escape,L'Objectif : Survivre et s'Évader,Das Ziel: Überleben und Fliehen,El Objetivo: Sobrevivir y Escapar
-loadingTipArea714,ui,tips,,,"Reach Hugh at Camp Frilsville to complete your escape. Good luck, survivor.",Camp Frilsville,Camp Frilsville,Campamento Frilsville
+loadingTipArea714,ui,tips,,,"Reach Hugh at Camp Frilsville to complete your escape. Good luck, survivor.","Rejoins Hugh à Camp Frilsville pour terminer ton évasion. Bonne chance, survivant.","Erreiche Hugh in Camp Frilsville, um deine Flucht abzuschließen. Viel Glück, Überlebender.","Llega hasta Hugh en Campamento Frilsville para completar tu huida. Buena suerte, superviviente."
 
 loadingTipArea715_title,ui,tips,,,Mission Debrief,Rapport de Mission,Missionsbericht,Informe de Misión
 loadingTipArea715,ui,tips,,,Your mission stats are saved after each run. View your debrief at Mods/FrilArea7Challenge/stats/Area7_Debrief.html,Vos statistiques de mission sont sauvegardées après chaque partie. Consultez votre rapport dans Mods/FrilArea7Challenge/stats/Area7_Debrief.html,Deine Missionsstatistiken werden nach jedem Durchlauf gespeichert. Sieh deinen Bericht unter Mods/FrilArea7Challenge/stats/Area7_Debrief.html,Tus estadísticas de misión se guardan tras cada partida. Consulta tu informe en Mods/FrilArea7Challenge/stats/Area7_Debrief.html
@@ -275,8 +295,8 @@ loadingTipArea715,ui,tips,,,Your mission stats are saved after each run. View yo
 # UI & MENU
 # ============================================================
 
-respawnTitleMessage,UI,Respawn Window,x,,READY TO WAKE UP IN AREA 7?,PRÊT À VOUS RÉVEILLER EN ZONE 7 ?,BEREIT IN BEREICH 7 AUFZUWACHEN?,¿LISTO PARA DESPERTAR EN LA ZONA 7?
-lblSpawn,UI,Spawn Menu,x,,Enter Area 7,Entrer en Zone 7,Bereich 7 Betreten,Entrar en Zona 7
+respawnTitleMessage,UI,Respawn Window,x,,READY TO WAKE UP IN AREA 7?,PRÊT À VOUS RÉVEILLER EN AREA 7 ?,BEREIT IN AREA 7 AUFZUWACHEN?,¿LISTO PARA DESPERTAR EN LA ZONA 7?
+lblSpawn,UI,Spawn Menu,x,,Enter Area 7,Entrer en Area 7,Area 7 Betreten,Entrar en Zona 7
 lblSpawnRandom,UI,Spawn Menu,x,,This is how you died...,Voilà comment vous êtes mort...,So bist du gestorben...,Así es como moriste...
 lblSpawnNearBedroll,UI,Spawn Menu,x,,Wake up near your bunk,Se réveiller près de votre couchette,In der Nähe deiner Pritsche aufwachen,Despertar cerca de tu litera
 lblSpawnOnBedroll,UI,Spawn Menu,x,,Wake up in your bunk,Se réveiller dans votre couchette,In deiner Pritsche aufwachen,Despertar en tu litera
@@ -287,38 +307,38 @@ lblSpawnNearBackpack,UI,Spawn Menu,x,,Crawl back to your gear,Rampez jusqu'à vo
 # ============================================================
 
 goAirDropFrequency,UI,Menu,x,,Air Drops ([ff0000]Disabled[-]),Largages Aériens ([ff0000]DÉSACTIVÉS[-]),Luftabwürfe ([ff0000]DEAKTIVIERT[-]),Suministros Aéreos ([ff0000]DESACTIVADOS[-])
-goAirDropFrequencyDesc,UI,Menu,x,,Set to [ff0000]Disabled[-]. Vanilla airdrops cannot be reached in the Area 7 Challenge.,Réglé sur DÉSACTIVÉ. Les largages classiques ne peuvent pas être atteints dans le Défi Zone 7.,Auf DEAKTIVIERT gesetzt. Vanilla-Luftabwürfe können in der Bereich-7-Herausforderung nicht erreicht werden.,Configurado como DESACTIVADO. Los suministros aéreos normales no se pueden alcanzar en el Desafío Zona 7.
+goAirDropFrequencyDesc,UI,Menu,x,,Set to [ff0000]Disabled[-]. Vanilla airdrops cannot be reached in the Area 7 Challenge.,Réglé sur DÉSACTIVÉ. Les largages classiques ne peuvent pas être atteints dans le Défi Area 7.,Auf DEAKTIVIERT gesetzt. Vanilla-Luftabwürfe können in der Bereich-7-Herausforderung nicht erreicht werden.,Configurado como DESACTIVADO. Los suministros aéreos normales no se pueden alcanzar en el Desafío Zona 7.
 
 goBiomeProgression,UI,Menu,,,Biome Progression ([ff0000]No[-]),Progression de Biome ([ff0000]Non[-]),Biom-Fortschritt ([ff0000]Nein[-]),Progresión de Bioma ([ff0000]No[-])
-goBiomeProgressionDesc,UI,Menu,,,Set to [ff0000]No[-]. Required for Area 7 Challenge to work properly.,Réglé sur ACTIVÉ. Requis pour le bon fonctionnement du Défi Zone 7.,Auf AN gesetzt. Erforderlich für das ordnungsgemäße Funktionieren der Bereich-7-Herausforderung.,Configurado como ACTIVADO. Necesario para que el Desafío Zona 7 funcione correctamente.
+goBiomeProgressionDesc,UI,Menu,,,Set to [ff0000]No[-]. Required for Area 7 Challenge to work properly.,Réglé sur ACTIVÉ. Requis pour le bon fonctionnement du Défi Area 7.,Auf AN gesetzt. Erforderlich für das ordnungsgemäße Funktionieren der Bereich-7-Herausforderung.,Configurado como ACTIVADO. Necesario para que el Desafío Zona 7 funcione correctamente.
 
 goLootRespawnDays,UI,Menu,x,,Loot Respawn ([00ff00]5 Days[-]),Réapparition du Butin ([00ff00]5 Jours[-]),Beute-Respawn ([00ff00]5 Tage[-]),Reaparición de Botín ([00ff00]5 Días[-])
 goLootRespawnDaysDesc,UI,Menu,x,,The number of days for loot to respawn if there is no one around.\n\nSelect anything except [00ff00]Disabled[-].,Le nombre de jours avant la réapparition du butin si personne n'est à proximité.\n\nSélectionnez n'importe quoi sauf [00ff00]Désactivé[-].,"Die Anzahl der Tage bis zur Beute-Erneuerung, wenn niemand in der Nähe ist.\n\nWähle alles außer [00ff00]Deaktiviert[-].",El número de días para que el botín reaparezca si no hay nadie cerca.\n\nSelecciona cualquier valor excepto [00ff00]Desactivado[-].
 
-goGameWorld,UI,Menu,x,,Choose Area 7 (Biome),Choisir Zone 7 (Biome),Bereich 7 Wählen (Biom),Elegir Zona 7 (Bioma)
-goGameWorldDesc,UI,Menu,x,,Choose Area 7 Challenge and the world you want to play on.,Choisissez le Défi Zone 7 et le monde sur lequel vous souhaitez jouer.,Wähle die Bereich-7-Herausforderung und die Welt aus.,Elige el Desafío Zona 7 y el mundo en el que quieres jugar.
+goGameWorld,UI,Menu,x,,Choose Area 7 (Biome),Choisir Area 7 (Biome),Area 7 Wählen (Biom),Elegir Zona 7 (Bioma)
+goGameWorldDesc,UI,Menu,x,,Choose Area 7 Challenge and the world you want to play on.,Choisissez le Défi Area 7 et le monde sur lequel vous souhaitez jouer.,Wähle die Bereich-7-Herausforderung und die Welt aus.,Elige el Desafío Zona 7 y el mundo en el que quieres jugar.
 
 # ============================================================
 # VERSION INFO & POI NAMES
 # ============================================================
 
 
-Area7_Challenge,blocks,POI,,,Area 7 Military Base,Base Militaire Zone 7,Militärbasis Bereich 7,Base Militar Zona 7
+Area7_Challenge,blocks,POI,,,Area 7 Military Base,Base Militaire Area 7,Militärbasis Area 7,Base Militar Zona 7
 Fril_Area7_Challenge_Army_Base,blocks,POI,,,Camp Frilsville,Camp Frilsville,Camp Frilsville,Campamento Frilsville
 
 # Area 7 Rules Message Window
-area7RulesWindowTitle,UI,,,,AREA 7 - SURVIVAL PROTOCOL,ZONE 7 - PROTOCOLE DE SURVIE,BEREICH 7 - ÜBERLEBENSPROTOKOLL,ZONA 7 - PROTOCOLO DE SUPERVIVENCIA
-area7RulesWindowMessage,UI,,,,Welcome to Area 7.\n\nYou've made it through the gates and regained consciousness just as your radiation protection wears off. The surrounding area is [cd5c5c]lethally irradiated[-] and entering it without protection means [cd5c5c]DEATH[-]. The facility is your only safe zone.\n\nThis was a top-secret military research facility. God knows what they were researching or what samples are loose inside now.\n\nComplete challenges to unlock equipment. Deploy the emergency transmitter to call for extraction - this triggers a [cd5c5c]massive blood moon horde[-] and awakens some [cd5c5c]Zombies in the Bunker[-]. An airdrop arrives at [cd5c5c]first light[-] with your extraction vehicle and Radiation Respirator. You can always make a smoothie if you don't want to wait.\n\nYour vehicle depends on your qualifications. Read magazines and level Grease Monkey. You might get [cd5c5c]nothing but an IOU[-] - craft your own as backup.\n\nCamp Frilsville is out there. Deploy the transmitter and coordinates appear on your map. Hugh has your extraction paperwork. Find him at Camp Frilsville.\n\nYou're a survivor who got lucky. [cd5c5c]Make it count.[-],Camp Frilsville,Camp Frilsville,Campamento Frilsville
-area7RulesOfferTeaser,UI,,,,"You've reached Area 7, a top-secret facility now lost to the outbreak. Complete challenges, deploy the transmitter, survive the horde, and escape.\n\nAccept to read the full briefing.","Vous avez atteint la Zone 7, une installation top-secrète désormais perdue depuis l'épidémie. Complétez les défis, déployez le transmetteur, survivez à la horde et évadez-vous.\n\nAcceptez pour lire le briefing complet.","Du hast Bereich 7 erreicht, eine geheime Anlage, die seit dem Ausbruch verloren ist. Schließe Herausforderungen ab, setze den Sender ein, überlebe die Horde und fliehe.\n\nAkzeptiere, um das vollständige Briefing zu lesen.","Has llegado a la Zona 7, una instalación ultrasecreta ahora perdida tras el brote. Completa desafíos, despliega el transmisor, sobrevive a la horda y escapa.\n\nAcepta para leer el informe completo."
+area7RulesWindowTitle,UI,,,,AREA 7 - SURVIVAL PROTOCOL,AREA 7 - PROTOCOLE DE SURVIE,AREA 7 - ÜBERLEBENSPROTOKOLL,ZONA 7 - PROTOCOLO DE SUPERVIVENCIA
+area7RulesWindowMessage,UI,,,,Welcome to Area 7.\n\nYou've made it through the gates and regained consciousness just as your radiation protection wears off. The surrounding area is [cd5c5c]lethally irradiated[-] and entering it without protection means [cd5c5c]DEATH[-]. The facility is your only safe zone.\n\nThis was a top-secret military research facility. God knows what they were researching or what samples are loose inside now.\n\nComplete challenges to unlock equipment. Deploy the emergency transmitter to call for extraction - this triggers a [cd5c5c]massive blood moon horde[-] and awakens some [cd5c5c]Zombies in the Bunker[-]. An airdrop arrives at [cd5c5c]first light[-] with your extraction vehicle and Radiation Respirator. You can always make a smoothie if you don't want to wait.\n\nYour vehicle depends on your qualifications. Read magazines and level Grease Monkey. You might get [cd5c5c]nothing but an IOU[-] - craft your own as backup.\n\nCamp Frilsville is out there. Deploy the transmitter and coordinates appear on your map. Hugh has your extraction paperwork. Find him at Camp Frilsville.\n\nYou're a survivor who got lucky. [cd5c5c]Make it count.[-],"Bienvenue à Area 7.\\n\\nTu as franchi les portes et tu reprends conscience au moment où ta protection contre les radiations s'estompe. La zone environnante est [cd5c5c]mortellement irradiée[-], et y entrer sans protection signifie la [cd5c5c]MORT[-]. L'installation est ta seule zone sûre.\\n\\nC'était une installation de recherche militaire top secrète. Dieu sait sur quoi ils travaillaient, ou quels échantillons courent maintenant à l'intérieur.\\n\\nTermine des défis pour débloquer de l'équipement. Déploie l'émetteur de secours pour demander une extraction - cela déclenche une [cd5c5c]horde de lune de sang massive[-] et réveille des [cd5c5c]zombies dans le bunker[-]. Un largage arrive au [cd5c5c]lever du jour[-] avec ton véhicule d'extraction et ton respirateur anti-radiations. Tu peux toujours préparer un smoothie si tu ne veux pas attendre.\\n\\nTon véhicule dépend de tes qualifications. Lis des magazines et monte Grease Monkey. Tu pourrais ne recevoir [cd5c5c]qu'une reconnaissance de dette[-] - fabrique le tien en secours.\\n\\nCamp Frilsville est là-bas. Déploie l'émetteur et les coordonnées apparaîtront sur ta carte. Hugh a tes papiers d'extraction. Trouve-le à Camp Frilsville.\\n\\nTu es un survivant qui a eu de la chance. [cd5c5c]Fais que ça compte.[-]","Willkommen in Area 7.\\n\\nDu hast es durch die Tore geschafft und kommst wieder zu Bewusstsein, gerade als dein Strahlenschutz nachlässt. Die Umgebung ist [cd5c5c]tödlich verstrahlt[-], und sie ohne Schutz zu betreten bedeutet den [cd5c5c]TOD[-]. Die Anlage ist deine einzige sichere Zone.\\n\\nDies war eine streng geheime militärische Forschungsanlage. Gott weiß, woran sie geforscht haben oder welche Proben jetzt dort drinnen frei herumlaufen.\\n\\nSchließe Herausforderungen ab, um Ausrüstung freizuschalten. Setze den Notsender ein, um Evakuierung anzufordern - das löst eine [cd5c5c]gewaltige Blutmond-Horde[-] aus und weckt einige [cd5c5c]Zombies im Bunker[-]. Bei [cd5c5c]Tagesanbruch[-] trifft ein Luftabwurf mit deinem Evakuierungsfahrzeug und deinem Strahlenschutz-Atemgerät ein. Du kannst auch jederzeit einen Smoothie herstellen, wenn du nicht warten willst.\\n\\nDein Fahrzeug hängt von deinen Qualifikationen ab. Lies Magazine und steigere Grease Monkey. Möglicherweise bekommst du [cd5c5c]nur einen Schuldschein[-] - baue als Reserve dein eigenes.\\n\\nCamp Frilsville ist dort draußen. Setze den Sender ein, und die Koordinaten erscheinen auf deiner Karte. Hugh hat deine Evakuierungspapiere. Finde ihn in Camp Frilsville.\\n\\nDu bist ein Überlebender, der Glück hatte. [cd5c5c]Nutze es.[-]","Bienvenido a Area 7.\\n\\nHas cruzado las puertas y recuperas la consciencia justo cuando tu protección contra la radiación se agota. La zona circundante está [cd5c5c]letalmente irradiada[-], y entrar en ella sin protección significa la [cd5c5c]MUERTE[-]. La instalación es tu única zona segura.\\n\\nEsto era una instalación de investigación militar de alto secreto. Dios sabe qué investigaban o qué muestras andan sueltas ahí dentro.\\n\\nCompleta desafíos para desbloquear equipo. Despliega el transmisor de emergencia para pedir extracción: eso desencadena una [cd5c5c]horda masiva de luna de sangre[-] y despierta a algunos [cd5c5c]zombis del búnker[-]. Al [cd5c5c]amanecer[-] llega un suministro aéreo con tu vehículo de extracción y tu respirador antirradiación. Siempre puedes preparar un batido si no quieres esperar.\\n\\nTu vehículo depende de tus cualificaciones. Lee revistas y sube Grease Monkey. Puede que solo recibas [cd5c5c]un pagaré[-]: fabrica el tuyo como reserva.\\n\\nCampamento Frilsville está ahí fuera. Despliega el transmisor y las coordenadas aparecerán en tu mapa. Hugh tiene tus papeles de extracción. Encuéntralo en Campamento Frilsville.\\n\\nEres un superviviente que tuvo suerte. [cd5c5c]Haz que cuente.[-]"
+area7RulesOfferTeaser,UI,,,,"You've reached Area 7, a top-secret facility now lost to the outbreak. Complete challenges, deploy the transmitter, survive the horde, and escape.\n\nAccept to read the full briefing.","Vous avez atteint la Area 7, une installation top-secrète désormais perdue depuis l'épidémie. Complétez les défis, déployez le transmetteur, survivez à la horde et évadez-vous.\n\nAcceptez pour lire le briefing complet.","Du hast Area 7 erreicht, eine geheime Anlage, die seit dem Ausbruch verloren ist. Schließe Herausforderungen ab, setze den Sender ein, überlebe die Horde und fliehe.\n\nAkzeptiere, um das vollständige Briefing zu lesen.","Has llegado a la Zona 7, una instalación ultrasecreta ahora perdida tras el brote. Completa desafíos, despliega el transmisor, sobrevive a la horda y escapa.\n\nAcepta para leer el informe completo."
 
 noteArea7Extraction,items,Item,,,Extraction Order,Ordre d'Extraction,Evakuierungsbefehl,Orden de Extracción
 noteArea7ExtractionDesc,items,Item,,,Official extraction authorisation issued by Northern Command. Operation Exodus is underway.,Autorisation officielle d'extraction émise par le Commandement Nord. L'Opération Exode est en cours.,Offizielle Evakuierungsgenehmigung des Nordkommandos. Operation Exodus ist angelaufen.,Autorización oficial de extracción emitida por el Mando Norte. La Operación Éxodo está en marcha.
 
 area7ExtractionWindowTitle,UI,,,,OPERATION EXODUS - EXTRACTION CONFIRMED - CHALLENGE COMPLETED,OPÉRATION EXODE - EXTRACTION CONFIRMÉE - DÉFI ACCOMPLI,OPERATION EXODUS - EVAKUIERUNG BESTÄTIGT - HERAUSFORDERUNG ABGESCHLOSSEN,OPERACIÓN ÉXODO - EXTRACCIÓN CONFIRMADA - DESAFÍO COMPLETADO
-area7ExtractionWindowMessage,UI,,,,"[cd5c5c]CLASSIFIED - EYES ONLY[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]CHALLENGE STATUS: COMPLETE[-]\nSURVIVOR EXTRACTED SUCCESSFULLY.\nAREA 7 PROTOCOL CONCLUDED.\n\nYou endured the irradiated zone, cleared the facility,\nand held the line on blood moon. Not many do.\n\n[7fff00]WELL DONE, SURVIVOR.[-]\n[cd5c5c]AREA 7 IS BEHIND YOU.[-]\n\nNorthern Command has a chopper waiting outside.\nGet out there and board it.\n\n[ff8c00]Mission debrief saved to:[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]","[cd5c5c]CLASSIFIÉ - CONFIDENTIEL[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]STATUT DU DÉFI : ACCOMPLI[-]\nSURVIVANT EXTRAIT AVEC SUCCÈS.\nPROTOCOLE ZONE 7 TERMINÉ.\n\nVous avez enduré la zone irradiée, nettoyé l'installation,\net tenu la ligne lors de la lune de sang. Peu y parviennent.\n\n[7fff00]BIEN JOUÉ, SURVIVANT.[-]\n[cd5c5c]LA ZONE 7 EST DERRIÈRE VOUS.[-]\n\n[ff8c00]Rapport de mission sauvegardé dans :[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]","[cd5c5c]GEHEIM - NUR FÜR BERECHTIGTE[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]HERAUSFORDERUNGSSTATUS: ABGESCHLOSSEN[-]\nÜBERLEBENDER ERFOLGREICH EVAKUIERT.\nBEREICH-7-PROTOKOLL BEENDET.\n\nDu hast die verstrahlte Zone überstanden, die Anlage gesäubert\nund beim Blutmond die Stellung gehalten. Das schaffen wenige.\n\n[7fff00]GUT GEMACHT, ÜBERLEBENDER.[-]\n[cd5c5c]BEREICH 7 LIEGT HINTER DIR.[-]\n\n[ff8c00]Missionsbericht gespeichert unter:[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]","[cd5c5c]CLASIFICADO - SOLO PARA OJOS AUTORIZADOS[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]ESTADO DEL DESAFÍO: COMPLETADO[-]\nSUPERVIVIENTE EXTRAÍDO CON ÉXITO.\nPROTOCOLO ZONA 7 CONCLUIDO.\n\nSoportaste la zona irradiada, limpiaste la instalación\ny mantuviste la línea en la luna de sangre. Pocos lo logran.\n\n[7fff00]BIEN HECHO, SUPERVIVIENTE.[-]\n[cd5c5c]LA ZONA 7 QUEDÓ ATRÁS.[-]\n\n[ff8c00]Informe de misión guardado en:[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]"
+area7ExtractionWindowMessage,UI,,,,"[cd5c5c]CLASSIFIED - EYES ONLY[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]CHALLENGE STATUS: COMPLETE[-]\nSURVIVOR EXTRACTED SUCCESSFULLY.\nAREA 7 PROTOCOL CONCLUDED.\n\nYou endured the irradiated zone, cleared the facility,\nand held the line on blood moon. Not many do.\n\n[7fff00]WELL DONE, SURVIVOR.[-]\n[cd5c5c]AREA 7 IS BEHIND YOU.[-]\n\nNorthern Command has a chopper waiting outside.\nGet out there and board it.\n\n[ff8c00]Mission debrief saved to:[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]","[cd5c5c]CLASSIFIÉ - CONFIDENTIEL[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]STATUT DU DÉFI : ACCOMPLI[-]\nSURVIVANT EXTRAIT AVEC SUCCÈS.\nPROTOCOLE AREA 7 TERMINÉ.\n\nVous avez enduré la zone irradiée, nettoyé l'installation,\net tenu la ligne lors de la lune de sang. Peu y parviennent.\n\n[7fff00]BIEN JOUÉ, SURVIVANT.[-]\n[cd5c5c]LA AREA 7 EST DERRIÈRE VOUS.[-]\n\n[ff8c00]Rapport de mission sauvegardé dans :[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]","[cd5c5c]GEHEIM - NUR FÜR BERECHTIGTE[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]HERAUSFORDERUNGSSTATUS: ABGESCHLOSSEN[-]\nÜBERLEBENDER ERFOLGREICH EVAKUIERT.\nBEREICH-7-PROTOKOLL BEENDET.\n\nDu hast die verstrahlte Zone überstanden, die Anlage gesäubert\nund beim Blutmond die Stellung gehalten. Das schaffen wenige.\n\n[7fff00]GUT GEMACHT, ÜBERLEBENDER.[-]\n[cd5c5c]AREA 7 LIEGT HINTER DIR.[-]\n\n[ff8c00]Missionsbericht gespeichert unter:[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]","[cd5c5c]CLASIFICADO - SOLO PARA OJOS AUTORIZADOS[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]ESTADO DEL DESAFÍO: COMPLETADO[-]\nSUPERVIVIENTE EXTRAÍDO CON ÉXITO.\nPROTOCOLO ZONA 7 CONCLUIDO.\n\nSoportaste la zona irradiada, limpiaste la instalación\ny mantuviste la línea en la luna de sangre. Pocos lo logran.\n\n[7fff00]BIEN HECHO, SUPERVIVIENTE.[-]\n[cd5c5c]LA ZONA 7 QUEDÓ ATRÁS.[-]\n\n[ff8c00]Informe de misión guardado en:[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]"
 area7ExtractionOfferTeaser,UI,,,,Extraction authorised. Northern Command is en route. Read your orders.,Extraction autorisée. Le Commandement Nord est en route. Lisez vos ordres.,Evakuierung genehmigt. Nordkommando ist unterwegs. Lies deine Befehle.,Extracción autorizada. El Mando Norte está en camino. Lee tus órdenes.
 area7MissionCompleteTitle,UI,,,,OPERATION EXODUS - MISSION ACCOMPLISHED,OPÉRATION EXODE - MISSION ACCOMPLIE,OPERATION EXODUS - MISSION ERFÜLLT,OPERACIÓN ÉXODO - MISIÓN CUMPLIDA
-area7MissionCompleteMessage,UI,,,,\"[cd5c5c]CLASSIFIED - EYES ONLY[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]EXTRACTION STATUS: COMPLETE[-]\nYOU ARE AIRBORNE. AREA 7 IS BEHIND YOU.\n\nYou made it out. The facility, the blood moon,\nthe horde — all of it. Behind you now.\n\n[7fff00]WELL DONE, SOLDIER.[-]\n[cd5c5c]NORTHERN AREA COMMAND OUT.[-]\n\n[ff8c00]Mission debrief saved to:[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]\",\"[cd5c5c]CLASSIFIÉ - CONFIDENTIEL[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]STATUT EXTRACTION : TERMINÉ[-]\nVOUS ÊTES EN VOL. LA ZONE 7 EST DERRIÈRE VOUS.\n\nVous avez réussi. L'installation, la lune de sang,\nla horde — tout ça derrière vous maintenant.\n\n[7fff00]BIEN JOUÉ, SOLDAT.[-]\n[cd5c5c]COMMANDEMENT NORD, TERMINÉ.[-]\n\n[ff8c00]Rapport de mission sauvegardé dans :[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]\",\"[cd5c5c]GEHEIM - NUR FÜR BERECHTIGTE[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]EVAKUIERUNGSSTATUS: ABGESCHLOSSEN[-]\nSIE SIND IN DER LUFT. BEREICH 7 LIEGT HINTER IHNEN.\n\nSie haben es geschafft. Die Anlage, der Blutmond,\ndie Horde — alles jetzt hinter Ihnen.\n\n[7fff00]GUT GEMACHT, SOLDAT.[-]\n[cd5c5c]NORDKOMMANDO, AUSSTEIGEN.[-]\n\n[ff8c00]Missionsbericht gespeichert unter:[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]\",\"[cd5c5c]CLASIFICADO - SOLO PARA OJOS AUTORIZADOS[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]ESTADO DE EXTRACCIÓN: COMPLETADO[-]\nESTÁS EN EL AIRE. LA ZONA 7 QUEDÓ ATRÁS.\n\nLo lograste. La instalación, la luna de sangre,\nla horda — todo eso atrás ahora.\n\n[7fff00]BIEN HECHO, SOLDADO.[-]\n[cd5c5c]MANDO NORTE, FUERA.[-]\n\n[ff8c00]Informe de misión guardado en:[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]\"
+area7MissionCompleteMessage,UI,,,,"[cd5c5c]CLASSIFIED - EYES ONLY[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]EXTRACTION STATUS: COMPLETE[-]\nYOU ARE AIRBORNE. AREA 7 IS BEHIND YOU.\n\nYou made it out. The facility, the blood moon,\nthe horde — all of it. Behind you now.\n\n[7fff00]WELL DONE, SOLDIER.[-]\n[cd5c5c]NORTHERN AREA COMMAND OUT.[-]\n\n[ff8c00]Mission debrief saved to:[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]","[cd5c5c]CLASSIFIÉ - CONFIDENTIEL[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]STATUT EXTRACTION : TERMINÉ[-]\nVOUS ÊTES EN VOL. LA AREA 7 EST DERRIÈRE VOUS.\n\nVous avez réussi. L'installation, la lune de sang,\nla horde — tout ça derrière vous maintenant.\n\n[7fff00]BIEN JOUÉ, SOLDAT.[-]\n[cd5c5c]COMMANDEMENT NORD, TERMINÉ.[-]\n\n[ff8c00]Rapport de mission sauvegardé dans :[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]","[cd5c5c]GEHEIM - NUR FÜR BERECHTIGTE[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]EVAKUIERUNGSSTATUS: ABGESCHLOSSEN[-]\nSIE SIND IN DER LUFT. AREA 7 LIEGT HINTER IHNEN.\n\nSie haben es geschafft. Die Anlage, der Blutmond,\ndie Horde — alles jetzt hinter Ihnen.\n\n[7fff00]GUT GEMACHT, SOLDAT.[-]\n[cd5c5c]NORDKOMMANDO, AUSSTEIGEN.[-]\n\n[ff8c00]Missionsbericht gespeichert unter:[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]","[cd5c5c]CLASIFICADO - SOLO PARA OJOS AUTORIZADOS[-]\n[ff8c00]--------------------------------------------[-]\n\n[7fff00]ESTADO DE EXTRACCIÓN: COMPLETADO[-]\nESTÁS EN EL AIRE. LA ZONA 7 QUEDÓ ATRÁS.\n\nLo lograste. La instalación, la luna de sangre,\nla horda — todo eso atrás ahora.\n\n[7fff00]BIEN HECHO, SOLDADO.[-]\n[cd5c5c]MANDO NORTE, FUERA.[-]\n\n[ff8c00]Informe de misión guardado en:[-]\nMods/FrilArea7Challenge/stats/Area7_Debrief.html\n\n[ff8c00]--------------------------------------------[-]"
 area7MissionCompleteOfferTeaser,UI,,,,Extraction complete. You are airborne.,Extraction terminée. Vous êtes en vol.,Evakuierung abgeschlossen. Sie sind in der Luft.,Extracción completa. Estás en el aire.
 plantedAloe1,items,Item,,,Aloe Vera Seeds,Graines d'Aloe Vera,Aloe-Vera-Samen,Semillas de Aloe Vera
 plantedBlueberry1,items,Item,,,Blueberry Seeds,Graines de Myrtille,Blaubeersamen,Semillas de Arándano
@@ -343,20 +363,24 @@ posterProstateDesc,blocks,blocks,,,Hospital poster \n\nARUK1.,Affiche d'hôpital
 posterProstate,blocks,blocks,,,ARUK1 Poster,Affiche ARUK1,ARUK1-Plakat,Póster ARUK1
 zombieMutated,entityclasses,Entity,,,Cran5000,,Cran5000,Cran5000,Cran5000,Cran5000,Cran5000,Cran5000,Cran5000,Cran5000,Cran5000,Cran5000,Cran5000,Cran5000
 noteArea7IOU4,items,Item,,,MILITARY SUPPLY REQUEST FORM,FORMULAIRE DE DEMANDE DE RAVITAILLEMENT,MILITÄRISCHES VERSORGUNGSANFORDERUNGSFORMULAR,FORMULARIO DE SOLICITUD DE SUMINISTROS MILITARES
-noteArea7IOU4Desc,items,Item,,,REQUESTED: 4x4 Vehicle - DENIED,"DEMANDÉ : Véhicule 4x4 - REFUSÉ
+noteArea7IOU4Desc,items,Item,,,"REQUESTED: 4x4 Vehicle - DENIED
+
+Heavy transport reserved for critical freight operations.
+
+Supply shortage. Ground evacuation authorised. Proceed to Camp Frilsville on foot.","DEMANDÉ : Véhicule 4x4 - REFUSÉ
 
 Transport lourd réservé aux opérations de fret critique.
 
-Pénurie de ravitaillement. Évacuation terrestre autorisée.","ANGEFORDERT: 4x4-Fahrzeug - ABGELEHNT
+Pénurie de ravitaillement. Évacuation terrestre autorisée. Rejoignez Camp Frilsville à pied.","ANGEFORDERT: 4x4-Fahrzeug - ABGELEHNT
 
 Schwertransport für kritische Frachtoperationen reserviert.
 
-Versorgungsengpass. Bodenräumung genehmigt.","SOLICITADO: Vehículo 4x4 - DENEGADO
+Versorgungsengpass. Bodenräumung genehmigt. Erreiche Camp Frilsville zu Fuß.","SOLICITADO: Vehículo 4x4 - DENEGADO
 
 Transporte pesado reservado para operaciones de carga crítica.
 
-Escasez de suministros. Evacuación terrestre autorizada."
-sandboxPresetGroupArea7,UI,Menu,x,,Area 7,Zone 7,Bereich 7,Zona 7
+Escasez de suministros. Evacuación terrestre autorizada. Diríjase a Campamento Frilsville a pie."
+sandboxPresetGroupArea7,UI,Menu,x,,Area 7,Area 7,Area 7,Zona 7
 buffArea7RadPermitArmor,buffs,Buff,,,Radiation Shielded,Protection Anti-Radiation,Strahlenschutz,Blindaje Antirradiacion
 buffArea7RadPermitArmorDesc,buffs,Buff,,,Your respirator is filtering the airborne fallout. You are safe while it is worn.,Votre respirateur filtre les retombees radioactives. Vous etes protege tant que vous le portez.,Deine Atemschutzmaske filtert den radioaktiven Niederschlag. Du bist geschuetzt solange du sie traegst.,Tu respirador filtra la lluvia radiactiva. Estas protegido mientras lo lleves puesto.
 buffArea7RadPermit,buffs,Buff,,,Radiation Shielded (Temporary),Protection Anti-Radiation (Temporaire),Strahlenschutz (Voruebergehend),Blindaje Antirradiacion (Temporal)

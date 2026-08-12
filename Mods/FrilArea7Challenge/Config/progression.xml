@@ -3,9 +3,20 @@
 <!--
 	Area 7 Challenge - Progression Modifications
 	Author: Frilioth
-	Version: 3.0.32
+	Version: 3.0.47
 	
 	MODIFICATIONS:
+	- v3.0.47: the perk screen was lying about unlock levels. Capping the
+	  passive_effect levels without also updating the display_entry
+	  unlock_levels left 17 of 20 workstations, and one trap tier,
+	  advertising a lower level than the one that actually grants the
+	  recipe (reported: workbench said 10, granted at 12). Also fixed
+	  three recipes that were IMPOSSIBLE to craft because their level
+	  sat above the skill's own cap: toolApiarySmoker (56), 
+	  toolForgeCrucible (75) and m60Turret (100), all now 50. The first
+	  two were caused by two <set> lines aimed at passive_effect[15] and
+	  [16] when the real indexes are [19] and [20]. Everything here now
+	  selects by @tags rather than by position.
 	- v3.0.32: fixed the four chemistry-station display patches (see the
 	  comments at the Tier 2 block). Nothing else in this file changed.
 	- Cap crafting skill magazines at level 50 (down from 75/100)
@@ -34,11 +45,33 @@
 	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[12]/@level">44,50</set>
 	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[13]/@level">48,50</set>
 	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[14]/@level">50,50</set>
-	<!-- toolApiarySmoker (index 15): 56 → 50 -->
-	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[15]/@level">50,50</set>
-	<set xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@name_key='workstationsT5-2,workstationsT5-5']/@unlock_level">30,50</set>
-	<!-- toolForgeCrucible (index 16): 75 → 50 -->
-	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[16]/@level">50,50</set>
+	<!-- v3.0.47 FIX: these two were aimed at the WRONG INDEXES. The comments said
+	     "index 15" and "index 16", but in vanilla toolApiarySmoker is passive_effect[19]
+	     and toolForgeCrucible is [20]. Indexes 15 and 16 are toolApiaryExtractor and
+	     toolApiaryBroodBox, which were already being capped on the lines above, so those
+	     got set twice while the smoker (56) and the crucible (75) were never touched at
+	     all. With max_level at 50 that put BOTH above the cap and made them impossible to
+	     craft, while the perk screen still advertised them at 30 and 50.
+	     Selecting by @tags instead of by position so this cannot drift again. -->
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[@tags='toolApiarySmoker']/@level">50,50</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[@tags='toolForgeCrucible']/@level">50,50</set>
+	<!-- These two were being capped only by accident, via the mis-aimed [15]/[16] lines
+	     above. They sit at vanilla 40 and 44, comfortably under the cap, so they are left
+	     where they are; only the trailing max is brought in line with everything else. -->
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[@tags='toolApiaryExtractor']/@level">40,50</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[@tags='toolApiaryBroodBox']/@level">44,50</set>
+
+	<!-- v3.0.47: KEEP THE PERK SCREEN HONEST.
+	     The passive_effect levels above are what the game actually enforces; the
+	     display_entry unlock_levels are what the perk screen PROMISES. Capping the
+	     former without the latter left 17 of 20 workstations advertising a level lower
+	     than the one that grants them, so a player could read enough magazines to see
+	     "unlocked" and still not be able to craft it. Reported for the workbench: screen
+	     said 10, the game granted at 12.
+	     Each list below is in the same order as that entry's unlock_entry children. -->
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@name_key='workstationsT1-1,workstationsT1-2,workstationsT1-3,workstationsT1-4,workstationsT1-5,workstationsT1-6']/@unlock_level">4,8,10,12,16,20</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@name_key='workstationsT3-2,workstationsT3-3,workstationsT3-4']/@unlock_level">44,48,50</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@name_key='workstationsT5-2,workstationsT5-5']/@unlock_level">50,50</set>
 	
 	<!-- Cap Trap Crafting (craftingTraps) at 50 -->
 	<set xpath="//crafting_skill[@name='craftingTraps']/@max_level">50</set>
@@ -52,6 +85,17 @@
 	<!-- autoTurret (index 3): 75 → 50 -->
 	<set xpath="//crafting_skill[@name='craftingTraps']/effect_group/passive_effect[3]/@level">50,50</set>
 	<set xpath="//crafting_skill[@name='craftingTraps']/display_entry[@name_key='trapsT3']/@unlock_level">50</set>
+
+	<!-- v3.0.47: m60Turret was never capped. Vanilla has it at 100 with a cap of 100; the
+	     mod lowered the cap to 50 and capped only passive_effect [1] [2] [3], leaving the
+	     turret needing level 100 on a skill that stops at 50, so it could never be crafted
+	     while the perk screen still advertised it. Selected by @tags, not by position. -->
+	<set xpath="//crafting_skill[@name='craftingTraps']/effect_group/passive_effect[@tags='m60Turret']/@level">50,50</set>
+	<set xpath="//crafting_skill[@name='craftingTraps']/display_entry[@name_key='trapsT4']/@unlock_level">50</set>
+
+	<!-- And keep the perk screen honest: trapsT1 still advertised vanilla's 25 while the
+	     passive_effect above grants at 50. Same fault as the workstations. -->
+	<set xpath="//crafting_skill[@name='craftingTraps']/display_entry[@name_key='trapsT1']/@unlock_level">50</set>
 	
 	<!-- Cap Electrician/Robotics (craftingElectrician) at 50 -->
 	<set xpath="//crafting_skill[@name='craftingElectrician']/@max_level">50</set>
@@ -169,7 +213,7 @@
 	     nothing and the chemistry station never appeared in the Tier 2 list. The
 	     unlock itself was never affected: that is the passive_effect line above. -->
 	<set xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@name_key='workstationsT2-1,workstationsT2-2,workstationsT2-3,workstationsT2-5,workstationsT2-6']/@icon">cntDewCollector,toolChickenCoopRun,toolAnvil,toolChickenCoopNestingBox,toolDewGatherer,chemistryStation</set>
-	<set xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@name_key='workstationsT2-1,workstationsT2-2,workstationsT2-3,workstationsT2-5,workstationsT2-6']/@unlock_level">16,18,20,24,26,20</set>
+	<set xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@name_key='workstationsT2-1,workstationsT2-2,workstationsT2-3,workstationsT2-5,workstationsT2-6']/@unlock_level">26,30,32,34,40,20</set>
 	<append xpath="//crafting_skill[@name='craftingWorkstations']/display_entry[@name_key='workstationsT2-1,workstationsT2-2,workstationsT2-3,workstationsT2-5,workstationsT2-6']">
 		<unlock_entry item="chemistryStation" unlock_tier="2"/>
 	</append>
