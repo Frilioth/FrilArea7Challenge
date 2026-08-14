@@ -2,7 +2,7 @@
 
 A self-contained survival challenge mod for **7 Days to Die V3.1.0**.
 
-**Mod version 3.1.1**
+**Mod version 3.1.3**
 
 You wake up inside a top-secret military research facility surrounded by lethal radiation. Your only goal: clear the facility, build an emergency transmitter, survive a blood moon horde, and escape to Camp Frilsville before the facility kills you.
 
