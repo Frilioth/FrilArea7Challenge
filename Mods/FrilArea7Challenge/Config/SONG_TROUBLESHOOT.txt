@@ -1,0 +1,14 @@
+IF THE SONG STILL DOESN'T PLAY - quick things to try in sounds.xml
+------------------------------------------------------------------
+The line that matters is the AudioSource. If the log again says
+"LoadAudio failed to load audio source object for ...", the prefab
+path is the culprit. Try these one at a time (swap the name= value):
+
+  @:Sounds/Prefabs/AudioSource_UI.prefab        <- current (2D, full volume)
+  @:Sounds/Prefabs/AudioSource_Music.prefab     <- music channel if it exists
+  @:Sounds/Prefabs/AudioSource_VO.prefab        <- voice-over 2D source
+  @:Sounds/Prefabs/AudioSource_Ambient.prefab   <- ambient
+
+After editing sounds.xml, fully restart the game (localisation and
+sounds load at mod load). Check the log for the LoadAudio line to see
+if the source resolved. Delete this file whenever.

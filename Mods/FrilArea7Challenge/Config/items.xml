@@ -2,7 +2,7 @@
 <!--
     FrilArea7Challenge - Item Modifications
     Author: Frilioth
-    Version: 3.0.48
+    Version: 3.1.4
 
 -->
 
@@ -27,12 +27,36 @@
   </effect_group>
 </append>
 
-  <!-- Wearing the Biome Badge grants permit until removed -->
+  <!-- Wearing the Biome Badge grants permit until removed.
+
+       v3.1.4: every triggered_effect here is now gated on the badge actually being WORN.
+
+       In 7 Days "equip" includes HELD IN HAND, not just worn in a slot. Verified in the
+       3.1.0 IL: Inventory.updateHoldingItem fires onSelfEquipStart and onSelfEquipStop,
+       the same two events Equipment.SetSlotItem fires. Ungated, that meant simply
+       scrolling to the respirator on the toolbelt granted the full radiation permit
+       without ever wearing it, and scrolling away took it off again. That shipped in
+       every release up to v3.1.3.
+
+       onSelfEquipStop is DELETED rather than gated. It fires when a HELD item is
+       holstered, so while the respirator was worn, scrolling away from a slot holding a
+       spare would have stripped protection. Removal is handled by
+       Area7CentralRadiation.ReconcileArmorPermit instead, which runs once a second and
+       is authoritative. Being slow to REMOVE protection would be the exploitable
+       direction; being slow to GRANT it just costs a radiation tick, so the DLL owning
+       removal is the safe way round.
+
+       The DLL reconcile also stays as the net for any route these triggers miss, which
+       is how the auto-equip case was found: the right-click Wear action does not go
+       through Equipment.SetSlotItem and so fires no event at all. -->
   <append xpath="/items/item[@name='biomeWeatherItem4']">
   <effect_group name="Area7 Radiation Armor Permit">
-    <triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="buffArea7RadPermit"/>
-    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffArea7RadPermitArmor"/>
-    <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffArea7RadPermitArmor"/>
+    <triggered_effect trigger="onSelfEquipStart" action="RemoveBuff" buff="buffArea7RadPermit">
+      <requirement name="WornItems" tags="biomeBadge4" operation="GTE" value="1"/>
+    </triggered_effect>
+    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffArea7RadPermitArmor">
+      <requirement name="WornItems" tags="biomeBadge4" operation="GTE" value="1"/>
+    </triggered_effect>
 
     <triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffArea7RadPermitArmor">
       <requirement name="WornItems" tags="biomeBadge4" operation="GTE" value="1"/>

@@ -3,13 +3,14 @@
 <!--  
 	Area 7 Challenge - Custom Challenge System
 	Author: Frilioth
-	Version: 3.0.1
+	Version: 3.1.4
 	
 	CHALLENGE PROGRESSION:
 	1. Basics - Kill zombies and get geared up
 	2. Generator - Gather materials for emergency transmitter
 	3. Deploy - Craft and activate transmitter (triggers blood moon horde + airdrop)
-	4. Escape - Reach Army Base and meet Trader Joel
+	4. Escape - Reach Camp Frilsville, clear it, find Hugh, read the Extraction Order,
+	   board the helicopter. Joel and Bob fly it; Hugh is the trader at the camp.
 	
 	NOTES:
 	- Transmitter deployment (deployTransmitter) triggers frilArea7SignalSent gameevent
@@ -21,7 +22,7 @@
 
 <set xpath="/challenges">
 	
-	<challenge_category name="Area7" title="Area 7 Escape" icon="ui_game_symbol_challenge_category1"/>
+	<challenge_category name="Area7" title_key="challengeCategoryArea7" icon="ui_game_symbol_challenge_category1"/>
 
 	<!-- ========================================
 	     CHALLENGE GROUPS
@@ -39,7 +40,9 @@
 	<challenge_group category="Area7" name="Deploy" title_key="challengeGroupDeploy"
 	                 reward_text_key="challengeGroupDeployReward" reward_event="challenge_reward_deploy" link_challenges="true" hidden_by="Generator"/>
 	
-	<!-- Group 4: Escape - Reach the Army Base -->
+	<!-- Group 4: Escape - Reach Camp Frilsville.
+	     Deliberately has NO hidden_by, unlike Generator and Deploy: Fril's call, the player
+	     should be able to see where this is all going from the start. Do not "fix" it. -->
 	<challenge_group category="Area7" name="Escape" title_key="challengeGroupEscape"
                  reward_text_key="challengeGroupEscapeReward" reward_event="challenge_complete_escape" link_challenges="true"/>
 

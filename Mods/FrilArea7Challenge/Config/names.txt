@@ -27,22 +27,41 @@
 #   zombieMoe  zombieJoe  zombieYo  zombieBoe  zombieBusinessMan  zombiePartyGirl
 #   zombieFemaleFat  zombieMutated  zombieBurnt  zombieSteve  zombieTomClark
 
-Frilioth=zombieSoldier
-
-PerfectTrip=zombieBoe
-Tycapanic=zombieDarlene
-Tycapanic=zombieArlene
-Kualija=zombieLab
-Mink80=zombieFemaleFat
-Holls=zombiePartyGirl
-Devilskut=zombieYo
 Bdubyah=zombieSpider
-Hells=zombieJanitor
+Bdubyah=zombieSpiderFeral
 China=zombieNurse
-Red=zombieNurse
-Crilaslays=zombieBusinessMan
-Flame=zombieMaleHazmat
-DeaLatis=zombieMaleHazmat
-KatsPurr=zombieMarlene
-Sphereii=zombieUtilityWorker
+China=zombieNurseFeral
 Cran5000=zombieMutatedFeral
+Crilaslays=zombieBusinessMan
+Crilaslays=zombieBusinessManFeral
+DeaLatis=zombieMaleHazmat
+DeaLatis=zombieMaleHazmatFeral
+Devilskut=zombieYo
+Devilskut=zombieYoFeral
+Flame=zombieMaleHazmat
+Flame=zombieMaleHazmatFeral
+Frilioth=zombieSoldier
+Game Retainer=zombieFatHawaiian
+Game Retainer=zombieFatHawaiianFeral
+Hells Janitor=zombieJanitor
+Hells Janitor=zombieJanitorFeral
+Holls=zombiePartyGirl
+Holls=zombiePartyGirlFeral
+KatsPurr=zombieMarlene
+KatsPurr=zombieMarleneFeral
+Kualija=zombieLab
+Kualija=zombieLabFeral
+Mink80=zombieFemaleFat
+Mink80=zombieFemaleFatFeral
+PerfectTrip=zombieBoe
+PerfectTrip=zombieBoeFeral
+Puppy=zombieMaleHazmat
+Puppy=zombieMaleHazmatFeral
+Red=zombieNurse
+Red=zombieNurseFeral
+Semper=zombieMaleHazmat
+Semper=zombieMaleHazmatFeral
+Sphereii=zombieUtilityWorker
+Sphereii=zombieUtilityWorkerFeral
+Tycapanic=zombieDarlene
+Tycapanic=zombieDarleneFeral
