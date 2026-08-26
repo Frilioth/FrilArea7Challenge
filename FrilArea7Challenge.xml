@@ -3,7 +3,7 @@
     <ServerGroup Name="Area 7 Challenge" Logo="" Description="Survive a military research facility surrounded by lethal radiation. Build a transmitter, survive the horde, and escape.">
         <Server Name="Area 7 Challenge" Logo="">
             <Description>
-                Area 7 Challenge — A self-contained survival challenge mod for 7 Days to Die (V3.1.0)
+                Area 7 Challenge — A self-contained survival challenge mod for 7 Days to Die (V3.2)
 
                 You wake up inside a top-secret military research facility surrounded by lethal radiation. Your only goal: clear the facility, build an emergency transmitter, survive a blood moon horde, and escape to Camp Frilsville before the facility kills you.
 
@@ -47,7 +47,7 @@
                 Twitch: twitch.tv/frilioth
             </Description>
 
-            <Version>3.1.1</Version>
+            <Version>3.1.5</Version>
             <EAC>Disabled</EAC>
             <Discord></Discord>
             <Donate></Donate>

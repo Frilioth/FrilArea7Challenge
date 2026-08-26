@@ -204,30 +204,40 @@
 	</insertafter>
 
 	<insertafter xpath="//lootcontainer[@name='playerBackpack']">
-		<!-- Area 7 Airdrop Containers - Tier-based vehicle lottery -->
+		<!-- Area 7 Airdrop Containers - Tier-based vehicle lottery
+
+		     ignore_loot_abundance="true" is LOAD-BEARING, do not remove it.
+		     LootFromXml.LoadLootContainer scales a container's count by the player's Loot
+		     Abundance setting at load time unless this is set. These containers are count="1"
+		     holding a single group, so at 150% abundance the count became 2 and the whole tier
+		     group was drawn TWICE: two respirators and two vehicle-lottery results. On tier 4
+		     or 5 that means two 4x4s, which reads as a broken mod rather than a lucky drop.
+		     The airdrop is a scripted story beat, not scavenged loot, so it should always
+		     contain exactly one respirator and one vehicle-or-IOU regardless of settings.
+		     Found 26 Aug after Fril's test drop came back with 2 notes and 2 respirators. -->
 
 		<!-- Tier 1: 0-4 magazines (No qualifications) -->
-		<lootcontainer name="210" count="1" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="210" count="1" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
 			<item group="frilArea7AirdropTier1"/>
 		</lootcontainer>
 
 		<!-- Tier 2: 5-19 magazines (Bicycle certified) -->
-		<lootcontainer name="211" count="1" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="211" count="1" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
 			<item group="frilArea7AirdropTier2"/>
 		</lootcontainer>
 
 		<!-- Tier 3: 20-44 magazines (Motorized certified) -->
-		<lootcontainer name="212" count="1" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="212" count="1" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
 			<item group="frilArea7AirdropTier3"/>
 		</lootcontainer>
 
 		<!-- Tier 4: 45-69 magazines (Advanced mechanic) -->
-		<lootcontainer name="213" count="1" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="213" count="1" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
 			<item group="frilArea7AirdropTier4"/>
 		</lootcontainer>
 
 		<!-- Tier 5: 70+ magazines (Master mechanic - GYRO UNLOCKED!) -->
-		<lootcontainer name="214" count="1" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+		<lootcontainer name="214" count="1" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
 			<item group="frilArea7AirdropTier5"/>
 		</lootcontainer>
 
