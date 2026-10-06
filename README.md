@@ -1,8 +1,10 @@
 # Area 7 Challenge
 
-A self-contained survival challenge mod for **7 Days to Die V3.1.0**.
+A self-contained survival challenge mod for **7 Days to Die V3.3**.
 
-**Mod version 3.1.3**
+**Mod version 3.1.9**
+
+> **This build requires 7 Days to Die V3.3 and will not run on earlier versions.** If you are still on V3.0, V3.1 or V3.2, download **v3.1.8** instead, which remains available on the [Releases page](https://github.com/Frilioth/FrilArea7Challenge/releases) and is unchanged. The two builds are identical in gameplay.
 
 You wake up inside a top-secret military research facility surrounded by lethal radiation. Your only goal: clear the facility, build an emergency transmitter, survive a blood moon horde, and escape to Camp Frilsville before the facility kills you.
 
