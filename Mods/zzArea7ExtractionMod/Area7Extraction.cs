@@ -1,5 +1,5 @@
 // File: Area7ExtractionMod.cs
-// Area 7 Extraction Mod - Version 1.4.8
+// Area 7 Extraction Mod - Version 1.5.1
 // Author: Frilioth
 // Requires: FrilArea7Challenge mod, BDubs Vehicles mod (vehicleUH60)
 //
@@ -15,7 +15,7 @@ using UnityEngine;
 
 public class Area7ExtractionMod : IModApi
 {
-    public const string ModVersion = "1.4.8";
+    public const string ModVersion = "1.5.1";
 
     public void InitMod(Mod _modInstance)
     {
@@ -75,26 +75,46 @@ public static class Area7ExtractionSequence
     // mountains on some outbound headings.
     private const float DEPART_CEILING = 150f;
 
-    // Cockpit crew. Attached to seats 0 and 1 so the player boards into seat 2 as a
-    // passenger instead of becoming the pilot.
-    // npcSurvivorRanged is a stock vanilla human NPC (player mesh, whiteriver faction,
-    // carries a pistol). If the crew climb out mid-flight, the fix is a custom passive
-    // class with the AI packages stripped - change this one constant to point at it.
-    // Tried in order; the first one actually REGISTERED in this install is used.
-    // npcSurvivorRanged is defined in vanilla entityclasses.xml but is NOT registered at
-    // runtime in 3.0.1 (EntityFactory rejected it with "unknown type"), so the trader
-    // classes are here as proven fallbacks - Hugh is an npcTrader and spawns fine every run.
-    // Hugh himself is deliberately excluded: he is standing at the camp.
-    private static readonly string[] PILOT_CLASS_CANDIDATES =
+    // Cockpit crew. ONE pilot, Jen, in seat 0.
+    //
+    // v1.5.0: WAS two standing traders in seats 0 and 1 (Joel and Bob). They stood because
+    // their animator has no seated state, and that was recorded as unfixable on 24 July.
+    // It is not. The recipe below was proved in the 1.4.9 to 1.4.12 test builds on 30 and
+    // 31 October and now ships in the Sky Cabs taxi mod.
+    //
+    // JEN AND ONLY JEN. She is the one vanilla NPC built on the same Unity avatar as the
+    // player (baseRigAvatar, generic), so the player's own animation file fits her skeleton.
+    // Joel's is HD_TraderJoelAvatar (humanoid): given the same file he sinks half through
+    // the floor, confirmed in game 30 Oct. Do not add other classes to this list hoping one
+    // will do; the avatar is the whole reason it works.
+    //
+    // DELIBERATE REMOVAL, v1.5.0: the co-pilot is gone, so seat 1 is empty. That changes
+    // where the PLAYER ends up, because boarding takes the first free slot - see the
+    // matching seat swap in the UH-60's vehicles.xml, which moves the cabin seat to index 1
+    // so the player still rides in the back rather than up front.
+    private const string PILOT_CLASS = "npcTraderJen";
+    private const int PILOT_SLOT = 0;
+
+    // The player's own third-person animation file. Jen's animator has no seated state of
+    // its own; this one does, and her skeleton matches it. Path read from
+    // SDCSUtils.get_TPAnimController. The female file is 3PPlayerFemaleController.override-
+    // Controller, deliberately NOT used: IsMale reads True for NPCs and she only holds a
+    // still seated pose, so it would change nothing visible (settled on the taxi mod).
+    private const string TP_ANIM =
+        "@:Entities/Player/Common/AnimControllers/3PPlayerMaleController.controller";
+
+    // Entities that must never be hidden while seated. The game hides an NPC beyond 90m and
+    // RESTARTS its animator when showing it again, which resets the seat pose to -1 and the
+    // walk style to 7, standing her back up. The chopper starts its run-in 520m out, so she
+    // would be hidden at spawn and re-shown on the way in, every single time.
+    // Read by Area7ExtractionKeepPilotVisiblePatch, below.
+    private static readonly System.Collections.Generic.HashSet<int> keepVisibleIds =
+        new System.Collections.Generic.HashSet<int>();
+
+    public static bool KeepVisible(int entityId)
     {
-        "npcSurvivorRanged",
-        "npcSurvivorTemplate",
-        "npcTraderJoel",
-        "npcTraderBob",
-        "npcTraderJen",
-        "npcTraderRekt",
-    };
-    private const int PILOT_COUNT = 2;
+        return keepVisibleIds.Count > 0 && keepVisibleIds.Contains(entityId);
+    }
 
     // NOTE (v1.4.0): CREW_SEAT_OFFSETS used to live here, hardcoded out of the UH-60's
     // vehicles.xml because Vehicle exposes no runtime seat-position getter. It is gone.
@@ -185,21 +205,39 @@ public static class Area7ExtractionSequence
 
         if (string.IsNullOrEmpty(path)) path = StatsPathFallback;
 
-        // The full absolute path ran off both edges of the screen: the tooltip label does not
-        // wrap. Fril's resolved to
-        //   D:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/7DaysToDie_Data/../Mods\...
-        // so show only the tail, from the Mods folder down, and put the full normalised path in
-        // the log for anyone who needs it.
-        string shortPath = path;
+        // Show only the tail, from the Mods folder down. TWO separate reasons, and the second
+        // one is why this is written defensively rather than best-effort:
+        //
+        //   1. The full absolute path ran off both edges of the screen, because the tooltip
+        //      label does not wrap. Fril's resolved to
+        //      D:/Program Files (x86)/Steam/steamapps/common/7 Days To Die/7DaysToDie_Data/../Mods\...
+        //
+        //   2. PRIVACY, v1.5.1. A player whose game lives under C:\Users\<their real name>
+        //      would have that name on screen at the end of every run. Several of these players
+        //      stream. Everything before the Mods folder is install location and identifies
+        //      them; everything from Mods down is what they actually need to find the file.
+        //
+        // So the full path MUST NOT reach the screen by any route. v1.5.0 had two ways it could:
+        // the "Mods not found" case fell back to the whole string, and an empty catch left the
+        // untrimmed path in place if GetFullPath threw. Both are closed below. The full path
+        // still goes to the log, which is local and is what players send when they ask for help.
+        const string SAFE_TAIL = "Mods\\FrilArea7Challenge\\stats\\Area7_Debrief.html";
+        string shortPath = SAFE_TAIL;
         try
         {
             string full = System.IO.Path.GetFullPath(path);
             UnityEngine.Debug.Log("[Area7Extraction] Debrief written to: " + full);
 
             int idx = full.LastIndexOf("Mods", StringComparison.OrdinalIgnoreCase);
-            shortPath = idx >= 0 ? full.Substring(idx) : full;
+            if (idx >= 0) shortPath = full.Substring(idx);
+            // else: leave SAFE_TAIL. Never show 'full' here. It is the identifying part.
         }
-        catch { }
+        catch (Exception ex)
+        {
+            // Not swallowed, and still never shows the full path: shortPath is already SAFE_TAIL.
+            UnityEngine.Debug.LogWarning("[Area7Extraction] Could not normalise the debrief path, "
+                                         + "showing the default location instead: " + ex.Message);
+        }
 
         cachedStatsTip = "Run stats: " + shortPath;
         return cachedStatsTip;
@@ -362,50 +400,25 @@ public static class Area7ExtractionSequence
     {
         try
         {
-            // v1.4.1: resolve EVERY candidate that is actually registered, not just the first,
-            // so each seat can get a DIFFERENT trader. Two identical Joels read as a glitch.
-            // Order of PILOT_CLASS_CANDIDATES decides who sits where: index 0 is the pilot in
-            // seat 0, index 1 the co-pilot in seat 1. Reorder that array to change the pairing.
-            var usableIds = new System.Collections.Generic.List<int>();
-            var usableNames = new System.Collections.Generic.List<string>();
-            for (int i = 0; i < PILOT_CLASS_CANDIDATES.Length; i++)
+            // v1.5.0: ONE pilot, Jen, in seat 0. The v1.4.1 multi-candidate resolver is gone
+            // with the co-pilot, because only Jen's skeleton takes the player animation file.
+            int classId = ResolveEntityClass(PILOT_CLASS);
+            if (classId == -1)
             {
-                int id = ResolveEntityClass(PILOT_CLASS_CANDIDATES[i]);
-                if (id == -1)
-                {
-                    UnityEngine.Debug.Log("[Area7Extraction] Pilot class '" + PILOT_CLASS_CANDIDATES[i] + "' not registered, skipping.");
-                    continue;
-                }
-                if (usableIds.Contains(id)) continue;   // guard against duplicate names in the array
-                usableIds.Add(id);
-                usableNames.Add(PILOT_CLASS_CANDIDATES[i]);
-                if (usableIds.Count >= PILOT_COUNT) break;
-            }
-
-            if (usableIds.Count == 0)
-            {
-                UnityEngine.Debug.LogWarning("[Area7Extraction] No usable pilot class found - flying empty.");
+                UnityEngine.Debug.LogWarning("[Area7Extraction] Pilot class '" + PILOT_CLASS
+                                             + "' not registered - flying empty.");
                 return;
             }
 
-            // If only one class registers we wrap and reuse it, which is exactly the pre-1.4.1
-            // behaviour - two of the same. No regression, just no variety.
-            if (usableIds.Count < PILOT_COUNT)
-                UnityEngine.Debug.LogWarning("[Area7Extraction] Only " + usableIds.Count
-                                             + " pilot class(es) registered; seats will reuse them.");
-
-            UnityEngine.Debug.Log("[Area7Extraction] Pilot classes: " + string.Join(", ", usableNames.ToArray()));
-
-            for (int slot = 0; slot < PILOT_COUNT; slot++)
             {
-                int classId = usableIds[slot % usableIds.Count];
-                string chosen = usableNames[slot % usableNames.Count];
+                int slot = PILOT_SLOT;
+                string chosen = PILOT_CLASS;
 
                 Entity spawned = EntityFactory.CreateEntity(classId, nearPos);
                 if (spawned == null)
                 {
                     UnityEngine.Debug.LogWarning("[Area7Extraction] CreateEntity returned null for slot " + slot + ".");
-                    continue;
+                    return;
                 }
 
                 world.SpawnEntityInWorld(spawned);
@@ -414,10 +427,15 @@ public static class Area7ExtractionSequence
                 if (crew == null)
                 {
                     UnityEngine.Debug.LogWarning("[Area7Extraction] Pilot is not an EntityAlive - skipping.");
-                    continue;
+                    return;
                 }
 
                 crew.Health = 9999;
+
+                // Registered BEFORE the attach, never after. AttachToEntity itself can hide a
+                // body, and the 520m run-in means the distance check would hide her anyway.
+                // Either hide restarts her animator and undoes the seated pose.
+                keepVisibleIds.Add(crew.entityId);
 
                 // THE v1.4.0 FIX. This used to be uh60.AttachEntityToSelf(crew, slot), which
                 // is only HALF of the engine's attach path. That half sets the seated pose, the
@@ -450,7 +468,8 @@ public static class Area7ExtractionSequence
                 {
                     UnityEngine.Debug.LogWarning("[Area7Extraction] AttachToEntity refused slot "
                                                  + slot + " for entity " + crew.entityId + ".");
-                    continue;
+                    keepVisibleIds.Remove(crew.entityId);
+                    return;
                 }
 
                 UnityEngine.Debug.Log("[Area7Extraction] Crew seated in slot " + actualSlot
@@ -461,22 +480,62 @@ public static class Area7ExtractionSequence
                 crewMembers.Add(crew);
                 crewSlots.Add(actualSlot);
 
-                // Raise the model so the feet are not through the floor. Applied AFTER the
-                // attach, because AttachToEntity is what sets localPosition in the first place.
+                // SIT HER DOWN. Three steps, in this order, all proved in the 1.4.9 to 1.4.12
+                // test builds and now shipping in the taxi mod:
+                //   1. put the PLAYER's third-person animation file on her animator. Her own
+                //      has no seated state; swapping the file also resets every animation
+                //      parameter, which is why the pose is set after it and not before.
+                //   2. set the seat pose the vehicle itself declares for that seat.
+                //   3. WalkType 0. NPCs carry 7, and 7 keeps her upright.
+                bool seated = false;
                 try
                 {
-                    Transform mt = crew.ModelTransform;
-                    if (mt != null)
+                    Animator anim = (crew.emodel != null && crew.emodel.avatarController != null)
+                                  ? crew.emodel.avatarController.GetAnimator() : null;
+                    RuntimeAnimatorController rac =
+                        DataLoader.LoadAsset<RuntimeAnimatorController>(TP_ANIM, false);
+
+                    if (anim != null && rac != null)
                     {
-                        Vector3 lp = mt.localPosition;
-                        mt.localPosition = new Vector3(lp.x, lp.y + CREW_MODEL_Y_OFFSET, lp.z);
-                        UnityEngine.Debug.Log("[Area7Extraction] Crew model raised " + CREW_MODEL_Y_OFFSET
-                                              + "m: " + lp + " -> " + mt.localPosition);
+                        anim.runtimeAnimatorController = rac;
+                        crew.SetVehiclePoseMode(uh60.vehicle.GetSeatPose(actualSlot));
+                        anim.SetInteger(Animator.StringToHash("WalkType"), 0);
+                        seated = true;
+                        UnityEngine.Debug.Log("[Area7Extraction] Pilot seated in slot " + actualSlot
+                                              + ", pose " + crew.GetVehicleAnimation());
+                    }
+                    else
+                    {
+                        UnityEngine.Debug.LogWarning("[Area7Extraction] Player animation file did not load"
+                                                     + (anim == null ? " (no animator)" : "")
+                                                     + " - pilot will stand.");
                     }
                 }
                 catch (Exception ex)
                 {
-                    UnityEngine.Debug.LogWarning("[Area7Extraction] Could not raise crew model: " + ex.Message);
+                    UnityEngine.Debug.LogWarning("[Area7Extraction] Could not seat the pilot: " + ex.Message);
+                }
+
+                // The 0.2m lift exists ONLY to hide a STANDING trader's feet in the cockpit
+                // floor. A seated pilot does not want it: she would ride 0.2m high. Applied
+                // now only as the fallback, if the pose above did not take.
+                if (!seated)
+                {
+                    try
+                    {
+                        Transform mt = crew.ModelTransform;
+                        if (mt != null)
+                        {
+                            Vector3 lp = mt.localPosition;
+                            mt.localPosition = new Vector3(lp.x, lp.y + CREW_MODEL_Y_OFFSET, lp.z);
+                            UnityEngine.Debug.Log("[Area7Extraction] Standing fallback, crew model raised "
+                                                  + CREW_MODEL_Y_OFFSET + "m: " + lp + " -> " + mt.localPosition);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        UnityEngine.Debug.LogWarning("[Area7Extraction] Could not raise crew model: " + ex.Message);
+                    }
                 }
             }
         }
@@ -492,6 +551,13 @@ public static class Area7ExtractionSequence
         uh60Entity = null;
         crewMembers.Clear();
         crewSlots.Clear();
+
+        // v1.5.0. MUST be cleared here. keepVisibleIds is a static, and a static in this game
+        // outlives the save: quitting to the main menu does not reload the app domain, so
+        // anything left in it carries into the next world the player starts. An id left behind
+        // would keep some unrelated NPC permanently visible in the next run. This is the same
+        // class of fault as the hughSpawned static that left players a waypoint and no trader.
+        keepVisibleIds.Clear();
 
         // A pinned tooltip lives in the UI, not in this class, so a sequence that ended
         // abnormally could otherwise leave one cycling into the next session.
@@ -888,6 +954,55 @@ public class Area7ExtractionResetPatch
         Area7ExtractionSequence.Reset();
         UnityEngine.Debug.Log("[Area7Extraction] State reset on world load.");
     }
+}
+
+
+// ---------------------------------------------------------------
+// HARMONY PATCH — Never let the seated pilot be hidden (v1.5.0)
+// ---------------------------------------------------------------
+// EntityNPC.VisiblityCheck hides any NPC more than 90m from the player and shows it again
+// when it comes back inside that range. Showing runs EModelBase.SetVisible(true), which
+// switches the body's GameObject back on and re-runs SwitchModelAndView. Switching a
+// GameObject on RESTARTS its Unity Animator with every value back at its default, so the
+// seat pose goes to -1, and SwitchModelAndView puts the NPC walk style (7) back. Either one
+// on its own stands her up.
+//
+// The chopper begins its run-in 520m out, so without this she is hidden the moment she
+// spawns and re-shown on the way in, every single run. That is what the 1.4.9 to 1.4.11
+// tests were actually fighting.
+//
+// Every hide path in the game goes through this one method (the NPC distance check, the
+// render fade in EntityAlive.Update, and AttachToEntity itself), so one prefix covers them
+// all. Only ids the extraction has registered are affected; every other NPC behaves exactly
+// as it always did.
+[HarmonyPatch(typeof(EModelBase), "SetVisible")]
+public class Area7ExtractionKeepPilotVisiblePatch
+{
+    static void Prefix(EModelBase __instance, ref bool _bVisible)
+    {
+        if (_bVisible) return;            // only ever block a HIDE, never force one
+        try
+        {
+            if (__instance != null && __instance.entity != null
+                && Area7ExtractionSequence.KeepVisible(__instance.entity.entityId))
+            {
+                _bVisible = true;
+            }
+        }
+        catch (Exception ex)
+        {
+            // Logged ONCE, never swallowed. This prefix runs for every entity the game shows
+            // or hides, so an unthrottled log line here would flood the file and hide the
+            // very thing it is reporting. Once is enough to know it happened.
+            if (!warnedOnce)
+            {
+                warnedOnce = true;
+                UnityEngine.Debug.LogWarning("[Area7Extraction] KeepPilotVisible prefix threw (logged once): " + ex.Message);
+            }
+        }
+    }
+
+    private static bool warnedOnce = false;
 }
 
 

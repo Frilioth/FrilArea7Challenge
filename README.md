@@ -1,10 +1,10 @@
 # Area 7 Challenge
 
-A self-contained survival challenge mod for **7 Days to Die V3.3**.
+A self-contained survival challenge mod for **7 Days to Die V3.4**.
 
-**Mod version 3.1.9**
+**Mod version 3.2.0**
 
-> **This build requires 7 Days to Die V3.3 and will not run on earlier versions.** If you are still on V3.0, V3.1 or V3.2, download **v3.1.8** instead, which remains available on the [Releases page](https://github.com/Frilioth/FrilArea7Challenge/releases) and is unchanged. The two builds are identical in gameplay.
+> **This build requires 7 Days to Die V3.4 and will not run on earlier versions.** If you are still on V3.0, V3.1 or V3.2, download **v3.1.8** instead, which remains available on the [Releases page](https://github.com/Frilioth/FrilArea7Challenge/releases) and is unchanged. The builds are identical in gameplay.
 
 You wake up inside a top-secret military research facility surrounded by lethal radiation. Your only goal: clear the facility, build an emergency transmitter, survive a blood moon horde, and escape to Camp Frilsville before the facility kills you.
 
@@ -60,11 +60,11 @@ This is deliberate, not a bug. It also means the other sandbox options are fixed
 | FrilArea7MenuVideoCycler | Rotating security-camera menu feeds |
 | FrilArea7ESCGuide | In-game ESC guide panel |
 | 0_Area7Items | Custom items, Unity3D resources, UI atlases |
-| zzzz_FrilBlocks | Custom block definitions |
 | Fril_Pickup_Workstations_and_Collectors | Allows picking up placed workstations |
 | FrilRotateLoadingscreens | Rotating loading screen images |
 | Frils-HUD | Full-width food and water bars, XP and level moved to the left stack, elevation and core temperature, improved compass |
 | Frilragdollfloorfix | Stops zombies getting up one block below the floor after a knockdown |
+| FrilCrouchMod | Crouch behaviour tweaks |
 | UH-60 | Helicopter, by **bdubyah**, bundled with permission |
 | 0_TFP_Harmony | Required Harmony framework |
 

@@ -1,0 +1,34 @@
+# THE PACKAGED MOD IS A RELEASE ASSET, NOT A REPO FILE.
+#
+# GitHub refuses any single file over 100MB in the tracked tree, and Mods.zip is
+# around 700MB. It rides on the Releases page as an attachment instead. This line
+# is why GitHub Desktop stopped offering to commit it.
+Mods.zip
+*.zip
+
+# Release output, if a build is ever run from inside the repo.
+dist/
+
+# Local junk.
+Thumbs.db
+desktop.ini
+*.pdb
+*.bak
+*.tmp
+*.log
+~$*
+
+# Files 7 Days to Die rebuilds on first load. They are derived from the world
+# data that IS tracked, so carrying them adds weight and nothing else.
+#
+# NOTE: adding a name here does NOT untrack a file that is already committed.
+# Five main.ttw.bak and five dtm_processed.raw are already in the index from
+# earlier commits, and git will keep updating them until they are removed with
+# "git rm --cached". These rules stop any NEW ones being added.
+checksums.txt
+dtm_processed.raw
+main.ttw.bak
+splat3_half.png
+splat3_processed.png
+splat4_half.png
+splat4_processed.png
